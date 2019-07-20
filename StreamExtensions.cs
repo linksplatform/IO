@@ -1,7 +1,7 @@
 ﻿using System.IO;
 using Platform.Unsafe;
 
-namespace Platform.Helpers.IO
+namespace Platform.IO
 {
     public static class StreamExtensions
     {
