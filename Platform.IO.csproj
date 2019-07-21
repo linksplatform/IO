@@ -4,12 +4,12 @@
     <Description>LinksPlatform's Platform.IO Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.IO</AssemblyTitle>
-    <VersionPrefix>0.0.2</VersionPrefix>
+    <VersionPrefix>0.0.3</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Platform.IO</AssemblyName>
     <PackageId>Platform.IO</PackageId>
-    <PackageTags>LinksPlatform;IO;FileHelpers;StreamExtensions</PackageTags>
+    <PackageTags>LinksPlatform;IO;FileHelpers;StreamExtensions;ConsoleHelpers;ConsoleCancellationHandler</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/linksplatform/Documentation/0a9177c11892ebb2fe467dc3ea9eaf5a5588f610/doc/Avatar-rainbow.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/linksplatform/IO</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/linksplatform/IO/blob/master/LICENSE</PackageLicenseUrl>
@@ -24,6 +24,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <PackageReference Include="Platform.Threading" Version="0.0.1" />
     <PackageReference Include="Platform.Unsafe" Version="0.0.1" />
   </ItemGroup>
 
