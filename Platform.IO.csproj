@@ -24,7 +24,7 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Platform.Threading" Version="0.0.1" />
+    <PackageReference Include="Platform.Threading" Version="0.0.3" />
     <PackageReference Include="Platform.Unsafe" Version="0.0.1" />
   </ItemGroup>
 
