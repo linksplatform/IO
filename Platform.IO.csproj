@@ -4,7 +4,7 @@
     <Description>LinksPlatform's Platform.IO Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.IO</AssemblyTitle>
-    <VersionPrefix>0.0.3</VersionPrefix>
+    <VersionPrefix>0.0.4</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFramework>netstandard2.0</TargetFramework>
     <AssemblyName>Platform.IO</AssemblyName>
@@ -21,6 +21,9 @@
     <GenerateAssemblyProductAttribute>false</GenerateAssemblyProductAttribute>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <PackageReleaseNotes>Platform.Threading dependency update from 0.0.1 to 0.0.4.
+Platform.Unsafe dependency update from 0.0.1 to 0.0.2.
+Refactoring and issues fix.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
