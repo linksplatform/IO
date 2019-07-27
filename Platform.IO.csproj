@@ -10,7 +10,7 @@
     <AssemblyName>Platform.IO</AssemblyName>
     <PackageId>Platform.IO</PackageId>
     <PackageTags>LinksPlatform;IO;FileHelpers;StreamExtensions;ConsoleHelpers;ConsoleCancellationHandler</PackageTags>
-    <PackageIconUrl>https://raw.githubusercontent.com/linksplatform/Documentation/0a9177c11892ebb2fe467dc3ea9eaf5a5588f610/doc/Avatar-rainbow.png</PackageIconUrl>
+    <PackageIconUrl>https://raw.githubusercontent.com/linksplatform/Documentation/18469f4d033ee9a5b7b84caab9c585acab2ac519/doc/Avatar-rainbow-icon-64x64.png</PackageIconUrl>
     <PackageProjectUrl>https://github.com/linksplatform/IO</PackageProjectUrl>
     <PackageLicenseUrl>https://github.com/linksplatform/IO/blob/master/LICENSE</PackageLicenseUrl>
     <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
