@@ -42,7 +42,7 @@ namespace Platform.IO
             var fileSize = GetSize(path);
             if (fileSize % elementSize != 0)
             {
-                throw new NotSupportedException($"File is not aligned to elements with size {elementSize}.");
+                throw new InvalidOperationException($"File is not aligned to elements with size {elementSize}.");
             }
             return fileSize > 0 ? File.OpenRead(path) : null;
         }
