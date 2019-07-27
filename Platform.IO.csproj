@@ -25,7 +25,7 @@
 
   <ItemGroup>
     <PackageReference Include="Platform.Threading" Version="0.0.4" />
-    <PackageReference Include="Platform.Unsafe" Version="0.0.1" />
+    <PackageReference Include="Platform.Unsafe" Version="0.0.2" />
   </ItemGroup>
 
 </Project>
