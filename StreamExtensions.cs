@@ -28,13 +28,11 @@ namespace Platform.IO
             var buffer = new byte[size];
             var elementsLength = stream.Length / size;
             var elements = new T[elementsLength];
-
             for (var i = 0; i < elementsLength; i++)
             {
                 stream.Read(buffer, 0, size);
                 elements[i] = buffer.ToStructure<T>();
             }
-
             return elements;
         }
     }

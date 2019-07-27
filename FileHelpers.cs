@@ -12,14 +12,18 @@ namespace Platform.IO
             where T : struct
         {
             using (var reader = File.OpenRead(path))
+            {
                 return reader.ReadAll<T>();
+            }
         }
 
         public static T ReadFirstOrDefault<T>(string path)
             where T : struct
         {
             using (var fileStream = GetValidFileStreamOrDefault<T>(path))
+            {
                 return fileStream?.ReadOrDefault<T>() ?? default;
+            }
         }
 
         private static FileStream GetValidFileStreamOrDefault<TStruct>(string path)
@@ -32,13 +36,14 @@ namespace Platform.IO
         private static FileStream GetValidFileStreamOrDefault(string path, int elementSize)
         {
             if (!File.Exists(path))
+            {
                 return null;
-
+            }
             var fileSize = GetSize(path);
-
             if (fileSize % elementSize != 0)
+            {
                 throw new NotSupportedException($"File is not aligned to elements with size {elementSize}.");
-
+            }
             return fileSize > 0 ? File.OpenRead(path) : null;
         }
 
@@ -49,11 +54,11 @@ namespace Platform.IO
             using (var reader = GetValidFileStreamOrDefault(path, elementSize))
             {
                 if (reader == null)
+                {
                     return default;
-
+                }
                 var totalElements = reader.Length / elementSize;
                 reader.Position = (totalElements - 1) * elementSize; // Set to last element
-
                 return reader.ReadOrDefault<T>();
             }
         }
@@ -75,8 +80,12 @@ namespace Platform.IO
         public static void SetSize(string path, long size)
         {
             using (var fileStream = File.Open(path, FileMode.OpenOrCreate))
+            {
                 if (fileStream.Length != size)
+                {
                     fileStream.SetLength(size);
+                }
+            }
         }
     }
 }

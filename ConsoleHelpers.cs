@@ -7,7 +7,6 @@ namespace Platform.IO
     {
         public static void PressAnyKeyToContinue()
         {
-            // TODO: Internationalization
             Console.WriteLine("Press any key to continue.");
             Console.ReadKey();
         }
@@ -17,15 +16,15 @@ namespace Platform.IO
         public static string GetOrReadArgument(int index, string readMessage, params string[] args)
         {
             string result;
-
             if (args != null && args.Length > index)
+            {
                 result = args[index];
+            }
             else
             {
                 Console.Write($"{readMessage}: ");
                 result = Console.ReadLine();
             }
-
             return (result ?? "").Trim().Trim('"').Trim();
         }
 
