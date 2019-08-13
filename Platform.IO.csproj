@@ -27,7 +27,7 @@ Refactoring and issues fix.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="Platform.Threading" Version="0.0.4" />
+    <PackageReference Include="Platform.Threading" Version="0.0.5" />
     <PackageReference Include="Platform.Unsafe" Version="0.0.2" />
   </ItemGroup>
 
