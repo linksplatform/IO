@@ -1,6 +1,8 @@
 ﻿using System.IO;
 using Platform.Unsafe;
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+
 namespace Platform.IO
 {
     public static class StreamExtensions

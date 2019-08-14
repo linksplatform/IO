@@ -3,6 +3,8 @@ using System.Threading;
 using Platform.Disposables;
 using Platform.Threading;
 
+#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
+
 namespace Platform.IO
 {
     public class ConsoleCancellationHandler : DisposableBase
