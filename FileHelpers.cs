@@ -26,12 +26,7 @@ namespace Platform.IO
             }
         }
 
-        private static FileStream GetValidFileStreamOrDefault<TStruct>(string path)
-            where TStruct : struct
-        {
-            var elementSize = Structure<TStruct>.Size;
-            return GetValidFileStreamOrDefault(path, elementSize);
-        }
+        private static FileStream GetValidFileStreamOrDefault<TStruct>(string path) where TStruct : struct => GetValidFileStreamOrDefault(path, Structure<TStruct>.Size);
 
         private static FileStream GetValidFileStreamOrDefault(string path, int elementSize)
         {

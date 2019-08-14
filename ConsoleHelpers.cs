@@ -19,13 +19,15 @@ namespace Platform.IO
             if (args != null && args.Length > index)
             {
                 result = args[index];
+                result = (result ?? "").Trim().Trim('"').Trim();
             }
             else
             {
                 Console.Write($"{readMessage}: ");
                 result = Console.ReadLine();
+                result = (result ?? "").Trim();
             }
-            return (result ?? "").Trim().Trim('"').Trim();
+            return result;
         }
 
         [Conditional("DEBUG")]

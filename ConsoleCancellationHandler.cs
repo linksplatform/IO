@@ -33,7 +33,7 @@ namespace Platform.IO
         private void OnCancelKeyPress(object sender, ConsoleCancelEventArgs e)
         {
             e.Cancel = true;
-            if (!Source.IsCancellationRequested)
+            if (NoCancellationRequested)
             {
                 Source.Cancel();
                 Console.WriteLine("Stopping...");

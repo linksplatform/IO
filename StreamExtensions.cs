@@ -17,8 +17,7 @@ namespace Platform.IO
         {
             var size = Structure<T>.Size;
             var buffer = new byte[size];
-            var read = stream.Read(buffer, 0, size);
-            return read < size ? default : buffer.ToStructure<T>();
+            return stream.Read(buffer, 0, size) == size ? buffer.ToStructure<T>() : default;
         }
 
         public static T[] ReadAll<T>(this Stream stream)
