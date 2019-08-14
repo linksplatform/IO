@@ -7,9 +7,9 @@ namespace Platform.IO
 {
     public class ConsoleCancellationHandler : DisposableBase
     {
-        public CancellationTokenSource Source { get; private set; }
+        public CancellationTokenSource Source { get; }
 
-        public CancellationToken Token { get; private set; }
+        public CancellationToken Token { get; }
 
         public bool IsCancellationRequested => Source.IsCancellationRequested;
 
