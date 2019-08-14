@@ -29,7 +29,7 @@ namespace Platform.IO
         private static FileStream GetValidFileStreamOrDefault<TStruct>(string path)
             where TStruct : struct
         {
-            var elementSize = StructureHelpers.SizeOf<TStruct>();
+            var elementSize = Structure<TStruct>.Size;
             return GetValidFileStreamOrDefault(path, elementSize);
         }
 
@@ -50,7 +50,7 @@ namespace Platform.IO
         public static T ReadLastOrDefault<T>(string path)
             where T : struct
         {
-            var elementSize = StructureHelpers.SizeOf<T>();
+            var elementSize = Structure<T>.Size;
             using (var reader = GetValidFileStreamOrDefault(path, elementSize))
             {
                 if (reader == null)

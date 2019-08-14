@@ -26,10 +26,7 @@ namespace Platform.IO
             Console.CancelKeyPress += OnCancelKeyPress;
         }
 
-        public ConsoleCancellationHandler()
-            : this(true)
-        {
-        }
+        public ConsoleCancellationHandler() : this(true) { }
 
         public void ForceCancellation() => Source.Cancel();
 
@@ -51,13 +48,13 @@ namespace Platform.IO
             }
         }
 
-        protected override void DisposeCore(bool manual, bool wasDisposed)
+        protected override void Dispose(bool manual, bool wasDisposed)
         {
             if (!wasDisposed)
             {
                 Console.CancelKeyPress -= OnCancelKeyPress;
+                Source.DisposeIfPossible();
             }
-            Disposable.TryDispose(Source);
         }
     }
 }
