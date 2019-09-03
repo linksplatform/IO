@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using Platform.Collections;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -21,14 +22,13 @@ namespace Platform.IO
             if (args != null && args.Length > index)
             {
                 result = args[index];
-                result = (result ?? "").Trim().Trim('"').Trim();
             }
             else
             {
                 Console.Write($"{readMessage}: ");
                 result = Console.ReadLine();
-                result = (result ?? "").Trim();
             }
+            result = (result ?? "").Trim().TrimSingle('"').Trim();
             return result;
         }
 
