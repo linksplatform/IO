@@ -7,44 +7,28 @@ using Platform.Threading;
 
 namespace Platform.IO
 {
-    public class ConsoleCancellationHandler : DisposableBase
+    public class ConsoleCancellation : DisposableBase
     {
         public CancellationTokenSource Source { get; }
 
         public CancellationToken Token { get; }
 
-        public bool IsCancellationRequested => Source.IsCancellationRequested;
+        public bool IsRequested => Source.IsCancellationRequested;
 
-        public bool NoCancellationRequested => !Source.IsCancellationRequested;
+        public bool NotRequested => !Source.IsCancellationRequested;
 
-        public ConsoleCancellationHandler(bool showDefaultIntroMessage)
+        public ConsoleCancellation()
         {
-            if (showDefaultIntroMessage)
-            {
-                Console.WriteLine("Press CTRL+C to stop.");
-            }
             Source = new CancellationTokenSource();
             Token = Source.Token;
             Console.CancelKeyPress += OnCancelKeyPress;
         }
 
-        public ConsoleCancellationHandler() : this(true) { }
-
         public void ForceCancellation() => Source.Cancel();
-
-        private void OnCancelKeyPress(object sender, ConsoleCancelEventArgs e)
-        {
-            e.Cancel = true;
-            if (NoCancellationRequested)
-            {
-                Source.Cancel();
-                Console.WriteLine("Stopping...");
-            }
-        }
 
         public void Wait()
         {
-            while (NoCancellationRequested)
+            while (NotRequested)
             {
                 ThreadHelpers.Sleep();
             }
@@ -56,6 +40,15 @@ namespace Platform.IO
             {
                 Console.CancelKeyPress -= OnCancelKeyPress;
                 Source.DisposeIfPossible();
+            }
+        }
+
+        private void OnCancelKeyPress(object sender, ConsoleCancelEventArgs e)
+        {
+            e.Cancel = true;
+            if (NotRequested)
+            {
+                Source.Cancel();
             }
         }
     }
