@@ -7,122 +7,116 @@ references:
   commentId: N:Platform.IO
   fullName: Platform.IO
   nameWithType: Platform.IO
-- uid: Platform.IO.ConsoleCancellationHandler
-  name: ConsoleCancellationHandler
-  href: api/Platform.IO.ConsoleCancellationHandler.html
-  commentId: T:Platform.IO.ConsoleCancellationHandler
-  fullName: Platform.IO.ConsoleCancellationHandler
-  nameWithType: ConsoleCancellationHandler
-- uid: Platform.IO.ConsoleCancellationHandler.#ctor
-  name: ConsoleCancellationHandler()
-  href: api/Platform.IO.ConsoleCancellationHandler.html#Platform_IO_ConsoleCancellationHandler__ctor
-  commentId: M:Platform.IO.ConsoleCancellationHandler.#ctor
-  fullName: Platform.IO.ConsoleCancellationHandler.ConsoleCancellationHandler()
-  nameWithType: ConsoleCancellationHandler.ConsoleCancellationHandler()
-- uid: Platform.IO.ConsoleCancellationHandler.#ctor(System.Boolean)
-  name: ConsoleCancellationHandler(Boolean)
-  href: api/Platform.IO.ConsoleCancellationHandler.html#Platform_IO_ConsoleCancellationHandler__ctor_System_Boolean_
-  commentId: M:Platform.IO.ConsoleCancellationHandler.#ctor(System.Boolean)
-  fullName: Platform.IO.ConsoleCancellationHandler.ConsoleCancellationHandler(System.Boolean)
-  nameWithType: ConsoleCancellationHandler.ConsoleCancellationHandler(Boolean)
-- uid: Platform.IO.ConsoleCancellationHandler.#ctor*
-  name: ConsoleCancellationHandler
-  href: api/Platform.IO.ConsoleCancellationHandler.html#Platform_IO_ConsoleCancellationHandler__ctor_
-  commentId: Overload:Platform.IO.ConsoleCancellationHandler.#ctor
+- uid: Platform.IO.ConsoleCancellation
+  name: ConsoleCancellation
+  href: api/Platform.IO.ConsoleCancellation.html
+  commentId: T:Platform.IO.ConsoleCancellation
+  fullName: Platform.IO.ConsoleCancellation
+  nameWithType: ConsoleCancellation
+- uid: Platform.IO.ConsoleCancellation.#ctor
+  name: ConsoleCancellation()
+  href: api/Platform.IO.ConsoleCancellation.html#Platform_IO_ConsoleCancellation__ctor
+  commentId: M:Platform.IO.ConsoleCancellation.#ctor
+  fullName: Platform.IO.ConsoleCancellation.ConsoleCancellation()
+  nameWithType: ConsoleCancellation.ConsoleCancellation()
+- uid: Platform.IO.ConsoleCancellation.#ctor*
+  name: ConsoleCancellation
+  href: api/Platform.IO.ConsoleCancellation.html#Platform_IO_ConsoleCancellation__ctor_
+  commentId: Overload:Platform.IO.ConsoleCancellation.#ctor
   isSpec: "True"
-  fullName: Platform.IO.ConsoleCancellationHandler.ConsoleCancellationHandler
-  nameWithType: ConsoleCancellationHandler.ConsoleCancellationHandler
-- uid: Platform.IO.ConsoleCancellationHandler.Dispose(System.Boolean,System.Boolean)
+  fullName: Platform.IO.ConsoleCancellation.ConsoleCancellation
+  nameWithType: ConsoleCancellation.ConsoleCancellation
+- uid: Platform.IO.ConsoleCancellation.Dispose(System.Boolean,System.Boolean)
   name: Dispose(Boolean, Boolean)
-  href: api/Platform.IO.ConsoleCancellationHandler.html#Platform_IO_ConsoleCancellationHandler_Dispose_System_Boolean_System_Boolean_
-  commentId: M:Platform.IO.ConsoleCancellationHandler.Dispose(System.Boolean,System.Boolean)
-  fullName: Platform.IO.ConsoleCancellationHandler.Dispose(System.Boolean, System.Boolean)
-  nameWithType: ConsoleCancellationHandler.Dispose(Boolean, Boolean)
-- uid: Platform.IO.ConsoleCancellationHandler.Dispose*
+  href: api/Platform.IO.ConsoleCancellation.html#Platform_IO_ConsoleCancellation_Dispose_System_Boolean_System_Boolean_
+  commentId: M:Platform.IO.ConsoleCancellation.Dispose(System.Boolean,System.Boolean)
+  fullName: Platform.IO.ConsoleCancellation.Dispose(System.Boolean, System.Boolean)
+  nameWithType: ConsoleCancellation.Dispose(Boolean, Boolean)
+- uid: Platform.IO.ConsoleCancellation.Dispose*
   name: Dispose
-  href: api/Platform.IO.ConsoleCancellationHandler.html#Platform_IO_ConsoleCancellationHandler_Dispose_
-  commentId: Overload:Platform.IO.ConsoleCancellationHandler.Dispose
+  href: api/Platform.IO.ConsoleCancellation.html#Platform_IO_ConsoleCancellation_Dispose_
+  commentId: Overload:Platform.IO.ConsoleCancellation.Dispose
   isSpec: "True"
-  fullName: Platform.IO.ConsoleCancellationHandler.Dispose
-  nameWithType: ConsoleCancellationHandler.Dispose
-- uid: Platform.IO.ConsoleCancellationHandler.ForceCancellation
+  fullName: Platform.IO.ConsoleCancellation.Dispose
+  nameWithType: ConsoleCancellation.Dispose
+- uid: Platform.IO.ConsoleCancellation.ForceCancellation
   name: ForceCancellation()
-  href: api/Platform.IO.ConsoleCancellationHandler.html#Platform_IO_ConsoleCancellationHandler_ForceCancellation
-  commentId: M:Platform.IO.ConsoleCancellationHandler.ForceCancellation
-  fullName: Platform.IO.ConsoleCancellationHandler.ForceCancellation()
-  nameWithType: ConsoleCancellationHandler.ForceCancellation()
-- uid: Platform.IO.ConsoleCancellationHandler.ForceCancellation*
+  href: api/Platform.IO.ConsoleCancellation.html#Platform_IO_ConsoleCancellation_ForceCancellation
+  commentId: M:Platform.IO.ConsoleCancellation.ForceCancellation
+  fullName: Platform.IO.ConsoleCancellation.ForceCancellation()
+  nameWithType: ConsoleCancellation.ForceCancellation()
+- uid: Platform.IO.ConsoleCancellation.ForceCancellation*
   name: ForceCancellation
-  href: api/Platform.IO.ConsoleCancellationHandler.html#Platform_IO_ConsoleCancellationHandler_ForceCancellation_
-  commentId: Overload:Platform.IO.ConsoleCancellationHandler.ForceCancellation
+  href: api/Platform.IO.ConsoleCancellation.html#Platform_IO_ConsoleCancellation_ForceCancellation_
+  commentId: Overload:Platform.IO.ConsoleCancellation.ForceCancellation
   isSpec: "True"
-  fullName: Platform.IO.ConsoleCancellationHandler.ForceCancellation
-  nameWithType: ConsoleCancellationHandler.ForceCancellation
-- uid: Platform.IO.ConsoleCancellationHandler.IsCancellationRequested
-  name: IsCancellationRequested
-  href: api/Platform.IO.ConsoleCancellationHandler.html#Platform_IO_ConsoleCancellationHandler_IsCancellationRequested
-  commentId: P:Platform.IO.ConsoleCancellationHandler.IsCancellationRequested
-  fullName: Platform.IO.ConsoleCancellationHandler.IsCancellationRequested
-  nameWithType: ConsoleCancellationHandler.IsCancellationRequested
-- uid: Platform.IO.ConsoleCancellationHandler.IsCancellationRequested*
-  name: IsCancellationRequested
-  href: api/Platform.IO.ConsoleCancellationHandler.html#Platform_IO_ConsoleCancellationHandler_IsCancellationRequested_
-  commentId: Overload:Platform.IO.ConsoleCancellationHandler.IsCancellationRequested
+  fullName: Platform.IO.ConsoleCancellation.ForceCancellation
+  nameWithType: ConsoleCancellation.ForceCancellation
+- uid: Platform.IO.ConsoleCancellation.IsRequested
+  name: IsRequested
+  href: api/Platform.IO.ConsoleCancellation.html#Platform_IO_ConsoleCancellation_IsRequested
+  commentId: P:Platform.IO.ConsoleCancellation.IsRequested
+  fullName: Platform.IO.ConsoleCancellation.IsRequested
+  nameWithType: ConsoleCancellation.IsRequested
+- uid: Platform.IO.ConsoleCancellation.IsRequested*
+  name: IsRequested
+  href: api/Platform.IO.ConsoleCancellation.html#Platform_IO_ConsoleCancellation_IsRequested_
+  commentId: Overload:Platform.IO.ConsoleCancellation.IsRequested
   isSpec: "True"
-  fullName: Platform.IO.ConsoleCancellationHandler.IsCancellationRequested
-  nameWithType: ConsoleCancellationHandler.IsCancellationRequested
-- uid: Platform.IO.ConsoleCancellationHandler.NoCancellationRequested
-  name: NoCancellationRequested
-  href: api/Platform.IO.ConsoleCancellationHandler.html#Platform_IO_ConsoleCancellationHandler_NoCancellationRequested
-  commentId: P:Platform.IO.ConsoleCancellationHandler.NoCancellationRequested
-  fullName: Platform.IO.ConsoleCancellationHandler.NoCancellationRequested
-  nameWithType: ConsoleCancellationHandler.NoCancellationRequested
-- uid: Platform.IO.ConsoleCancellationHandler.NoCancellationRequested*
-  name: NoCancellationRequested
-  href: api/Platform.IO.ConsoleCancellationHandler.html#Platform_IO_ConsoleCancellationHandler_NoCancellationRequested_
-  commentId: Overload:Platform.IO.ConsoleCancellationHandler.NoCancellationRequested
+  fullName: Platform.IO.ConsoleCancellation.IsRequested
+  nameWithType: ConsoleCancellation.IsRequested
+- uid: Platform.IO.ConsoleCancellation.NotRequested
+  name: NotRequested
+  href: api/Platform.IO.ConsoleCancellation.html#Platform_IO_ConsoleCancellation_NotRequested
+  commentId: P:Platform.IO.ConsoleCancellation.NotRequested
+  fullName: Platform.IO.ConsoleCancellation.NotRequested
+  nameWithType: ConsoleCancellation.NotRequested
+- uid: Platform.IO.ConsoleCancellation.NotRequested*
+  name: NotRequested
+  href: api/Platform.IO.ConsoleCancellation.html#Platform_IO_ConsoleCancellation_NotRequested_
+  commentId: Overload:Platform.IO.ConsoleCancellation.NotRequested
   isSpec: "True"
-  fullName: Platform.IO.ConsoleCancellationHandler.NoCancellationRequested
-  nameWithType: ConsoleCancellationHandler.NoCancellationRequested
-- uid: Platform.IO.ConsoleCancellationHandler.Source
+  fullName: Platform.IO.ConsoleCancellation.NotRequested
+  nameWithType: ConsoleCancellation.NotRequested
+- uid: Platform.IO.ConsoleCancellation.Source
   name: Source
-  href: api/Platform.IO.ConsoleCancellationHandler.html#Platform_IO_ConsoleCancellationHandler_Source
-  commentId: P:Platform.IO.ConsoleCancellationHandler.Source
-  fullName: Platform.IO.ConsoleCancellationHandler.Source
-  nameWithType: ConsoleCancellationHandler.Source
-- uid: Platform.IO.ConsoleCancellationHandler.Source*
+  href: api/Platform.IO.ConsoleCancellation.html#Platform_IO_ConsoleCancellation_Source
+  commentId: P:Platform.IO.ConsoleCancellation.Source
+  fullName: Platform.IO.ConsoleCancellation.Source
+  nameWithType: ConsoleCancellation.Source
+- uid: Platform.IO.ConsoleCancellation.Source*
   name: Source
-  href: api/Platform.IO.ConsoleCancellationHandler.html#Platform_IO_ConsoleCancellationHandler_Source_
-  commentId: Overload:Platform.IO.ConsoleCancellationHandler.Source
+  href: api/Platform.IO.ConsoleCancellation.html#Platform_IO_ConsoleCancellation_Source_
+  commentId: Overload:Platform.IO.ConsoleCancellation.Source
   isSpec: "True"
-  fullName: Platform.IO.ConsoleCancellationHandler.Source
-  nameWithType: ConsoleCancellationHandler.Source
-- uid: Platform.IO.ConsoleCancellationHandler.Token
+  fullName: Platform.IO.ConsoleCancellation.Source
+  nameWithType: ConsoleCancellation.Source
+- uid: Platform.IO.ConsoleCancellation.Token
   name: Token
-  href: api/Platform.IO.ConsoleCancellationHandler.html#Platform_IO_ConsoleCancellationHandler_Token
-  commentId: P:Platform.IO.ConsoleCancellationHandler.Token
-  fullName: Platform.IO.ConsoleCancellationHandler.Token
-  nameWithType: ConsoleCancellationHandler.Token
-- uid: Platform.IO.ConsoleCancellationHandler.Token*
+  href: api/Platform.IO.ConsoleCancellation.html#Platform_IO_ConsoleCancellation_Token
+  commentId: P:Platform.IO.ConsoleCancellation.Token
+  fullName: Platform.IO.ConsoleCancellation.Token
+  nameWithType: ConsoleCancellation.Token
+- uid: Platform.IO.ConsoleCancellation.Token*
   name: Token
-  href: api/Platform.IO.ConsoleCancellationHandler.html#Platform_IO_ConsoleCancellationHandler_Token_
-  commentId: Overload:Platform.IO.ConsoleCancellationHandler.Token
+  href: api/Platform.IO.ConsoleCancellation.html#Platform_IO_ConsoleCancellation_Token_
+  commentId: Overload:Platform.IO.ConsoleCancellation.Token
   isSpec: "True"
-  fullName: Platform.IO.ConsoleCancellationHandler.Token
-  nameWithType: ConsoleCancellationHandler.Token
-- uid: Platform.IO.ConsoleCancellationHandler.Wait
+  fullName: Platform.IO.ConsoleCancellation.Token
+  nameWithType: ConsoleCancellation.Token
+- uid: Platform.IO.ConsoleCancellation.Wait
   name: Wait()
-  href: api/Platform.IO.ConsoleCancellationHandler.html#Platform_IO_ConsoleCancellationHandler_Wait
-  commentId: M:Platform.IO.ConsoleCancellationHandler.Wait
-  fullName: Platform.IO.ConsoleCancellationHandler.Wait()
-  nameWithType: ConsoleCancellationHandler.Wait()
-- uid: Platform.IO.ConsoleCancellationHandler.Wait*
+  href: api/Platform.IO.ConsoleCancellation.html#Platform_IO_ConsoleCancellation_Wait
+  commentId: M:Platform.IO.ConsoleCancellation.Wait
+  fullName: Platform.IO.ConsoleCancellation.Wait()
+  nameWithType: ConsoleCancellation.Wait()
+- uid: Platform.IO.ConsoleCancellation.Wait*
   name: Wait
-  href: api/Platform.IO.ConsoleCancellationHandler.html#Platform_IO_ConsoleCancellationHandler_Wait_
-  commentId: Overload:Platform.IO.ConsoleCancellationHandler.Wait
+  href: api/Platform.IO.ConsoleCancellation.html#Platform_IO_ConsoleCancellation_Wait_
+  commentId: Overload:Platform.IO.ConsoleCancellation.Wait
   isSpec: "True"
-  fullName: Platform.IO.ConsoleCancellationHandler.Wait
-  nameWithType: ConsoleCancellationHandler.Wait
+  fullName: Platform.IO.ConsoleCancellation.Wait
+  nameWithType: ConsoleCancellation.Wait
 - uid: Platform.IO.ConsoleHelpers
   name: ConsoleHelpers
   href: api/Platform.IO.ConsoleHelpers.html
