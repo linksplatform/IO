@@ -4,13 +4,13 @@
     <Description>LinksPlatform's Platform.IO Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.IO</AssemblyTitle>
-    <VersionPrefix>0.0.6</VersionPrefix>
+    <VersionPrefix>0.1.0</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFrameworks Condition="'$(OS)' == 'Windows_NT'">netstandard2.0;net461</TargetFrameworks>
     <TargetFramework Condition="'$(OS)' != 'Windows_NT'">netcoreapp2.0</TargetFramework>
     <AssemblyName>Platform.IO</AssemblyName>
     <PackageId>Platform.IO</PackageId>
-    <PackageTags>LinksPlatform;IO;FileHelpers;StreamExtensions;ConsoleHelpers;ConsoleCancellationHandler</PackageTags>
+    <PackageTags>LinksPlatform;IO;FileHelpers;StreamExtensions;ConsoleHelpers;ConsoleCancellation</PackageTags>
     <PackageIconUrl>https://raw.githubusercontent.com/linksplatform/Documentation/18469f4d033ee9a5b7b84caab9c585acab2ac519/doc/Avatar-rainbow-icon-64x64.png</PackageIconUrl>
     <PackageProjectUrl>https://linksplatform.github.io/IO</PackageProjectUrl>
     <PackageLicenseExpression>MIT</PackageLicenseExpression>
@@ -22,7 +22,15 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <PackageReleaseNotes>Platform.Unsafe dependency updated from 0.1.0 to 0.1.1.</PackageReleaseNotes>
+    <PackageReleaseNotes>Added support for net461 (.NET Framework 4.6.1).
+Platform.Threading dependency updated from 0.0.5 to 0.1.0.
+Platform.Unsafe dependency updated from 0.1.1 to 0.1.2.
+ConsoleCancellationHandler renamed to ConsoleCancellation.
+All console output in ConsoleCancellation removed.
+IsCancellationRequested and NoCancellationRequested properties of ConsoleCancellation class renamed to IsRequested and NotRequested.
+Issues fix.
+
+This release is not backward compatible with the previous 0.0.6 release.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup>
