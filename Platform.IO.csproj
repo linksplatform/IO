@@ -4,7 +4,7 @@
     <Description>LinksPlatform's Platform.IO Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.IO</AssemblyTitle>
-    <VersionPrefix>0.1.0</VersionPrefix>
+    <VersionPrefix>0.1.1</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFrameworks>net471;netstandard2.0</TargetFrameworks>
     <AssemblyName>Platform.IO</AssemblyName>
@@ -22,15 +22,10 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <LangVersion>Latest</LangVersion>
-    <PackageReleaseNotes>Added support for net461 (.NET Framework 4.6.1).
-Platform.Threading dependency updated from 0.0.5 to 0.1.0.
-Platform.Unsafe dependency updated from 0.1.1 to 0.1.2.
-ConsoleCancellationHandler renamed to ConsoleCancellation.
-All console output in ConsoleCancellation removed.
-IsCancellationRequested and NoCancellationRequested properties of ConsoleCancellation class renamed to IsRequested and NotRequested.
-Issues fix.
-
-This release is not backward compatible with the previous 0.0.6 release.</PackageReleaseNotes>
+    <PackageReleaseNotes>The minumum supported version of .NET Framework is now 4.7.1.
+Platform.Unsafe dependency updated from 0.1.2 to 0.1.3.
+Project file updated to support multiple build environments: dotnet, Travis CI, MonoDevelop, and Visual Studio.
+Travis CI configuration updated to support automatic NuGet package publishing.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup Condition="$(TargetFramework.StartsWith('net4')) AND '$(MSBuildRuntimeType)' == 'Core' AND '$(OS)' != 'Windows_NT'">
