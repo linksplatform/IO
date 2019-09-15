@@ -6,8 +6,7 @@
     <AssemblyTitle>Platform.IO</AssemblyTitle>
     <VersionPrefix>0.1.0</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
-    <TargetFrameworks Condition="'$(OS)' == 'Windows_NT'">netstandard2.0;net461</TargetFrameworks>
-    <TargetFramework Condition="'$(OS)' != 'Windows_NT'">netcoreapp2.0</TargetFramework>
+    <TargetFrameworks>net471;netstandard2.0</TargetFrameworks>
     <AssemblyName>Platform.IO</AssemblyName>
     <PackageId>Platform.IO</PackageId>
     <PackageTags>LinksPlatform;IO;FileHelpers;StreamExtensions;ConsoleHelpers;ConsoleCancellation</PackageTags>
@@ -22,6 +21,7 @@
     <GenerateDocumentationFile>true</GenerateDocumentationFile>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
+    <LangVersion>Latest</LangVersion>
     <PackageReleaseNotes>Added support for net461 (.NET Framework 4.6.1).
 Platform.Threading dependency updated from 0.0.5 to 0.1.0.
 Platform.Unsafe dependency updated from 0.1.1 to 0.1.2.
@@ -32,6 +32,10 @@ Issues fix.
 
 This release is not backward compatible with the previous 0.0.6 release.</PackageReleaseNotes>
   </PropertyGroup>
+
+  <ItemGroup Condition="$(TargetFramework.StartsWith('net4')) AND '$(MSBuildRuntimeType)' == 'Core' AND '$(OS)' != 'Windows_NT'">
+    <PackageReference Include="Microsoft.NETFramework.ReferenceAssemblies" Version="1.0.0-preview.2" PrivateAssets="All" />
+  </ItemGroup>
 
   <ItemGroup>
     <PackageReference Include="Platform.Threading" Version="0.1.0" />
