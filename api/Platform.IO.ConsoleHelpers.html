@@ -90,35 +90,11 @@
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
     <div class="level1"><span class="xref">ConsoleHelpers</span></div>
   </div>
-  <div class="inheritedMembers">
-    <h5>Inherited Members</h5>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
-    </div>
-  </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Platform.IO.html">Platform.IO</a></h6>
   <h6><strong>Assembly</strong>: Platform.IO.dll</h6>
   <h5 id="Platform_IO_ConsoleHelpers_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public static class ConsoleHelpers</code></pre>
+    <pre><code class="lang-csharp hljs">public static class ConsoleHelpers : object</code></pre>
   </div>
   <h3 id="methods">Methods
   </h3>
@@ -127,7 +103,7 @@
     <a href="https://github.com/linksplatform/IO/new/master/apiSpec/new?filename=Platform_IO_ConsoleHelpers_Debug_System_String_System_Object___.md&amp;value=---%0Auid%3A%20Platform.IO.ConsoleHelpers.Debug(System.String%2CSystem.Object%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/linksplatform/IO/blob/bc76508cfa1d3d2a70b02f215e17ef2898d7ae49/ConsoleHelpers.cs/#L35">View Source</a>
+    <a href="https://github.com/linksplatform/IO/blob/f9efd689b49af70fd0fb4ce3b7ec04d59ddea254/ConsoleHelpers.cs/#L35">View Source</a>
   </span>
   <a id="Platform_IO_ConsoleHelpers_Debug_" data-uid="Platform.IO.ConsoleHelpers.Debug*"></a>
   <h4 id="Platform_IO_ConsoleHelpers_Debug_System_String_System_Object___" data-uid="Platform.IO.ConsoleHelpers.Debug(System.String,System.Object[])">Debug(String, Object[])</h4>
@@ -135,8 +111,7 @@
   <div class="markdown level1 conceptual"></div>
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">[Conditional(&quot;DEBUG&quot;)]
-public static void Debug(string format, params object[] args)</code></pre>
+    <pre><code class="lang-csharp hljs">public static void Debug(string format, params object[] args)</code></pre>
   </div>
   <h5 class="parameters">Parameters</h5>
   <table class="table table-bordered table-striped table-condensed">
@@ -165,7 +140,7 @@ public static void Debug(string format, params object[] args)</code></pre>
     <a href="https://github.com/linksplatform/IO/new/master/apiSpec/new?filename=Platform_IO_ConsoleHelpers_GetOrReadArgument_System_Int32_System_String_System_String___.md&amp;value=---%0Auid%3A%20Platform.IO.ConsoleHelpers.GetOrReadArgument(System.Int32%2CSystem.String%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/linksplatform/IO/blob/bc76508cfa1d3d2a70b02f215e17ef2898d7ae49/ConsoleHelpers.cs/#L19">View Source</a>
+    <a href="https://github.com/linksplatform/IO/blob/f9efd689b49af70fd0fb4ce3b7ec04d59ddea254/ConsoleHelpers.cs/#L19">View Source</a>
   </span>
   <a id="Platform_IO_ConsoleHelpers_GetOrReadArgument_" data-uid="Platform.IO.ConsoleHelpers.GetOrReadArgument*"></a>
   <h4 id="Platform_IO_ConsoleHelpers_GetOrReadArgument_System_Int32_System_String_System_String___" data-uid="Platform.IO.ConsoleHelpers.GetOrReadArgument(System.Int32,System.String,System.String[])">GetOrReadArgument(Int32, String, String[])</h4>
@@ -222,7 +197,7 @@ public static void Debug(string format, params object[] args)</code></pre>
     <a href="https://github.com/linksplatform/IO/new/master/apiSpec/new?filename=Platform_IO_ConsoleHelpers_GetOrReadArgument_System_Int32_System_String___.md&amp;value=---%0Auid%3A%20Platform.IO.ConsoleHelpers.GetOrReadArgument(System.Int32%2CSystem.String%5B%5D)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/linksplatform/IO/blob/bc76508cfa1d3d2a70b02f215e17ef2898d7ae49/ConsoleHelpers.cs/#L17">View Source</a>
+    <a href="https://github.com/linksplatform/IO/blob/f9efd689b49af70fd0fb4ce3b7ec04d59ddea254/ConsoleHelpers.cs/#L17">View Source</a>
   </span>
   <a id="Platform_IO_ConsoleHelpers_GetOrReadArgument_" data-uid="Platform.IO.ConsoleHelpers.GetOrReadArgument*"></a>
   <h4 id="Platform_IO_ConsoleHelpers_GetOrReadArgument_System_Int32_System_String___" data-uid="Platform.IO.ConsoleHelpers.GetOrReadArgument(System.Int32,System.String[])">GetOrReadArgument(Int32, String[])</h4>
@@ -274,7 +249,7 @@ public static void Debug(string format, params object[] args)</code></pre>
     <a href="https://github.com/linksplatform/IO/new/master/apiSpec/new?filename=Platform_IO_ConsoleHelpers_PressAnyKeyToContinue.md&amp;value=---%0Auid%3A%20Platform.IO.ConsoleHelpers.PressAnyKeyToContinue%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/linksplatform/IO/blob/bc76508cfa1d3d2a70b02f215e17ef2898d7ae49/ConsoleHelpers.cs/#L11">View Source</a>
+    <a href="https://github.com/linksplatform/IO/blob/f9efd689b49af70fd0fb4ce3b7ec04d59ddea254/ConsoleHelpers.cs/#L11">View Source</a>
   </span>
   <a id="Platform_IO_ConsoleHelpers_PressAnyKeyToContinue_" data-uid="Platform.IO.ConsoleHelpers.PressAnyKeyToContinue*"></a>
   <h4 id="Platform_IO_ConsoleHelpers_PressAnyKeyToContinue" data-uid="Platform.IO.ConsoleHelpers.PressAnyKeyToContinue">PressAnyKeyToContinue()</h4>
@@ -295,7 +270,7 @@ public static void Debug(string format, params object[] args)</code></pre>
                     <a href="https://github.com/linksplatform/IO/new/master/apiSpec/new?filename=Platform_IO_ConsoleHelpers.md&amp;value=---%0Auid%3A%20Platform.IO.ConsoleHelpers%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/linksplatform/IO/blob/bc76508cfa1d3d2a70b02f215e17ef2898d7ae49/ConsoleHelpers.cs/#L9" class="contribution-link">View Source</a>
+                    <a href="https://github.com/linksplatform/IO/blob/f9efd689b49af70fd0fb4ce3b7ec04d59ddea254/ConsoleHelpers.cs/#L9" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>
