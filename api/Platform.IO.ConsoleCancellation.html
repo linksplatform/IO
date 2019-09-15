@@ -88,13 +88,61 @@
   <div class="inheritance">
     <h5>Inheritance</h5>
     <div class="level0"><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object">Object</a></div>
-    <div class="level1"><span class="xref">ConsoleCancellation</span></div>
+    <div class="level1"><span class="xref">Platform.Disposables.DisposableBase</span></div>
+    <div class="level2"><span class="xref">ConsoleCancellation</span></div>
+  </div>
+  <div classs="implements">
+    <h5>Implements</h5>
+    <div><span class="xref">Platform.Disposables.IDisposable</span></div>
+    <div><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">IDisposable</a></div>
+  </div>
+  <div class="inheritedMembers">
+    <h5>Inherited Members</h5>
+    <div>
+      <span class="xref">Platform.Disposables.DisposableBase.Dispose()</span>
+    </div>
+    <div>
+      <span class="xref">Platform.Disposables.DisposableBase.Destruct()</span>
+    </div>
+    <div>
+      <span class="xref">Platform.Disposables.DisposableBase.IsDisposed</span>
+    </div>
+    <div>
+      <span class="xref">Platform.Disposables.DisposableBase.ObjectName</span>
+    </div>
+    <div>
+      <span class="xref">Platform.Disposables.DisposableBase.AllowMultipleDisposeAttempts</span>
+    </div>
+    <div>
+      <span class="xref">Platform.Disposables.DisposableBase.AllowMultipleDisposeCalls</span>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_">Object.Equals(Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.equals#System_Object_Equals_System_Object_System_Object_">Object.Equals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gethashcode#System_Object_GetHashCode">Object.GetHashCode()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.gettype#System_Object_GetType">Object.GetType()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.memberwiseclone#System_Object_MemberwiseClone">Object.MemberwiseClone()</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.referenceequals#System_Object_ReferenceEquals_System_Object_System_Object_">Object.ReferenceEquals(Object, Object)</a>
+    </div>
+    <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.object.tostring#System_Object_ToString">Object.ToString()</a>
+    </div>
   </div>
   <h6><strong>Namespace</strong>: <a class="xref" href="Platform.IO.html">Platform.IO</a></h6>
   <h6><strong>Assembly</strong>: Platform.IO.dll</h6>
   <h5 id="Platform_IO_ConsoleCancellation_syntax">Syntax</h5>
   <div class="codewrapper">
-    <pre><code class="lang-csharp hljs">public class ConsoleCancellation : DisposableBase</code></pre>
+    <pre><code class="lang-csharp hljs">public class ConsoleCancellation : DisposableBase, IDisposable, IDisposable</code></pre>
   </div>
   <h3 id="constructors">Constructors
   </h3>
@@ -103,7 +151,7 @@
     <a href="https://github.com/linksplatform/IO/new/master/apiSpec/new?filename=Platform_IO_ConsoleCancellation__ctor.md&amp;value=---%0Auid%3A%20Platform.IO.ConsoleCancellation.%23ctor%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/linksplatform/IO/blob/f9efd689b49af70fd0fb4ce3b7ec04d59ddea254/ConsoleCancellation.cs/#L20">View Source</a>
+    <a href="https://github.com/linksplatform/IO/blob/35b3fc9bb11793272dec84a75053ffc9689bd22d/ConsoleCancellation.cs/#L20">View Source</a>
   </span>
   <a id="Platform_IO_ConsoleCancellation__ctor_" data-uid="Platform.IO.ConsoleCancellation.#ctor*"></a>
   <h4 id="Platform_IO_ConsoleCancellation__ctor" data-uid="Platform.IO.ConsoleCancellation.#ctor">ConsoleCancellation()</h4>
@@ -120,7 +168,7 @@
     <a href="https://github.com/linksplatform/IO/new/master/apiSpec/new?filename=Platform_IO_ConsoleCancellation_IsRequested.md&amp;value=---%0Auid%3A%20Platform.IO.ConsoleCancellation.IsRequested%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/linksplatform/IO/blob/f9efd689b49af70fd0fb4ce3b7ec04d59ddea254/ConsoleCancellation.cs/#L16">View Source</a>
+    <a href="https://github.com/linksplatform/IO/blob/35b3fc9bb11793272dec84a75053ffc9689bd22d/ConsoleCancellation.cs/#L16">View Source</a>
   </span>
   <a id="Platform_IO_ConsoleCancellation_IsRequested_" data-uid="Platform.IO.ConsoleCancellation.IsRequested*"></a>
   <h4 id="Platform_IO_ConsoleCancellation_IsRequested" data-uid="Platform.IO.ConsoleCancellation.IsRequested">IsRequested</h4>
@@ -150,7 +198,7 @@
     <a href="https://github.com/linksplatform/IO/new/master/apiSpec/new?filename=Platform_IO_ConsoleCancellation_NotRequested.md&amp;value=---%0Auid%3A%20Platform.IO.ConsoleCancellation.NotRequested%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/linksplatform/IO/blob/f9efd689b49af70fd0fb4ce3b7ec04d59ddea254/ConsoleCancellation.cs/#L18">View Source</a>
+    <a href="https://github.com/linksplatform/IO/blob/35b3fc9bb11793272dec84a75053ffc9689bd22d/ConsoleCancellation.cs/#L18">View Source</a>
   </span>
   <a id="Platform_IO_ConsoleCancellation_NotRequested_" data-uid="Platform.IO.ConsoleCancellation.NotRequested*"></a>
   <h4 id="Platform_IO_ConsoleCancellation_NotRequested" data-uid="Platform.IO.ConsoleCancellation.NotRequested">NotRequested</h4>
@@ -180,7 +228,7 @@
     <a href="https://github.com/linksplatform/IO/new/master/apiSpec/new?filename=Platform_IO_ConsoleCancellation_Source.md&amp;value=---%0Auid%3A%20Platform.IO.ConsoleCancellation.Source%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/linksplatform/IO/blob/f9efd689b49af70fd0fb4ce3b7ec04d59ddea254/ConsoleCancellation.cs/#L12">View Source</a>
+    <a href="https://github.com/linksplatform/IO/blob/35b3fc9bb11793272dec84a75053ffc9689bd22d/ConsoleCancellation.cs/#L12">View Source</a>
   </span>
   <a id="Platform_IO_ConsoleCancellation_Source_" data-uid="Platform.IO.ConsoleCancellation.Source*"></a>
   <h4 id="Platform_IO_ConsoleCancellation_Source" data-uid="Platform.IO.ConsoleCancellation.Source">Source</h4>
@@ -200,7 +248,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">CancellationTokenSource</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtokensource">CancellationTokenSource</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -210,7 +258,7 @@
     <a href="https://github.com/linksplatform/IO/new/master/apiSpec/new?filename=Platform_IO_ConsoleCancellation_Token.md&amp;value=---%0Auid%3A%20Platform.IO.ConsoleCancellation.Token%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/linksplatform/IO/blob/f9efd689b49af70fd0fb4ce3b7ec04d59ddea254/ConsoleCancellation.cs/#L14">View Source</a>
+    <a href="https://github.com/linksplatform/IO/blob/35b3fc9bb11793272dec84a75053ffc9689bd22d/ConsoleCancellation.cs/#L14">View Source</a>
   </span>
   <a id="Platform_IO_ConsoleCancellation_Token_" data-uid="Platform.IO.ConsoleCancellation.Token*"></a>
   <h4 id="Platform_IO_ConsoleCancellation_Token" data-uid="Platform.IO.ConsoleCancellation.Token">Token</h4>
@@ -230,7 +278,7 @@
     </thead>
     <tbody>
       <tr>
-        <td><span class="xref">CancellationToken</span></td>
+        <td><a class="xref" href="https://docs.microsoft.com/dotnet/api/system.threading.cancellationtoken">CancellationToken</a></td>
         <td></td>
       </tr>
     </tbody>
@@ -242,7 +290,7 @@
     <a href="https://github.com/linksplatform/IO/new/master/apiSpec/new?filename=Platform_IO_ConsoleCancellation_Dispose_System_Boolean_System_Boolean_.md&amp;value=---%0Auid%3A%20Platform.IO.ConsoleCancellation.Dispose(System.Boolean%2CSystem.Boolean)%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/linksplatform/IO/blob/f9efd689b49af70fd0fb4ce3b7ec04d59ddea254/ConsoleCancellation.cs/#L37">View Source</a>
+    <a href="https://github.com/linksplatform/IO/blob/35b3fc9bb11793272dec84a75053ffc9689bd22d/ConsoleCancellation.cs/#L37">View Source</a>
   </span>
   <a id="Platform_IO_ConsoleCancellation_Dispose_" data-uid="Platform.IO.ConsoleCancellation.Dispose*"></a>
   <h4 id="Platform_IO_ConsoleCancellation_Dispose_System_Boolean_System_Boolean_" data-uid="Platform.IO.ConsoleCancellation.Dispose(System.Boolean,System.Boolean)">Dispose(Boolean, Boolean)</h4>
@@ -274,12 +322,14 @@
       </tr>
     </tbody>
   </table>
+  <h5 class="overrides">Overrides</h5>
+  <div><span class="xref">Platform.Disposables.DisposableBase.Dispose(System.Boolean, System.Boolean)</span></div>
   <span class="small pull-right mobile-hide">
     <span class="divider">|</span>
     <a href="https://github.com/linksplatform/IO/new/master/apiSpec/new?filename=Platform_IO_ConsoleCancellation_ForceCancellation.md&amp;value=---%0Auid%3A%20Platform.IO.ConsoleCancellation.ForceCancellation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/linksplatform/IO/blob/f9efd689b49af70fd0fb4ce3b7ec04d59ddea254/ConsoleCancellation.cs/#L27">View Source</a>
+    <a href="https://github.com/linksplatform/IO/blob/35b3fc9bb11793272dec84a75053ffc9689bd22d/ConsoleCancellation.cs/#L27">View Source</a>
   </span>
   <a id="Platform_IO_ConsoleCancellation_ForceCancellation_" data-uid="Platform.IO.ConsoleCancellation.ForceCancellation*"></a>
   <h4 id="Platform_IO_ConsoleCancellation_ForceCancellation" data-uid="Platform.IO.ConsoleCancellation.ForceCancellation">ForceCancellation()</h4>
@@ -294,7 +344,7 @@
     <a href="https://github.com/linksplatform/IO/new/master/apiSpec/new?filename=Platform_IO_ConsoleCancellation_Wait.md&amp;value=---%0Auid%3A%20Platform.IO.ConsoleCancellation.Wait%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A">Improve this Doc</a>
   </span>
   <span class="small pull-right mobile-hide">
-    <a href="https://github.com/linksplatform/IO/blob/f9efd689b49af70fd0fb4ce3b7ec04d59ddea254/ConsoleCancellation.cs/#L29">View Source</a>
+    <a href="https://github.com/linksplatform/IO/blob/35b3fc9bb11793272dec84a75053ffc9689bd22d/ConsoleCancellation.cs/#L29">View Source</a>
   </span>
   <a id="Platform_IO_ConsoleCancellation_Wait_" data-uid="Platform.IO.ConsoleCancellation.Wait*"></a>
   <h4 id="Platform_IO_ConsoleCancellation_Wait" data-uid="Platform.IO.ConsoleCancellation.Wait">Wait()</h4>
@@ -303,6 +353,13 @@
   <h5 class="decalaration">Declaration</h5>
   <div class="codewrapper">
     <pre><code class="lang-csharp hljs">public void Wait()</code></pre>
+  </div>
+  <h3 id="implements">Implements</h3>
+  <div>
+      <span class="xref">Platform.Disposables.IDisposable</span>
+  </div>
+  <div>
+      <a class="xref" href="https://docs.microsoft.com/dotnet/api/system.idisposable">System.IDisposable</a>
   </div>
 </article>
           </div>
@@ -315,7 +372,7 @@
                     <a href="https://github.com/linksplatform/IO/new/master/apiSpec/new?filename=Platform_IO_ConsoleCancellation.md&amp;value=---%0Auid%3A%20Platform.IO.ConsoleCancellation%0Asummary%3A%20'*You%20can%20override%20summary%20for%20the%20API%20here%20using%20*MARKDOWN*%20syntax'%0A---%0A%0A*Please%20type%20below%20more%20information%20about%20this%20API%3A*%0A%0A" class="contribution-link">Improve this Doc</a>
                   </li>
                   <li>
-                    <a href="https://github.com/linksplatform/IO/blob/f9efd689b49af70fd0fb4ce3b7ec04d59ddea254/ConsoleCancellation.cs/#L10" class="contribution-link">View Source</a>
+                    <a href="https://github.com/linksplatform/IO/blob/35b3fc9bb11793272dec84a75053ffc9689bd22d/ConsoleCancellation.cs/#L10" class="contribution-link">View Source</a>
                   </li>
                 </ul>
               </div>

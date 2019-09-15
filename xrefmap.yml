@@ -312,13 +312,13 @@ references:
   isSpec: "True"
   fullName: Platform.IO.StreamExtensions.ReadAll
   nameWithType: StreamExtensions.ReadAll
-- uid: Platform.IO.StreamExtensions.ReadAll``1(Stream)
+- uid: Platform.IO.StreamExtensions.ReadAll``1(System.IO.Stream)
   name: ReadAll<T>(Stream)
-  href: api/Platform.IO.StreamExtensions.html#Platform_IO_StreamExtensions_ReadAll__1_Stream_
-  commentId: M:Platform.IO.StreamExtensions.ReadAll``1(Stream)
+  href: api/Platform.IO.StreamExtensions.html#Platform_IO_StreamExtensions_ReadAll__1_System_IO_Stream_
+  commentId: M:Platform.IO.StreamExtensions.ReadAll``1(System.IO.Stream)
   name.vb: ReadAll(Of T)(Stream)
-  fullName: Platform.IO.StreamExtensions.ReadAll<T>(Stream)
-  fullName.vb: Platform.IO.StreamExtensions.ReadAll(Of T)(Stream)
+  fullName: Platform.IO.StreamExtensions.ReadAll<T>(System.IO.Stream)
+  fullName.vb: Platform.IO.StreamExtensions.ReadAll(Of T)(System.IO.Stream)
   nameWithType: StreamExtensions.ReadAll<T>(Stream)
   nameWithType.vb: StreamExtensions.ReadAll(Of T)(Stream)
 - uid: Platform.IO.StreamExtensions.ReadOrDefault*
@@ -328,13 +328,13 @@ references:
   isSpec: "True"
   fullName: Platform.IO.StreamExtensions.ReadOrDefault
   nameWithType: StreamExtensions.ReadOrDefault
-- uid: Platform.IO.StreamExtensions.ReadOrDefault``1(Stream)
+- uid: Platform.IO.StreamExtensions.ReadOrDefault``1(System.IO.Stream)
   name: ReadOrDefault<T>(Stream)
-  href: api/Platform.IO.StreamExtensions.html#Platform_IO_StreamExtensions_ReadOrDefault__1_Stream_
-  commentId: M:Platform.IO.StreamExtensions.ReadOrDefault``1(Stream)
+  href: api/Platform.IO.StreamExtensions.html#Platform_IO_StreamExtensions_ReadOrDefault__1_System_IO_Stream_
+  commentId: M:Platform.IO.StreamExtensions.ReadOrDefault``1(System.IO.Stream)
   name.vb: ReadOrDefault(Of T)(Stream)
-  fullName: Platform.IO.StreamExtensions.ReadOrDefault<T>(Stream)
-  fullName.vb: Platform.IO.StreamExtensions.ReadOrDefault(Of T)(Stream)
+  fullName: Platform.IO.StreamExtensions.ReadOrDefault<T>(System.IO.Stream)
+  fullName.vb: Platform.IO.StreamExtensions.ReadOrDefault(Of T)(System.IO.Stream)
   nameWithType: StreamExtensions.ReadOrDefault<T>(Stream)
   nameWithType.vb: StreamExtensions.ReadOrDefault(Of T)(Stream)
 - uid: Platform.IO.StreamExtensions.Write*
@@ -344,12 +344,12 @@ references:
   isSpec: "True"
   fullName: Platform.IO.StreamExtensions.Write
   nameWithType: StreamExtensions.Write
-- uid: Platform.IO.StreamExtensions.Write``1(Stream,``0)
+- uid: Platform.IO.StreamExtensions.Write``1(System.IO.Stream,``0)
   name: Write<T>(Stream, T)
-  href: api/Platform.IO.StreamExtensions.html#Platform_IO_StreamExtensions_Write__1_Stream___0_
-  commentId: M:Platform.IO.StreamExtensions.Write``1(Stream,``0)
+  href: api/Platform.IO.StreamExtensions.html#Platform_IO_StreamExtensions_Write__1_System_IO_Stream___0_
+  commentId: M:Platform.IO.StreamExtensions.Write``1(System.IO.Stream,``0)
   name.vb: Write(Of T)(Stream, T)
-  fullName: Platform.IO.StreamExtensions.Write<T>(Stream, T)
-  fullName.vb: Platform.IO.StreamExtensions.Write(Of T)(Stream, T)
+  fullName: Platform.IO.StreamExtensions.Write<T>(System.IO.Stream, T)
+  fullName.vb: Platform.IO.StreamExtensions.Write(Of T)(System.IO.Stream, T)
   nameWithType: StreamExtensions.Write<T>(Stream, T)
   nameWithType.vb: StreamExtensions.Write(Of T)(Stream, T)
