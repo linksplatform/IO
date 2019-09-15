@@ -35,7 +35,7 @@ This release is not backward compatible with the previous 0.0.6 release.</Packag
 
   <ItemGroup>
     <PackageReference Include="Platform.Threading" Version="0.1.0" />
-    <PackageReference Include="Platform.Unsafe" Version="0.1.2" />
+    <PackageReference Include="Platform.Unsafe" Version="0.1.3" />
   </ItemGroup>
 
 </Project>
