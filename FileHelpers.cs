@@ -16,20 +16,16 @@ namespace Platform.IO
         public static T[] ReadAll<T>(string path)
             where T : struct
         {
-            using (var reader = File.OpenRead(path))
-            {
-                return reader.ReadAll<T>();
-            }
+            using var reader = File.OpenRead(path);
+            return reader.ReadAll<T>();
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T ReadFirstOrDefault<T>(string path)
             where T : struct
         {
-            using (var fileStream = GetValidFileStreamOrDefault<T>(path))
-            {
-                return fileStream?.ReadOrDefault<T>() ?? default;
-            }
+            using var fileStream = GetValidFileStreamOrDefault<T>(path);
+            return fileStream?.ReadOrDefault<T>() ?? default;
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -55,27 +51,23 @@ namespace Platform.IO
             where T : struct
         {
             var elementSize = Structure<T>.Size;
-            using (var reader = GetValidFileStreamOrDefault(path, elementSize))
+            using var reader = GetValidFileStreamOrDefault(path, elementSize);
+            if (reader == null)
             {
-                if (reader == null)
-                {
-                    return default;
-                }
-                var totalElements = reader.Length / elementSize;
-                reader.Position = (totalElements - 1) * elementSize; // Set to last element
-                return reader.ReadOrDefault<T>();
+                return default;
             }
+            var totalElements = reader.Length / elementSize;
+            reader.Position = (totalElements - 1) * elementSize; // Set to last element
+            return reader.ReadOrDefault<T>();
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void WriteFirst<T>(string path, T value)
             where T : struct
         {
-            using (var writer = File.OpenWrite(path))
-            {
-                writer.Position = 0;
-                writer.Write(value);
-            }
+            using var writer = File.OpenWrite(path);
+            writer.Position = 0;
+            writer.Write(value);
         }
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -87,12 +79,10 @@ namespace Platform.IO
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void SetSize(string path, long size)
         {
-            using (var fileStream = File.Open(path, FileMode.OpenOrCreate))
+            using var fileStream = File.Open(path, FileMode.OpenOrCreate);
+            if (fileStream.Length != size)
             {
-                if (fileStream.Length != size)
-                {
-                    fileStream.SetLength(size);
-                }
+                fileStream.SetLength(size);
             }
         }
     }
