@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.IO.ConsoleCancellation.html",
-          "hash": "oOLAEXAQP8+kk34U29ppQA=="
+          "hash": "GoYNWH11+JLEZUtfoLKNrQ=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.IO.ConsoleHelpers.html",
-          "hash": "6KvAIQWkuD8jj5Bde1wtLw=="
+          "hash": "Bkc/vKXc/qU2UpnM17BrmQ=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.IO.FileHelpers.html",
-          "hash": "vix4NGAjEECZNQwGiS9IUg=="
+          "hash": "eHzu4Pj8rcB/aPTIYjxi/g=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.IO.StreamExtensions.html",
-          "hash": "oa5S+ZG8tGzCt0udlYk1Jw=="
+          "hash": "691JGXv6aM7IsoLRTK0BHA=="
         }
       },
       "is_incremental": false,
@@ -130,16 +130,16 @@
           "total_file_count": 0,
           "skipped_file_count": 0
         },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 5,
-          "skipped_file_count": 0
-        },
         "ConceptualDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 1,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 5,
           "skipped_file_count": 0
         }
       }
