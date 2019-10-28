@@ -6,7 +6,7 @@
     <AssemblyTitle>Platform.IO</AssemblyTitle>
     <VersionPrefix>0.1.1</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
-    <TargetFrameworks>net471;netstandard2.0</TargetFrameworks>
+    <TargetFrameworks>net471;netstandard2.0;netstandard2.1</TargetFrameworks>
     <AssemblyName>Platform.IO</AssemblyName>
     <PackageId>Platform.IO</PackageId>
     <PackageTags>LinksPlatform;IO;FileHelpers;StreamExtensions;ConsoleHelpers;ConsoleCancellation</PackageTags>
