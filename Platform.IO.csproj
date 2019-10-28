@@ -33,7 +33,7 @@ Travis CI configuration updated to support automatic NuGet package publishing.</
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Platform.Threading" Version="0.1.0" />
+    <PackageReference Include="Platform.Threading" Version="0.1.1" />
     <PackageReference Include="Platform.Unsafe" Version="0.1.3" />
   </ItemGroup>
 
