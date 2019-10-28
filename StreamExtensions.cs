@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using System.Runtime.CompilerServices;
 using Platform.Unsafe;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
@@ -7,6 +8,7 @@ namespace Platform.IO
 {
     public static class StreamExtensions
     {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Write<T>(this Stream stream, T value)
             where T : struct
         {
@@ -14,6 +16,7 @@ namespace Platform.IO
             stream.Write(bytes, 0, bytes.Length);
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T ReadOrDefault<T>(this Stream stream)
             where T : struct
         {
@@ -22,6 +25,7 @@ namespace Platform.IO
             return stream.Read(buffer, 0, size) == size ? buffer.ToStructure<T>() : default;
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T[] ReadAll<T>(this Stream stream)
             where T : struct
         {

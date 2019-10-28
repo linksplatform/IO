@@ -1,5 +1,6 @@
 ﻿using System;
 using System.IO;
+using System.Runtime.CompilerServices;
 using Platform.Unsafe;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
@@ -8,8 +9,10 @@ namespace Platform.IO
 {
     public static class FileHelpers
     {
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static char[] ReadAllChars(string path) => File.ReadAllText(path).ToCharArray();
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T[] ReadAll<T>(string path)
             where T : struct
         {
@@ -19,6 +22,7 @@ namespace Platform.IO
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T ReadFirstOrDefault<T>(string path)
             where T : struct
         {
@@ -28,8 +32,10 @@ namespace Platform.IO
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static FileStream GetValidFileStreamOrDefault<TStruct>(string path) where TStruct : struct => GetValidFileStreamOrDefault(path, Structure<TStruct>.Size);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static FileStream GetValidFileStreamOrDefault(string path, int elementSize)
         {
             if (!File.Exists(path))
@@ -44,6 +50,7 @@ namespace Platform.IO
             return fileSize > 0 ? File.OpenRead(path) : null;
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T ReadLastOrDefault<T>(string path)
             where T : struct
         {
@@ -60,6 +67,7 @@ namespace Platform.IO
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void WriteFirst<T>(string path, T value)
             where T : struct
         {
@@ -70,10 +78,13 @@ namespace Platform.IO
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static FileStream Append(string path) => File.Open(path, FileMode.Append, FileAccess.Write);
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static long GetSize(string path) => File.Exists(path) ? new FileInfo(path).Length : 0;
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void SetSize(string path, long size)
         {
             using (var fileStream = File.Open(path, FileMode.OpenOrCreate))

@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Runtime.CompilerServices;
 using System.Threading;
 using Platform.Disposables;
 using Platform.Threading;
@@ -9,14 +10,31 @@ namespace Platform.IO
 {
     public class ConsoleCancellation : DisposableBase
     {
-        public CancellationTokenSource Source { get; }
+        public CancellationTokenSource Source
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get;
+        }
 
-        public CancellationToken Token { get; }
+        public CancellationToken Token
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get;
+        }
 
-        public bool IsRequested => Source.IsCancellationRequested;
+        public bool IsRequested
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get => Source.IsCancellationRequested;
+        }
 
-        public bool NotRequested => !Source.IsCancellationRequested;
+        public bool NotRequested
+        {
+            [MethodImpl(MethodImplOptions.AggressiveInlining)]
+            get => !Source.IsCancellationRequested;
+        }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public ConsoleCancellation()
         {
             Source = new CancellationTokenSource();
@@ -24,8 +42,10 @@ namespace Platform.IO
             Console.CancelKeyPress += OnCancelKeyPress;
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void ForceCancellation() => Source.Cancel();
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Wait()
         {
             while (NotRequested)
@@ -34,6 +54,7 @@ namespace Platform.IO
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected override void Dispose(bool manual, bool wasDisposed)
         {
             if (!wasDisposed)
@@ -43,6 +64,7 @@ namespace Platform.IO
             }
         }
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void OnCancelKeyPress(object sender, ConsoleCancelEventArgs e)
         {
             e.Cancel = true;
