@@ -23,7 +23,7 @@
     <EmbedUntrackedSources>true</EmbedUntrackedSources>
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
-    <LangVersion>Latest</LangVersion>
+    <LangVersion>latest</LangVersion>
     <PackageReleaseNotes>The minumum supported version of .NET Framework is now 4.7.1.
 Platform.Unsafe dependency updated from 0.1.2 to 0.1.3.
 Project file updated to support multiple build environments: dotnet, Travis CI, MonoDevelop, and Visual Studio.
