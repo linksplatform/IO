@@ -1,5 +1,5 @@
 [![NuGet Version and Downloads count](https://buildstats.info/nuget/Platform.IO)](https://www.nuget.org/packages/Platform.IO)
-[![Build Status](https://travis-ci.com/linksplatform/IO.svg?branch=master)](https://travis-ci.com/linksplatform/IO)
+[![Actions Status](https://github.com/linksplatform/IO/workflows/CD/badge.svg)](https://github.com/linksplatform/IO/actions?workflow=CD)
 [![Codacy Badge](https://api.codacy.com/project/badge/Grade/8b11296f878a4f568db9b2d7fbb4ac48)](https://app.codacy.com/app/drakonard/IO?utm_source=github.com&utm_medium=referral&utm_content=linksplatform/IO&utm_campaign=Badge_Grade_Dashboard)
 [![CodeFactor](https://www.codefactor.io/repository/github/linksplatform/io/badge)](https://www.codefactor.io/repository/github/linksplatform/io)
 
