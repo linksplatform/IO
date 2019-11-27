@@ -1,9 +1,4 @@
 {
-  "api/Platform.IO.html": {
-    "href": "api/Platform.IO.html",
-    "title": "Namespace Platform.IO | LinksPlatform's Platform.IO Library",
-    "keywords": "Namespace Platform.IO Classes ConsoleCancellation ConsoleHelpers FileHelpers StreamExtensions"
-  },
   "README.html": {
     "href": "README.html",
     "title": "IO | LinksPlatform's Platform.IO Library",
@@ -14,15 +9,20 @@
     "title": "Class ConsoleHelpers | LinksPlatform's Platform.IO Library",
     "keywords": "Class ConsoleHelpers Inheritance Object ConsoleHelpers Inherited Members Object.Equals(Object) Object.Equals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Object.ReferenceEquals(Object, Object) Object.ToString() Namespace : Platform.IO Assembly : Platform.IO.dll Syntax public static class ConsoleHelpers Methods | Improve this Doc View Source Debug(String, Object[]) Declaration [Conditional(\"DEBUG\")] public static void Debug(string format, params object[] args) Parameters Type Name Description String format Object [] args | Improve this Doc View Source GetOrReadArgument(Int32, String, String[]) Declaration public static string GetOrReadArgument(int index, string readMessage, params string[] args) Parameters Type Name Description Int32 index String readMessage String [] args Returns Type Description String | Improve this Doc View Source GetOrReadArgument(Int32, String[]) Declaration public static string GetOrReadArgument(int index, params string[] args) Parameters Type Name Description Int32 index String [] args Returns Type Description String | Improve this Doc View Source PressAnyKeyToContinue() Declaration public static void PressAnyKeyToContinue()"
   },
-  "api/Platform.IO.StreamExtensions.html": {
-    "href": "api/Platform.IO.StreamExtensions.html",
-    "title": "Class StreamExtensions | LinksPlatform's Platform.IO Library",
-    "keywords": "Class StreamExtensions Inheritance Object StreamExtensions Inherited Members Object.Equals(Object) Object.Equals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Object.ReferenceEquals(Object, Object) Object.ToString() Namespace : Platform.IO Assembly : Platform.IO.dll Syntax public static class StreamExtensions Methods | Improve this Doc View Source ReadAll<T>(Stream) Declaration public static T[] ReadAll<T>(this Stream stream) where T : struct Parameters Type Name Description Stream stream Returns Type Description T[] Type Parameters Name Description T | Improve this Doc View Source ReadOrDefault<T>(Stream) Declaration public static T ReadOrDefault<T>(this Stream stream) where T : struct Parameters Type Name Description Stream stream Returns Type Description T Type Parameters Name Description T | Improve this Doc View Source Write<T>(Stream, T) Declaration public static void Write<T>(this Stream stream, T value) where T : struct Parameters Type Name Description Stream stream T value Type Parameters Name Description T"
-  },
   "api/Platform.IO.ConsoleCancellation.html": {
     "href": "api/Platform.IO.ConsoleCancellation.html",
     "title": "Class ConsoleCancellation | LinksPlatform's Platform.IO Library",
     "keywords": "Class ConsoleCancellation Inheritance Object Platform.Disposables.DisposableBase ConsoleCancellation Implements Platform.Disposables.IDisposable IDisposable Inherited Members Platform.Disposables.DisposableBase.Dispose() Platform.Disposables.DisposableBase.Destruct() Platform.Disposables.DisposableBase.Dispose(System.Boolean) Platform.Disposables.DisposableBase.IsDisposed Platform.Disposables.DisposableBase.ObjectName Platform.Disposables.DisposableBase.AllowMultipleDisposeAttempts Platform.Disposables.DisposableBase.AllowMultipleDisposeCalls Object.Equals(Object) Object.Equals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Object.ReferenceEquals(Object, Object) Object.ToString() Namespace : Platform.IO Assembly : Platform.IO.dll Syntax public class ConsoleCancellation : DisposableBase, IDisposable, IDisposable Constructors | Improve this Doc View Source ConsoleCancellation() Declaration public ConsoleCancellation() Properties | Improve this Doc View Source IsRequested Declaration public bool IsRequested { get; } Property Value Type Description Boolean | Improve this Doc View Source NotRequested Declaration public bool NotRequested { get; } Property Value Type Description Boolean | Improve this Doc View Source Source Declaration public CancellationTokenSource Source { get; } Property Value Type Description CancellationTokenSource | Improve this Doc View Source Token Declaration public CancellationToken Token { get; } Property Value Type Description CancellationToken Methods | Improve this Doc View Source Dispose(Boolean, Boolean) Declaration protected override void Dispose(bool manual, bool wasDisposed) Parameters Type Name Description Boolean manual Boolean wasDisposed Overrides Platform.Disposables.DisposableBase.Dispose(System.Boolean, System.Boolean) | Improve this Doc View Source ForceCancellation() Declaration public void ForceCancellation() | Improve this Doc View Source Wait() Declaration public void Wait() Implements Platform.Disposables.IDisposable System.IDisposable"
+  },
+  "api/Platform.IO.html": {
+    "href": "api/Platform.IO.html",
+    "title": "Namespace Platform.IO | LinksPlatform's Platform.IO Library",
+    "keywords": "Namespace Platform.IO Classes ConsoleCancellation ConsoleHelpers FileHelpers StreamExtensions"
+  },
+  "api/Platform.IO.StreamExtensions.html": {
+    "href": "api/Platform.IO.StreamExtensions.html",
+    "title": "Class StreamExtensions | LinksPlatform's Platform.IO Library",
+    "keywords": "Class StreamExtensions Inheritance Object StreamExtensions Inherited Members Object.Equals(Object) Object.Equals(Object, Object) Object.GetHashCode() Object.GetType() Object.MemberwiseClone() Object.ReferenceEquals(Object, Object) Object.ToString() Namespace : Platform.IO Assembly : Platform.IO.dll Syntax public static class StreamExtensions Methods | Improve this Doc View Source ReadAll<T>(Stream) Declaration public static T[] ReadAll<T>(this Stream stream) where T : struct Parameters Type Name Description Stream stream Returns Type Description T[] Type Parameters Name Description T | Improve this Doc View Source ReadOrDefault<T>(Stream) Declaration public static T ReadOrDefault<T>(this Stream stream) where T : struct Parameters Type Name Description Stream stream Returns Type Description T Type Parameters Name Description T | Improve this Doc View Source Write<T>(Stream, T) Declaration public static void Write<T>(this Stream stream, T value) where T : struct Parameters Type Name Description Stream stream T value Type Parameters Name Description T"
   },
   "api/Platform.IO.FileHelpers.html": {
     "href": "api/Platform.IO.FileHelpers.html",
