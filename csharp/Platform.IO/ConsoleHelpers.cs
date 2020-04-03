@@ -2,6 +2,7 @@
 using System.Diagnostics;
 using System.Runtime.CompilerServices;
 using Platform.Collections;
+using Platform.Collections.Arrays;
 
 #pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
@@ -22,18 +23,19 @@ namespace Platform.IO
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static string GetOrReadArgument(int index, string readMessage, params string[] args)
         {
-            string result;
-            if (args != null && args.Length > index)
-            {
-                result = args[index];
-            }
-            else
+            if (!args.TryGetElement(index, out string result))
             {
                 Console.Write($"{readMessage}: ");
                 result = Console.ReadLine();
             }
-            result = (result ?? "").Trim().TrimSingle('"').Trim();
-            return result;
+            if (string.IsNullOrEmpty(result))
+            {
+                return "";
+            }
+            else
+            {
+                return result.Trim().TrimSingle('"').Trim();
+            }
         }
 
         [Conditional("DEBUG")]
