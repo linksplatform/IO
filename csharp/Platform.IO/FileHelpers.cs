@@ -85,5 +85,20 @@ namespace Platform.IO
                 fileStream.SetLength(size);
             }
         }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void DeleteAll(string directory) => DeleteAll(directory, "*");
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void DeleteAll(string directory, string searchPattern) => DeleteAll(directory, searchPattern, SearchOption.TopDirectoryOnly);
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void DeleteAll(string directory, string searchPattern, SearchOption searchOption)
+        {
+            foreach (var file in Directory.EnumerateFiles(directory, searchPattern, searchOption))
+            {
+                File.Delete(file);
+            }
+        }
     }
 }
