@@ -39,7 +39,7 @@ Tests added.</PackageReleaseNotes>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Platform.Threading" Version="0.2.0" />
+    <PackageReference Include="Platform.Threading" Version="0.2.1" />
     <PackageReference Include="Platform.Unsafe" Version="0.4.0" />
   </ItemGroup>
 
