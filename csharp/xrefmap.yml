@@ -196,6 +196,31 @@ references:
   isSpec: "True"
   fullName: Platform.IO.FileHelpers.Append
   nameWithType: FileHelpers.Append
+- uid: Platform.IO.FileHelpers.DeleteAll(System.String)
+  name: DeleteAll(String)
+  href: api/Platform.IO.FileHelpers.html#Platform_IO_FileHelpers_DeleteAll_System_String_
+  commentId: M:Platform.IO.FileHelpers.DeleteAll(System.String)
+  fullName: Platform.IO.FileHelpers.DeleteAll(System.String)
+  nameWithType: FileHelpers.DeleteAll(String)
+- uid: Platform.IO.FileHelpers.DeleteAll(System.String,System.String)
+  name: DeleteAll(String, String)
+  href: api/Platform.IO.FileHelpers.html#Platform_IO_FileHelpers_DeleteAll_System_String_System_String_
+  commentId: M:Platform.IO.FileHelpers.DeleteAll(System.String,System.String)
+  fullName: Platform.IO.FileHelpers.DeleteAll(System.String, System.String)
+  nameWithType: FileHelpers.DeleteAll(String, String)
+- uid: Platform.IO.FileHelpers.DeleteAll(System.String,System.String,System.IO.SearchOption)
+  name: DeleteAll(String, String, SearchOption)
+  href: api/Platform.IO.FileHelpers.html#Platform_IO_FileHelpers_DeleteAll_System_String_System_String_System_IO_SearchOption_
+  commentId: M:Platform.IO.FileHelpers.DeleteAll(System.String,System.String,System.IO.SearchOption)
+  fullName: Platform.IO.FileHelpers.DeleteAll(System.String, System.String, System.IO.SearchOption)
+  nameWithType: FileHelpers.DeleteAll(String, String, SearchOption)
+- uid: Platform.IO.FileHelpers.DeleteAll*
+  name: DeleteAll
+  href: api/Platform.IO.FileHelpers.html#Platform_IO_FileHelpers_DeleteAll_
+  commentId: Overload:Platform.IO.FileHelpers.DeleteAll
+  isSpec: "True"
+  fullName: Platform.IO.FileHelpers.DeleteAll
+  nameWithType: FileHelpers.DeleteAll
 - uid: Platform.IO.FileHelpers.GetSize(System.String)
   name: GetSize(String)
   href: api/Platform.IO.FileHelpers.html#Platform_IO_FileHelpers_GetSize_System_String_
