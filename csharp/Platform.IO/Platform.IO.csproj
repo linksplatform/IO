@@ -4,7 +4,7 @@
     <Description>LinksPlatform's Platform.IO Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.IO</AssemblyTitle>
-    <VersionPrefix>0.2.0</VersionPrefix>
+    <VersionPrefix>0.2.1</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFrameworks>net472;netstandard2.0;netstandard2.1</TargetFrameworks>
     <AssemblyName>Platform.IO</AssemblyName>
@@ -24,10 +24,10 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <LangVersion>latest</LangVersion>
-    <PackageReleaseNotes>Lowest supported version of .NET Framework is now 4.7.2.
-Platform.Threading dependency updated from 0.1.1 to 0.2.0.
-Platform.Unsafe dependency updated from 0.3.0 to 0.4.0.
-Tests added.</PackageReleaseNotes>
+    <PackageReleaseNotes>Platform.Threading dependency updated from 0.2.0 to 0.2.1.
+Platform.Unsafe dependency updated from 0.4.0 to 0.4.1.
+ConsoleHelpers.Debug method with single string argument added.
+Refactoring, issues fix.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup Condition="$(TargetFramework.StartsWith('net4')) AND '$(MSBuildRuntimeType)' == 'Core' AND '$(OS)' != 'Windows_NT'">
