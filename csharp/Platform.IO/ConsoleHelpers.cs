@@ -39,6 +39,9 @@ namespace Platform.IO
         }
 
         [Conditional("DEBUG")]
+        public static void Debug(string @string) => Console.WriteLine(@string);
+
+        [Conditional("DEBUG")]
         public static void Debug(string format, params object[] args) => Console.WriteLine(format, args);
     }
 }
