@@ -123,6 +123,12 @@ references:
   commentId: T:Platform.IO.ConsoleHelpers
   fullName: Platform.IO.ConsoleHelpers
   nameWithType: ConsoleHelpers
+- uid: Platform.IO.ConsoleHelpers.Debug(System.String)
+  name: Debug(String)
+  href: api/Platform.IO.ConsoleHelpers.html#Platform_IO_ConsoleHelpers_Debug_System_String_
+  commentId: M:Platform.IO.ConsoleHelpers.Debug(System.String)
+  fullName: Platform.IO.ConsoleHelpers.Debug(System.String)
+  nameWithType: ConsoleHelpers.Debug(String)
 - uid: Platform.IO.ConsoleHelpers.Debug(System.String,System.Object[])
   name: Debug(String, Object[])
   href: api/Platform.IO.ConsoleHelpers.html#Platform_IO_ConsoleHelpers_Debug_System_String_System_Object___
