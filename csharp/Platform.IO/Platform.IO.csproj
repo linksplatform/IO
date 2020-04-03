@@ -40,7 +40,7 @@ Tests added.</PackageReleaseNotes>
 
   <ItemGroup>
     <PackageReference Include="Platform.Threading" Version="0.2.1" />
-    <PackageReference Include="Platform.Unsafe" Version="0.4.0" />
+    <PackageReference Include="Platform.Unsafe" Version="0.4.1" />
   </ItemGroup>
 
 </Project>
