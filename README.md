@@ -7,14 +7,14 @@
 
 LinksPlatform's Platform.IO Class Library.
 
-Namespace: [Platform.IO](https://linksplatform.github.io/IO/api/Platform.IO.html)
+Namespace: [Platform.IO](https://linksplatform.github.io/IO/csharp/api/Platform.IO.html)
 
 Forked from: [Konard/LinksPlatform/Platform/Platform.Helpers/IO](https://github.com/Konard/LinksPlatform/tree/690ac2490d0a18c0071743bcf59958c0267e0166/Platform/Platform.Helpers/IO)
 
 NuGet package: [Platform.IO](https://www.nuget.org/packages/Platform.IO)
 
 ## [Documentation](https://linksplatform.github.io/IO)
-[PDF file](https://linksplatform.github.io/IO/Platform.IO.pdf) with code for e-readers.
+[PDF file](https://linksplatform.github.io/IO/csharp/Platform.IO.pdf) with code for e-readers.
 
 ## Depend on
 *   [Platform.Threading](https://github.com/linksplatform/Threading)
