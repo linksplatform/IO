@@ -18,7 +18,79 @@
       "output": {
         ".html": {
           "relative_path": "README.html",
-          "hash": "z8AewkBuRQxgQITdBiCxZQ=="
+          "hash": "Xs0nNBmEVWQS1oG7d0klYg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.IO.ConsoleCancellation.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.IO.ConsoleCancellation.html",
+          "hash": "gN/XlMrAK1kv4BLLugqIww=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.IO.ConsoleHelpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.IO.ConsoleHelpers.html",
+          "hash": "bdQ6RRo88iLbQhglXwu0MQ=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.IO.FileHelpers.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.IO.FileHelpers.html",
+          "hash": "kqEncy3a+JL6lhaVpiZX1g=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.IO.StreamExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.IO.StreamExtensions.html",
+          "hash": "ftdvGsTJfNyW8hFghmqeuw=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.IO.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.IO.html",
+          "hash": "11xLDvedQcPR5iXPa6gdcg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "obj/api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html",
+          "hash": "bkjKAF1GTApeuRex/pisrw=="
         }
       },
       "is_incremental": false,
@@ -33,7 +105,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "htqEWH14uKEvOh7wF9TRSA=="
+          "hash": "p9yB+JEpoW+jJxD0mG2JkQ=="
         }
       },
       "is_incremental": false,
@@ -55,6 +127,12 @@
           "can_incremental": false,
           "incrementalPhase": "build",
           "total_file_count": 1,
+          "skipped_file_count": 0
+        },
+        "ManagedReferenceDocumentProcessor": {
+          "can_incremental": false,
+          "incrementalPhase": "build",
+          "total_file_count": 5,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
