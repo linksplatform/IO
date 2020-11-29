@@ -44,8 +44,8 @@ namespace Platform.IO
 		public static string GetOrReadArgument(int index, params string[] args) => GetOrReadArgument(index, $"{index + 1} argument", args);
 
 		/// <summary>
-		/// <para>Get index and message as arguments, trim whitespace and double quotes around message and return it.</para>
-		/// <para>Получает аргумент и сообщение как аргумент, вырезает пробелы и двойные кавычки вокруг сообщения и возвращает его.</para>
+		/// <para>Get index and message as arguments, trim whitespace and double quotes around message and return it</para>
+		/// <para>Получает аргумент и сообщение как аргумент, вырезает пробелы и двойные кавычки вокруг сообщения и возвращает его</para>
         /// </summary>
 		/// <param name="index">
 		/// <para>Item number in the array</para>
