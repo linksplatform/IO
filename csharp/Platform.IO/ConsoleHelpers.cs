@@ -28,8 +28,8 @@ namespace Platform.IO
 		}
 
 		/// <summary>
-		/// <para>Calls GetOrReadArgument function with readMessage argument's value equal to "index+1 argument"</para>
-		/// <para>Вызывает функцию GetOrReadArgument с значением аргумента readMessage равному "index+1 argument"</para>
+		/// <para>Calls GetOrReadArgument function with readMessage argument's value equal to index+1 argument</para>
+		/// <para>Вызывает функцию GetOrReadArgument с значением аргумента readMessage равному index+1 argument</para>
 		/// </summary>
 		/// <param name="index">
 		/// <para>Item number in the arguments array</para>
