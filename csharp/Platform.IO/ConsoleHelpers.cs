@@ -10,7 +10,6 @@ namespace Platform.IO
 {
     public static class ConsoleHelpers
     {
-
         /// <summary>
         /// <para>Displays in the console appealing to press any key for continue</para>
         /// <para>Выводит в консоли призыв нажать любую клавишу для продолжения</para>
@@ -19,7 +18,6 @@ namespace Platform.IO
         /// <para>Returns true if a user pressed any key.</para>
         /// <para>Возвращает истину если пользователь нажал любую клавишу</para>
         /// </returns>
-
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void PressAnyKeyToContinue()
         {
@@ -39,7 +37,6 @@ namespace Platform.IO
         /// <para>Array of rest arguments</para>
         /// <para>Массив остаточных аргументов</para>
         /// </param>
-
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static string GetOrReadArgument(int index, params string[] args) => GetOrReadArgument(index, $"{index + 1} argument", args);
 
@@ -62,7 +59,6 @@ namespace Platform.IO
         /// <para>Returns text passed to console with double quotes and whitespace around removed</para>
         /// <para>Возвращает текст переданный в консоль с удалёнными пробелами и двойными ковычками вокруг текста</para>
         /// </returns>
-
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static string GetOrReadArgument(int index, string readMessage, params string[] args)
         {
@@ -89,7 +85,6 @@ namespace Platform.IO
         /// <para>Text passed to the console</para>
         /// <para>Текст переданный в консоль</para>
         /// </param>
-
         [Conditional("DEBUG")]
         public static void Debug(string @string) => Console.WriteLine(@string);
 
@@ -105,7 +100,6 @@ namespace Platform.IO
         /// <para>Array of rest arguments</para>
         /// <para>Массив остаточных аргументов</para>
         /// </param>
-
         [Conditional("DEBUG")]
         public static void Debug(string format, params object[] args) => Console.WriteLine(format, args);
     }
