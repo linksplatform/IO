@@ -11,8 +11,8 @@ namespace Platform.IO
     public static class ConsoleHelpers
     {
         /// <summary>
-        /// <para>Displays in the console appealing to press any key and wait user's input.</para>
-        /// <para>Выводит в консоль призыв нажать любую клавишу и ожидает ввода от пользователя.</para>
+        /// <para>Requests and expects to press any key by the user in the console.</para>
+        /// <para>Запрашивает и ожидает нажатие любой клавиши пользователем в консоли.</para>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void PressAnyKeyToContinue()
@@ -22,47 +22,47 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Get value of argument with the specified index number from the argument array, if it's absent request input of this value in the console from the user.</para>
-        /// <para>Получает значение аргумента с указанным порядковым номером из массива аргументов, если он отсутствует запрашивает ввод этого значения в консоли у пользователя.</para>
+        /// <para>Get value of argument with the specified <paramref name="index" /> from the argument array(<paramref name="args"/>)and if it's absent request input of this value in the console from the user.</para>
+        /// <para>Получает значение аргумента с указанным индексом(<paramref name="index"/>) из массива аргументов(<paramref name="args"/>)a если оно отсутствует запрашивает его ввод в консоли у пользователя.</para>
         /// </summary>
         /// <param name="index">
-        /// <para>The index number of the argument in the array.</para>
+        /// <para>The ordinal number of the argument in the array.</para>
         /// <para>Порядковый номер аргумента в массиве.</para>
         /// </param>
         /// <param name="readMessage">
-        /// <para>The text of the message to the user describing which argument is being entered at the moment. This message is only used if the arguments array doesn't contain argument with the specified number.</para>
-        /// <para>Текст сообщения пользователю описывающее какой аргумент вводится в данный момент. Это сообщение используется только если массив аргументов не содержит аргумента с указанным номером.</para>
+        /// <para>The text of the message to the user describing which argument is being entered at the moment. If the arguments array(<paramref name="args"/>) doesn't contain the element with the specified <paramref name="index"/>, then this message is used.</para>
+        /// <para>Текст сообщения пользователю описывающее какой аргумент вводится в данный момент. Это сообщение используется только если массив аргументов(<paramref name="args"/>) не содержит аргумента с указанным индексом(<paramref name="index"/>).</para>
         /// </param>
         /// <param name="args">
-        /// <para>Arguments array received at application start.</para>
-        /// <para>Массив аргументов полученных при запуске приложения.</para>
+        /// <para>The array of arguments passed to the application.</para>
+        /// <para>Массив аргументов переданных приложению.</para>
         /// </param>
         /// <returns>
-        /// <para>The value of the argument with the specified index number extracted from the argument array or entered by the user in the console.</para>
-        /// <para>Значение аргумента с указанным порядковым номером извлечённое из массива аргументов либо введённое пользователем в консоли.</para>
+        /// <para>The value of the argument with the specified <paramref name="index"/> extracted from the argument array(<paramref name="args"/>) or entered by user in the console.</para>
+        /// <para>Значение аргумента с указанным индексом(<paramref name="index"/>) извлечённое из массива аргументов(<paramref name="args"/>) или введённое пользователем в консоли.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static string GetOrReadArgument(int index, params string[] args) => GetOrReadArgument(index, $"{index + 1} argument", args);
 
         /// <summary>
-        /// <para>Get value of argument with the specified index number from the argument array, if it's absent request input of this value in the console from the user.</para>
-        /// <para>Получает значение аргумента с указанным порядковым номером из массива аргументов, если он отсутствует запрашивает ввод этого значения в консоли у пользователя.</para>
+        /// <para>Get value of argument with the specified <paramref name="index" /> from the argument array(<paramref name="args"/>)and if it's absent request input of this value in the console from the user.</para>
+        /// <para>Получает значение аргумента с указанным индексом(<paramref name="index"/>) из массива аргументов(<paramref name="args"/>), и если оно отсутствует запрашивает его ввод в консоли у пользователя.</para>
         /// </summary>
         /// <param name="index">
-        /// <para>The index number of the argument in the array.</para>
+        /// <para>The ordinal number of the argument in the array.</para>
         /// <para>Порядковый номер аргумента в массиве.</para>
         /// </param>
         /// <param name="readMessage">
-        /// <para>The text of the message to the user describing which argument is being entered at the moment. This message is only used if the arguments array doesn't contain argument with the specified number.</para>
-        /// <para>Текст сообщения пользователю описывающее какой аргумент вводится в данный момент. Это сообщение используется только если массив аргументов не содержит аргумента с указанным номером.</para>
+        /// <para>The text of the message to the user describing which argument is being entered at the moment. If the arguments array(<paramref name="args"/>) doesn't contain the element with the specified <paramref name="index"/>, then this message is used.</para>
+        /// <para>Текст сообщения пользователю описывающее какой аргумент вводится в данный момент. Это сообщение используется только если массив аргументов(<paramref name="args"/>) не содержит аргумента с указанным индексом(<paramref name="index"/>).</para>
         /// </param>
         /// <param name="args">
-        /// <para>Arguments array received at application start.</para>
-        /// <para>Массив аргументов полученных при запуске приложения.</para>
+        /// <para>The array of arguments passed to the application.</para>
+        /// <para>Массив аргументов переданных приложению.</para>
         /// </param>
         /// <returns>
-        /// <para>The value of the argument with the specified index number extracted from the argument array or entered by the user in the console.</para>
-        /// <para>Значение аргумента с указанным порядковым номером извлечённое из массива аргументов либо введённое пользователем в консоли.</para>
+        /// <para>The value of the argument with the specified <paramref name="index"/> extracted from the argument array(<paramref name="args"/>) or entered by user in the console.</para>
+        /// <para>Значение аргумента с указанным индексом(<paramref name="index"/>) извлечённое из массива аргументов(<paramref name="args"/>) или введённое пользователем в консоли.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static string GetOrReadArgument(int index, string readMessage, params string[] args)
@@ -83,27 +83,27 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Output a input string to the console. The method is only executed if the application has been compiled with the DEBUG directive.</para>
-        /// <para>Выводит переданную строку в консоль. Метод выполняется только в том случае, если приложение было скомпилировано с директивой DEBUG.</para>
+        /// <para>Outputs a <paramref name="string" /> to the console. The method is only executed if the application was compiled with the DEBUG directive.</para>
+        /// <para>Выводит строку(<paramref name="string" />) в консоль. Метод выполняется только в том случае, если приложение было скомпилировано с директивой DEBUG.</para>
         /// </summary>
         /// <param name="string">
-        /// <para>The string, that you want to output to the console.</para>
-        /// <para>Строка, которую нужно вывести в консоль.</para>
+        /// <para>The string to be outputted to the console.</para>
+        /// <para>Строка выводимая в консоль.</para>
         /// </param>
         [Conditional("DEBUG")]
         public static void Debug(string @string) => Console.WriteLine(@string);
 
         /// <summary>
-        ///	<para>Output composit formatted text in the console.</para>
-        /// <para>Выводит строку составного формата в консоли.</para>
+        /// <para>Writes the text representation of the specified array of objects(<paramref name="args"/>), followed by the current line terminator, to the standard output stream using the specified format information(<paramref name="format"/>).</para>
+        /// <para>Записывает текстовые представления заданного массива объектов(<paramref name="args"/>), за которым следует текущий признак конца строки, в стандартный выходной поток с использованием заданных сведений о форматировании(<paramref name="format"/>).</para>
         /// </summary>
         /// <param name="format">
         /// <para>A composite format string.</para>
         /// <para>Строка составного формата.</para>
         /// </param>
         /// <param name="args">
-        /// <para>An array of objects to write using format.</para>
-        /// <para>Массив объектов для записи с использованием format.</para>
+        /// <para>An array of objects to write using <paramref name="format" />.</para>
+        /// <para>Массив объектов для записи с использованием <paramref name="format" />.</para>
         /// </param>
         [Conditional("DEBUG")]
         public static void Debug(string format, params object[] args) => Console.WriteLine(format, args);
