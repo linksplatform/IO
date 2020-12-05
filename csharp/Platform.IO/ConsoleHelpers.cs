@@ -22,8 +22,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Gets the argument's value with the specified <paramref name="index" /> from the argument array (<paramref name="args"/>) and if it's absent request input of this value in the console from the user.</para>
-        /// <para>Получает значение аргумента с указанным <paramref name="index"/> из массива аргументов <paramref name="args"/>, a если оно отсутствует запрашивает его ввод в консоли у пользователя.</para>
+        /// <para>Gets the argument's value with the specified <paramref name="index" /> from the array (<paramref name="args"/>) and if it's absent request input of this value in the console from the user.</para>
+        /// <para>Получает значение аргумента с указанным <paramref name="index"/> из массива <paramref name="args"/>, a если оно отсутствует запрашивает его ввод в консоли у пользователя.</para>
         /// </summary>
         /// <param name="index">
         /// <para>The ordinal number of the argument in the array.</para>
@@ -34,15 +34,15 @@ namespace Platform.IO
         /// <para>Массив аргументов переданных приложению.</para>
         /// </param>
         /// <returns>
-        /// <para>The value with the specified <paramref name="index"/> extracted from the argument array <paramref name="args"/> or entered by a user in the console.</para>
+        /// <para>The value with the specified <paramref name="index"/> extracted from the array <paramref name="args"/> or entered by a user in the console.</para>
         /// <para>Значение с указанным <paramref name="index"/>, извлечённое из массива <paramref name="args"/>, или введённое пользователем в консоли.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static string GetOrReadArgument(int index, params string[] args) => GetOrReadArgument(index, $"{index + 1} argument", args);
 
         /// <summary>
-        /// <para>Gets the argument's value with the specified <paramref name="index" /> from the argument array (<paramref name="args"/>) and if it's absent request input of this value in the console from the user.</para>
-        /// <para>Получает значение аргумента с указанным <paramref name="index"/> из массива аргументов <paramref name="args"/>, a если оно отсутствует запрашивает его ввод в консоли у пользователя.</para>
+        /// <para>Gets the argument's value with the specified <paramref name="index" /> from the array (<paramref name="args"/>) and if it's absent request input of this value in the console from the user.</para>
+        /// <para>Получает значение аргумента с указанным <paramref name="index"/> из массива <paramref name="args"/>, a если оно отсутствует запрашивает его ввод в консоли у пользователя.</para>
         /// </summary>
         /// <param name="index">
         /// <para>The ordinal number of the argument in the array.</para>
@@ -57,7 +57,7 @@ namespace Platform.IO
         /// <para>Массив аргументов переданных приложению.</para>
         /// </param>
         /// <returns>
-        /// <para>The value with the specified <paramref name="index"/> extracted from the argument array <paramref name="args"/> or entered by a user in the console.</para>
+        /// <para>The value with the specified <paramref name="index"/> extracted from the array <paramref name="args"/> or entered by a user in the console.</para>
         /// <para>Значение с указанным <paramref name="index"/>, извлечённое из массива <paramref name="args"/>, или введённое пользователем в консоли.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -106,7 +106,7 @@ namespace Platform.IO
         /// <para>Строка составного формата.</para>
         /// </param>
         /// <param name="args">
-        /// <para>The pbject array to write to the standard output stream using <paramref name="format" />.</para>
+        /// <para>The object array to write to the standard output stream using <paramref name="format" />.</para>
         /// <para>Массив объектов для записи в стандартный выходной поток с использованием <paramref name="format" />.</para>
         /// </param>
         [Conditional("DEBUG")]
