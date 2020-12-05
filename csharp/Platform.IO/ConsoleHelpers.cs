@@ -82,25 +82,21 @@ namespace Platform.IO
         /// <para>Outputs the <paramref name="string" /> to the console.</para>
         /// <para>Выводит <paramref name="string" /> в консоль.</para>
         /// </summary>
-        /// <remarks>
-        /// <para>The method is only executed if the application was compiled with the DEBUG directive.</para>
-        /// <para>Метод выполняется только в том случае, если приложение было скомпилировано с директивой DEBUG.</para>
-        /// </remarks>
         /// <param name="string">
         /// <para>The string to output to the console.</para>
         /// <para>Строка выводимая в консоль.</para>
         /// </param>
-        [Conditional("DEBUG")]
-        public static void Debug(string @string) => Console.WriteLine(@string);
-
-        /// <summary>
-        /// <para>Writes the text representation of the specified <paramref name="args"/> array, followed by the current line terminator, to the standard output stream using the specified <paramref name="format"/>.</para>
-        /// <para>Записывает текстовые представления заданного массива <paramref name="args"/>, за которым следует текущий признак конца строки, в стандартный выходной поток с использованием заданного<paramref name="format"/>.</para>
-        /// </summary>
         /// <remarks>
         /// <para>The method is only executed if the application was compiled with the DEBUG directive.</para>
         /// <para>Метод выполняется только в том случае, если приложение было скомпилировано с директивой DEBUG.</para>
         /// </remarks>
+        [Conditional("DEBUG")]
+        public static void Debug(string @string) => Console.WriteLine(@string);
+
+        /// <summary>
+        /// <para>Writes text representations of objects of the specified <paramref name="args"/>, followed by the current line terminator, to the standard output stream using the specified <paramref name="format"/>.</para>
+        /// <para>Записывает текстовые представления объектов заданного массива <paramref name="args"/>, за которым следует текущий признак конца строки, в стандартный выходной поток с использованием заданного <paramref name="format"/>.</para>
+        /// </summary>
         /// <param name="format">
         /// <para>The composite format string.</para>
         /// <para>Строка составного формата.</para>
@@ -109,6 +105,10 @@ namespace Platform.IO
         /// <para>The object array to write to the standard output stream using <paramref name="format" />.</para>
         /// <para>Массив объектов для записи в стандартный выходной поток с использованием <paramref name="format" />.</para>
         /// </param>
+        /// <remarks>
+        /// <para>The method is only executed if the application was compiled with the DEBUG directive.</para>
+        /// <para>Метод выполняется только в том случае, если приложение было скомпилировано с директивой DEBUG.</para>
+        /// </remarks>
         [Conditional("DEBUG")]
         public static void Debug(string format, params object[] args) => Console.WriteLine(format, args);
     }
