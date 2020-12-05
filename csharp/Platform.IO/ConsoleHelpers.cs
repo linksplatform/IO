@@ -94,7 +94,7 @@ namespace Platform.IO
         public static void Debug(string @string) => Console.WriteLine(@string);
 
         /// <summary>
-        /// <para>Writes text representations of objects of the specified <paramref name="args"/>, followed by the current line terminator, to the standard output stream using the specified <paramref name="format"/>.</para>
+        /// <para>Writes text representations of objects of the specified <paramref name="args"/> array, followed by the current line terminator, to the standard output stream using the specified <paramref name="format"/>.</para>
         /// <para>Записывает текстовые представления объектов заданного массива <paramref name="args"/>, за которым следует текущий признак конца строки, в стандартный выходной поток с использованием заданного <paramref name="format"/>.</para>
         /// </summary>
         /// <param name="format">
