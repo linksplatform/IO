@@ -22,7 +22,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Gets the argument's value with the specified <paramref name="index" /> from the array (<paramref name="args"/>) and if it's absent request input of this value in the console from the user.</para>
+        /// <para>Gets the argument's value with the specified <paramref name="index" /> from the <paramref name="args"/> array and if it's absent request input of this value in the console from the user.</para>
         /// <para>Получает значение аргумента с указанным <paramref name="index"/> из массива <paramref name="args"/>, a если оно отсутствует запрашивает его ввод в консоли у пользователя.</para>
         /// </summary>
         /// <param name="index">
@@ -34,14 +34,14 @@ namespace Platform.IO
         /// <para>Массив аргументов переданных приложению.</para>
         /// </param>
         /// <returns>
-        /// <para>The value with the specified <paramref name="index"/> extracted from the array <paramref name="args"/> or entered by a user in the console.</para>
+        /// <para>The value with the specified <paramref name="index"/> extracted from the <paramref name="args"/> array or entered by a user in the console.</para>
         /// <para>Значение с указанным <paramref name="index"/>, извлечённое из массива <paramref name="args"/>, или введённое пользователем в консоли.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static string GetOrReadArgument(int index, params string[] args) => GetOrReadArgument(index, $"{index + 1} argument", args);
 
         /// <summary>
-        /// <para>Gets the argument's value with the specified <paramref name="index" /> from the array (<paramref name="args"/>) and if it's absent request input of this value in the console from the user.</para>
+        /// <para>Gets the argument's value with the specified <paramref name="index" /> from the <paramref name="args"/> array and if it's absent request input of this value in the console from the user.</para>
         /// <para>Получает значение аргумента с указанным <paramref name="index"/> из массива <paramref name="args"/>, a если оно отсутствует запрашивает его ввод в консоли у пользователя.</para>
         /// </summary>
         /// <param name="index">
@@ -49,7 +49,7 @@ namespace Platform.IO
         /// <para>Порядковый номер аргумента в массиве.</para>
         /// </param>
         /// <param name="readMessage">
-        /// <para>The message's text to a user describing which argument is being entered at the moment. If the array <paramref name="args"/> doesn't contain the element with the specified <paramref name="index"/>, then this message is used.</para>
+        /// <para>The message's text to a user describing which argument is being entered at the moment. If the <paramref name="args"/> array doesn't contain the element with the specified <paramref name="index"/>, then this message is used.</para>
         /// <para>Текст сообщения пользователю описывающее какой аргумент вводится в данный момент. Это сообщение используется только если массив <paramref name="args"/> не содержит аргумента с указанным <paramref name="index"/>.</para>
         /// </param>
         /// <param name="args">
@@ -57,7 +57,7 @@ namespace Platform.IO
         /// <para>Массив аргументов переданных приложению.</para>
         /// </param>
         /// <returns>
-        /// <para>The value with the specified <paramref name="index"/> extracted from the array <paramref name="args"/> or entered by a user in the console.</para>
+        /// <para>The value with the specified <paramref name="index"/> extracted from the <paramref name="args"/> array or entered by a user in the console.</para>
         /// <para>Значение с указанным <paramref name="index"/>, извлечённое из массива <paramref name="args"/>, или введённое пользователем в консоли.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -94,8 +94,8 @@ namespace Platform.IO
         public static void Debug(string @string) => Console.WriteLine(@string);
 
         /// <summary>
-        /// <para>Writes the text representation of the specified object array <paramref name="args"/>, followed by the current line terminator, to the standard output stream using the specified <paramref name="format"/>.</para>
-        /// <para>Записывает текстовые представления заданного массива объектов <paramref name="args"/>, за которым следует текущий признак конца строки, в стандартный выходной поток с использованием заданного<paramref name="format"/>.</para>
+        /// <para>Writes the text representation of the specified <paramref name="args"/> array, followed by the current line terminator, to the standard output stream using the specified <paramref name="format"/>.</para>
+        /// <para>Записывает текстовые представления заданного массива <paramref name="args"/>, за которым следует текущий признак конца строки, в стандартный выходной поток с использованием заданного<paramref name="format"/>.</para>
         /// </summary>
         /// <remarks>
         /// <para>The method is only executed if the application was compiled with the DEBUG directive.</para>
