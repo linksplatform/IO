@@ -41,7 +41,7 @@ namespace Platform.IO
         public static string GetOrReadArgument(int index, params string[] args) => GetOrReadArgument(index, $"{index + 1} argument", args);
 
         /// <summary>
-        /// <para>Gets the argument's value with the specified <paramref name="index" /> from the <paramref name="args"/> array and if it's absent request input of this value in the console from the user.</para>
+        /// <para>Gets the argument's value with the specified <paramref name="index" /> from the <paramref name="args"/> array and if the value is absent requests a user to input it in the console.</para>
         /// <para>Получает значение аргумента с указанным <paramref name="index"/> из массива <paramref name="args"/>, a если оно отсутствует запрашивает его ввод в консоли у пользователя.</para>
         /// </summary>
         /// <param name="index">
