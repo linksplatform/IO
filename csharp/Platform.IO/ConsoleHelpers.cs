@@ -22,7 +22,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Gets the argument's value with the specified <paramref name="index" /> from the <paramref name="args"/> array and if it's absent request input of this value in the console from the user.</para>
+        /// <para>Gets the argument's value with the specified <paramref name="index" /> from the <paramref name="args"/> array and if it's absent requests a user to input it in the console.</para>
         /// <para>Получает значение аргумента с указанным <paramref name="index"/> из массива <paramref name="args"/>, a если оно отсутствует запрашивает его ввод в консоли у пользователя.</para>
         /// </summary>
         /// <param name="index">
@@ -41,7 +41,7 @@ namespace Platform.IO
         public static string GetOrReadArgument(int index, params string[] args) => GetOrReadArgument(index, $"{index + 1} argument", args);
 
         /// <summary>
-        /// <para>Gets the argument's value with the specified <paramref name="index" /> from the <paramref name="args"/> array and if the value is absent requests a user to input it in the console.</para>
+        /// <para>Gets the argument's value with the specified <paramref name="index" /> from the <paramref name="args"/> array and if it's absent requests a user to input it in the console.</para>
         /// <para>Получает значение аргумента с указанным <paramref name="index"/> из массива <paramref name="args"/>, a если оно отсутствует запрашивает его ввод в консоли у пользователя.</para>
         /// </summary>
         /// <param name="index">
@@ -94,7 +94,7 @@ namespace Platform.IO
         public static void Debug(string @string) => Console.WriteLine(@string);
 
         /// <summary>
-        /// <para>Writes text representations of objects of the specified <paramref name="args"/>, followed by the current line terminator, to the standard output stream using the specified <paramref name="format"/>.</para>
+        /// <para>Writes text representations of objects of the specified <paramref name="args"/> array, followed by the current line terminator, to the standard output stream using the specified <paramref name="format"/>.</para>
         /// <para>Записывает текстовые представления объектов заданного массива <paramref name="args"/>, за которым следует текущий признак конца строки, в стандартный выходной поток с использованием заданного <paramref name="format"/>.</para>
         /// </summary>
         /// <param name="format">
