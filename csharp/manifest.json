@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.IO.ConsoleCancellation.html",
-          "hash": "bqOyYB7tEDfVVlCUFQvElQ=="
+          "hash": "ArYh3Gsto57ER35D+Jii0Q=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.IO.ConsoleHelpers.html",
-          "hash": "t2m8LHmHaai/dBooMihUbg=="
+          "hash": "oCDo/jjz5MWsN9Np3sT7gg=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.IO.FileHelpers.html",
-          "hash": "ZiLEBWrXC5chs2Pb4Qo2tw=="
+          "hash": "r50oxUdzQZDdGErPlja3GQ=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.IO.StreamExtensions.html",
-          "hash": "PrTgHAiDmnAZxxydVDL1WQ=="
+          "hash": "GquUZNeQk7zAt8Tj8e6Zow=="
         }
       },
       "is_incremental": false,
