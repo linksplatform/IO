@@ -9,9 +9,28 @@ namespace Platform.IO
 {
     public static class FileHelpers
     {
+        /// <summary>
+        /// <para>Reads all the text in the <paramref name="path"/> and put it into the character array.</para>
+        /// <para>Читает весь текст в <paramref name="path"/> и помещает его в массив.</para>
+        /// </summary>
+        /// <param name="path">
+        /// <para>File to be read.</para>
+        /// <para>Файл для чтения.</para>
+        /// </param>
+        /// <returns>
+        /// <para>The character array</para>
+        /// <para>Массив букв</para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static char[] ReadAllChars(string path) => File.ReadAllText(path).ToCharArray();
 
+        /// <summary>
+        /// <para></para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="T"></typeparam>
+        /// <param name="path"></param>
+        /// <returns></returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T[] ReadAll<T>(string path)
             where T : struct
