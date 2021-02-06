@@ -8,6 +8,18 @@ namespace Platform.IO
 {
     public static class StreamExtensions
     {
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <typeparam name="T">
+        /// <para>Struct</para>
+        /// <para>Структура</para>
+        /// </typeparam>
+        /// <param name="stream">
+        /// <para>An abstract class that provides an overview of a sequence of bytes</para>
+        /// <para>Абстрактный класс предоставляющий универсальное представление последовательности байтов</para>
+        /// </param>
+        /// <param name="value"></param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Write<T>(this Stream stream, T value)
             where T : struct
