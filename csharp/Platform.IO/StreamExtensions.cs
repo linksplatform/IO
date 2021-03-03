@@ -9,15 +9,16 @@ namespace Platform.IO
     public static class StreamExtensions
     {
         /// <summary>
-        /// 
+        /// <para>Writes a sequence of bytes derived from <paramref name="value"/> to the current stream and advances the current position within this stream by the number of bytes written.</para>
+        /// <para>Записывает последовательность байтов, полученных из <paramref name="value"/> в текущий поток и перемещает текущую позицию в нем вперед на число записанных байтов.</para>
         /// </summary>
         /// <typeparam name="T">
-        /// <para>Struct</para>
-        /// <para>Структура</para>
+        /// <para>Struct.</para>
+        /// <para>Структура.</para>
         /// </typeparam>
         /// <param name="stream">
-        /// <para>An abstract class that provides an overview of a sequence of bytes</para>
-        /// <para>Абстрактный класс предоставляющий универсальное представление последовательности байтов</para>
+        /// <para>An abstract class that provides an overview of a sequence of bytes.</para>
+        /// <para>Абстрактный класс предоставляющий универсальное представление последовательности байтов.</para>
         /// </param>
         /// <param name="value"></param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -28,6 +29,19 @@ namespace Platform.IO
             stream.Write(bytes, 0, bytes.Length);
         }
 
+        /// <summary>
+        /// <para>Reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.</para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="T">
+        /// <para>Struct.</para>
+        /// <para>Структура.</para>
+        /// </typeparam>
+        /// <param name="stream">
+        /// <para>An abstract class that provides an overview of a sequence of bytes.</para>
+        /// <para>Абстрактный класс предоставляющий универсальное представление последовательности байтов.</para>
+        /// </param>
+        /// <returns></returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T ReadOrDefault<T>(this Stream stream)
             where T : struct
