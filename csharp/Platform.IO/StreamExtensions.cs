@@ -13,16 +13,16 @@ namespace Platform.IO
         /// <para>Записывает последовательность байт представляющую <paramref name="value"/> в  поток <paramref name="stream"/> и перемещает текущую позицию в нем вперед на число записанных байт.</para>
         /// </summary>
         /// <typeparam name="T">
-        /// <para>Type being structure.</para>
+        /// <para>The structure type.</para>
         /// <para>Тип являющийся структурой.</para>
         /// </typeparam>
         /// <param name="stream">
-        /// <para>A stream to record.</para>
+        /// <para>A stream to write to.</para>
         /// <para>Поток, в который осуществляется запись.</para>
         /// </param>
         /// <param name="value">
-        /// <para>The struct value to be written to the <paramref name="stream"/>..</para>
-        /// <para>Структура, значение которой записывается в поток <paramref name="stream"/>.</para>
+        /// <para>The struct <typeparam name="T"> value to be written to the <paramref name="stream"/>.</para>
+        /// <para>Значение структуры <typeparam name="T"> которое записывается в поток <paramref name="stream"/>.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Write<T>(this Stream stream, T value)
@@ -33,20 +33,20 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Reads a sequence of bytes representing the structure and moves the current position within the <paramref name="stream"/> by the number of bytes read.</para>
-        /// <para>Прочитывает последовательность байт представляющих структуру и перемещает текущую позицию в <paramref name="stream"/> вперед на число прочитанных байт..</para>
+        /// <para>Reads a sequence of bytes representing the <typeparamref name="T"/> structure and moves the current position within the <paramref name="stream"/> by the number of read bytes.</para>
+        /// <para>Считывает последовательность байт представляющих структуру <typeparamref name="T"/> и перемещает текущую позицию в <paramref name="stream"/> вперед на число прочитанных байт.</para>
         /// </summary>
         /// <typeparam name="T">
-        /// <para>Type being structure.</para>
+        /// <para>The structure type.</para>
         /// <para>Тип являющийся структурой.</para>
         /// </typeparam>
         /// <param name="stream">
-        /// <para>A stream containing the structure.</para>
-        /// <para>Поток, содержащий структуру.</para>
+        /// <para>A stream containing the <typeparam name="T"> structure.</para>
+        /// <para>Поток, содержащий структуру <typeparam name="T">.</para>
         /// </param>
         /// <returns>
-        /// <para>The structure, if all bytes from stream have been read, otherwise the structure with default fields values.</para>
-        /// <para>Структура, если все байты из потока были прочитаны, иначе структура с значениями полей по умолчанию.</para>
+        /// <para>The <typeparam name="T"> structure, if all bytes from stream have been read, otherwise the default value of <typeparamref name="T"/> structure.</para>
+        /// <para>Структура <typeparam name="T">, если все байты из потока были прочитаны, иначе значение структуры <typeparamref name="T"/> по умолчанию.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T ReadOrDefault<T>(this Stream stream)
@@ -58,20 +58,20 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Reads and return array of structures from the strem <paramref name="stream"/>.</para>
-        /// <para>Прочитывает и возвращает массив всех структур из потока <paramref name="stream"/>.</para>
+        /// <para>Reads and return array of <typeparam name="T"> structures from the strem <paramref name="stream"/>.</para>
+        /// <para>Прочитывает и возвращает массив всех структур <typeparam name="T"> из потока <paramref name="stream"/>.</para>
         /// </summary>
         /// <typeparam name="T">
-        /// <para>Type being structure.</para>
+        /// <para>The structure type.</para>
         /// <para>Тип являющийся структурой.</para>
         /// </typeparam>
         /// <param name="stream">
-        /// <para>A stream containing the structure.</para>
-        /// <para>Поток, содержащий структуру.</para>
+        /// <para>A stream containing the <typeparam name="T"> structure.</para>
+        /// <para>Поток, содержащий структуру <typeparam name="T">.</para>
         /// </param>
         /// <returns>
-        /// <para>The array with structures obtained from the stream <paramref name="stream"/>.</para>
-        /// <para>Массив с структурами полученными из потока <paramref name="stream"/>.</para>
+        /// <para>The array with <typeparam name="T"> structures obtained from the stream <paramref name="stream"/>.</para>
+        /// <para>Массив с структурами <typeparam name="T"> полученными из потока <paramref name="stream"/>.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T[] ReadAll<T>(this Stream stream)
