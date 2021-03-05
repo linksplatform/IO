@@ -58,11 +58,21 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// 
+        /// <para>Reads and return array of structures from the strem <paramref name="stream"/>.</para>
+        /// <para>Прочитывает и возвращает массив всех структур из потока <paramref name="stream"/>.</para>
         /// </summary>
-        /// <typeparam name="T"></typeparam>
-        /// <param name="stream"></param>
-        /// <returns></returns>
+        /// <typeparam name="T">
+        /// <para>Type being structure.</para>
+        /// <para>Тип являющийся структурой.</para>
+        /// </typeparam>
+        /// <param name="stream">
+        /// <para>A stream containing the structure.</para>
+        /// <para>Поток, содержащий структуру.</para>
+        /// </param>
+        /// <returns>
+        /// <para>The array with structures obtained from the stream <paramref name="stream"/>.</para>
+        /// <para>Массив с структурами полученными из потока <paramref name="stream"/>.</para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T[] ReadAll<T>(this Stream stream)
             where T : struct
