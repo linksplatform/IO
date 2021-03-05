@@ -9,8 +9,8 @@ namespace Platform.IO
     public static class StreamExtensions
     {
         /// <summary>
-        /// <para>Writes a sequence of bytes derived from <paramref name="value"/> to the current stream and advances the current position within this stream by the number of bytes written.</para>
-        /// <para>Записывает последовательность байтов, полученных из <paramref name="value"/> в текущий поток и перемещает текущую позицию в нем вперед на число записанных байтов.</para>
+        /// <para>Writes a sequence of bytes representing <paramref name = "value"/> to the stream <paramref name = "stream"/>.</para>
+        /// <para>Записывает последовательность байт представляющую <paramref name="value"/> в  поток <paramref name="stream"/>.</para>
         /// </summary>
         /// <typeparam name="T">
         /// <para>Struct.</para>
@@ -20,7 +20,10 @@ namespace Platform.IO
         /// <para>An abstract class that provides an overview of a sequence of bytes.</para>
         /// <para>Абстрактный класс предоставляющий универсальное представление последовательности байтов.</para>
         /// </param>
-        /// <param name="value"></param>
+        /// <param name="value">
+        /// <para>Struct whose value pass to the stream <paramref name="stream"/>.</para>
+        /// <para>Структура, значение которой записывается в поток <paramref name="stream"/>.</para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Write<T>(this Stream stream, T value)
             where T : struct
@@ -30,7 +33,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Reads a sequence of bytes from the current stream and advances the position within the stream by the number of bytes read.</para>
+        /// <para>Reads a sequence of bytes representing.</para>
         /// <para></para>
         /// </summary>
         /// <typeparam name="T">
