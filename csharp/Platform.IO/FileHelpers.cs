@@ -10,15 +10,15 @@ namespace Platform.IO
     public static class FileHelpers
     {
         /// <summary>
-        /// <para>Reads all the text and return character array from the <paramref name="path"/>.</para>
+        /// <para>Reads all the text and returns character array from the <paramref name="path"/>.</para>
         /// <para>Читает весь текст и возвращает массив символов из <paramref name="path"/>.</para>
         /// </summary>
         /// <param name="path">
-        /// <para>The string passed to the application.</para>
-        /// <para>Строка переданная приложению.</para>
+        /// <para>The path to the file, from which to read the character array .</para>
+        /// <para>Путь к файлу, из которого нужно прочитать массив символов.</para>
         /// </param>
         /// <returns>
-        /// <para>A character array from the <paramref name="path"/>.</para>
+        /// <para>The character array from the <paramref name="path"/>.</para>
         /// <para>Массив символов из <paramref name="path"/>.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
