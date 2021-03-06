@@ -24,6 +24,22 @@ namespace Platform.IO
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static char[] ReadAllChars(string path) => File.ReadAllText(path).ToCharArray();
 
+        /// <summary>
+        /// <para>Reads and return structures from <paramref name="path"/>.</para>
+        /// <para>Считывает и возвращает все структуры из <paramref name="path"/>.</para>
+        /// </summary>
+        /// <typeparam name="T">
+        /// <para>The structure type.</para>
+        /// <para>Тип являющийся структурой.</para>
+        /// </typeparam>
+        /// <param name="path">
+        /// <para>The path to the file, from which to read array of <typeparamref name="T"/> structures.</para>
+        /// <para>Путь к файлу, из которого нужно прочитать массив структур <typeparamref name="T"/>.</para>
+        /// </param>
+        /// <returns>
+        /// <para>The structure <typeparamref name="T"/> value.</para>
+        /// <para>Значение структуры <typeparamref name="T"/>.</para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T[] ReadAll<T>(string path)
             where T : struct
