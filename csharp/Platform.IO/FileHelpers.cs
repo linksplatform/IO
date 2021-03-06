@@ -25,8 +25,8 @@ namespace Platform.IO
         public static char[] ReadAllChars(string path) => File.ReadAllText(path).ToCharArray();
 
         /// <summary>
-        /// <para>Reads and return all structures from <paramref name="path"/>.</para>
-        /// <para>Считывает и возвращает все структуры из <paramref name="path"/>.</para>
+        /// <para>Reads and return all <typeparamref name="T"/> structures from <paramref name="path"/>.</para>
+        /// <para>Считывает и возвращает все структуры типа <typeparamref name="T"/> из <paramref name="path"/>.</para>
         /// </summary>
         /// <typeparam name="T">
         /// <para>The structure type.</para>
@@ -38,7 +38,7 @@ namespace Platform.IO
         /// </param>
         /// <returns>
         /// <para>The <typeparamref name="T"/> structure value.</para>
-        /// <para>Значение структуры <typeparamref name="T"/>.</para>
+        /// <para>Значение структуры типа <typeparamref name="T"/>.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T[] ReadAll<T>(string path)
@@ -50,7 +50,7 @@ namespace Platform.IO
 
         /// <summary>
         /// <para>Reads and returns <typeparamref name="T"/> struct from <paramref name="path"/>.</para>
-        /// <para>Считывае, и возвращает структуру <typeparamref name="T"/> из <paramref name="path"/>.</para>
+        /// <para>Считывае, и возвращает структуру типа <typeparamref name="T"/> из <paramref name="path"/>.</para>
         /// </summary>
         /// <typeparam name="T">
         /// <para>The structure type.</para>
@@ -58,11 +58,11 @@ namespace Platform.IO
         /// </typeparam>
         /// <param name="path">
         /// <para>The path to the file, from which to read array of <typeparamref name="T"/> structures.</para>
-        /// <para>Путь к файлу, из которого нужно прочитать массив структур <typeparamref name="T"/>.</para>
+        /// <para>Путь к файлу, из которого нужно прочитать массив структур типа <typeparamref name="T"/>.</para>
         /// </param>
         /// <returns>
         /// <para><typeparamref name="T"/> Struct if reading from <paramref name="path"/> was successfull, otherwise default struct.</para>
-        /// <para>Структура <typeparamref name="T"/> если чтение с <paramref name="path"/> было успешным, иначе структуру <typeparamref name="T"/> по умолчанию.</para>
+        /// <para>Структура типа <typeparamref name="T"/> если чтение с <paramref name="path"/> было успешным, иначе структуру типа <typeparamref name="T"/> по умолчанию.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T ReadFirstOrDefault<T>(string path)
