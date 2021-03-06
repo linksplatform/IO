@@ -35,7 +35,7 @@ namespace Platform.IO
 
         /// <summary>
         /// <para>Reads a sequence that represents the <typeparamref name="T"/> structure and moves the current position of the <paramref name="stream"/> by the number of read bytes.</para>
-        /// <para>Считывает последовательность байт представляющих структуру <typeparamref name="T"/> и перемещает текущую позицию в <paramref name="stream"/> вперед на число прочитанных байт.</para>
+        /// <para>Считывает последовательность байт представляющих структуру типа <typeparamref name="T"/> и перемещает текущую позицию в <paramref name="stream"/> вперед на число прочитанных байт.</para>
         /// </summary>
         /// <typeparam name="T">
         /// <para>The structure type.</para>
@@ -47,7 +47,7 @@ namespace Platform.IO
         /// </param>
         /// <returns>
         /// <para>The <typeparam name="T"> structure, if its bytes from<paramref name="stream"/> have been read, otherwise the default value of <typeparamref name="T"/> structure.</para>
-        /// <para>Структура <typeparam name="T">, если её байты из потока были прочитаны, иначе значение структуры <typeparamref name="T"/> по умолчанию.</para>
+        /// <para>Структура <typeparam name="T">, если её байты из потока были прочитаны, иначе значение структуры типа <typeparamref name="T"/> по умолчанию.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T ReadOrDefault<T>(this Stream stream)
