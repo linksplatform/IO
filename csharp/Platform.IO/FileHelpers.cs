@@ -14,7 +14,7 @@ namespace Platform.IO
         /// <para>Читает весь текст и возвращает массив символов из <paramref name="path"/>.</para>
         /// </summary>
         /// <param name="path">
-        /// <para>The path to the file, from which to read the character array .</para>
+        /// <para>The path to the file, from which to read the character array.</para>
         /// <para>Путь к файлу, из которого нужно прочитать массив символов.</para>
         /// </param>
         /// <returns>
@@ -25,7 +25,7 @@ namespace Platform.IO
         public static char[] ReadAllChars(string path) => File.ReadAllText(path).ToCharArray();
 
         /// <summary>
-        /// <para>Reads and return structures from <paramref name="path"/>.</para>
+        /// <para>Reads and return all structures from <paramref name="path"/>.</para>
         /// <para>Считывает и возвращает все структуры из <paramref name="path"/>.</para>
         /// </summary>
         /// <typeparam name="T">
@@ -34,7 +34,7 @@ namespace Platform.IO
         /// </typeparam>
         /// <param name="path">
         /// <para>The path to the file, from which to read array of <typeparamref name="T"/> structures.</para>
-        /// <para>Путь к файлу, из которого нужно прочитать массив структур <typeparamref name="T"/>.</para>
+        /// <para>Путь к файлу, из которого нужно прочитать массив структур типа <typeparamref name="T"/>.</para>
         /// </param>
         /// <returns>
         /// <para>The <typeparamref name="T"/> structure value.</para>
