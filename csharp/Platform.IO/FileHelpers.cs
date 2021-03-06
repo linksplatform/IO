@@ -57,7 +57,7 @@ namespace Platform.IO
         /// <para>Тип являющийся структурой.</para>
         /// </typeparam>
         /// <param name="path">
-        /// <para>The path to the file, from which to read array of <typeparamref name="T"/> structures.</para>
+        /// <para>The path to the file, from which to read the array of <typeparamref name="T"/> structures.</para>
         /// <para>Путь к файлу, из которого нужно прочитать массив структур типа <typeparamref name="T"/>.</para>
         /// </param>
         /// <returns>
@@ -72,6 +72,22 @@ namespace Platform.IO
             return fileStream?.ReadOrDefault<T>() ?? default;
         }
 
+        /// <summary>
+        /// <para></para>
+        /// <para></para>
+        /// </summary>
+        /// <typeparam name="TStruct">
+        /// <para></para>
+        /// <para></para>
+        /// </typeparam>
+        /// <param name="path">
+        /// <para></para>
+        /// <para></para>
+        /// </param>
+        /// <returns>
+        /// <para></para>
+        /// <para></para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static FileStream GetValidFileStreamOrDefault<TStruct>(string path) where TStruct : struct => GetValidFileStreamOrDefault(path, Structure<TStruct>.Size);
 
