@@ -6,6 +6,10 @@ using Platform.Unsafe;
 
 namespace Platform.IO
 {
+    /// <summary>
+    /// <para>Provides a set of helper methods for <see cref="Stream"/> objects.</para>
+    /// <para>Предоставляет набор вспомогательных методов для объектов <see cref="Stream"/>.</para>
+    /// </summary>
     public static class StreamExtensions
     {
         /// <summary>
