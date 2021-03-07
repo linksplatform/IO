@@ -10,8 +10,7 @@ namespace Platform.IO
     {
         /// <summary>
         /// <para>Writes a sequence that represents the <paramref name="value"/> to the <paramref name="stream"/> and moves the current position of the <paramref name="stream"/> by the number of written bytes.</para>
-        /// <para>Записывает последовательность байт представляющую <paramref name="value"/> в поток <paramref name="stream"/> и перемещает текущую позицию в <paramref name="stream"/> вперед
-        на число записанных байт.</para>
+        /// <para>Записывает последовательность байт представляющую <paramref name="value"/> в поток <paramref name="stream"/> и перемещает текущую позицию в <paramref name="stream"/> вперед на число записанных байт.</para>
         /// </summary>
         /// <typeparam name="T">
         /// <para>The structure type.</para>
@@ -42,12 +41,12 @@ namespace Platform.IO
         /// <para>Тип являющийся структурой.</para>
         /// </typeparam>
         /// <param name="stream">
-        /// <para>A stream containing the <typeparam name="T"> structure.</para>
-        /// <para>Поток, содержащий структуру <typeparam name="T">.</para>
+        /// <para>A stream containing the <typeparam name="T"> structure value.</para>
+        /// <para>Поток, содержащий значение структуры <typeparam name="T">.</para>
         /// </param>
         /// <returns>
-        /// <para>The <typeparam name="T"> structure, if its bytes from<paramref name="stream"/> have been read, otherwise the default value of <typeparamref name="T"/> structure.</para>
-        /// <para>Структура <typeparam name="T">, если её байты из потока были прочитаны, иначе значение структуры типа <typeparamref name="T"/> по умолчанию.</para>
+        /// <para>The <typeparam name="T"> structure, if its bytes from the <paramref name="stream"/> are read, otherwise the default value of the <typeparamref name="T"/> structure value.</para>
+        /// <para>Значение структуры <typeparam name="T">, если её байты из потока были прочитаны, иначе значение структуры типа <typeparamref name="T"/> по умолчанию.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T ReadOrDefault<T>(this Stream stream)
@@ -59,20 +58,20 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Reads and returns array of <typeparam name="T"> structures from the <paramref name="stream"/>.</para>
-        /// <para>Прочитывает и возвращает массив всех структур <typeparam name="T"> из потока <paramref name="stream"/>.</para>
+        /// <para>Reads and returns array of <typeparam name="T"> structure values from the <paramref name="stream"/>.</para>
+        /// <para>Прочитывает и возвращает массив всех значений структур типа <typeparam name="T"> из потока <paramref name="stream"/>.</para>
         /// </summary>
         /// <typeparam name="T">
         /// <para>The structure type.</para>
         /// <para>Тип являющийся структурой.</para>
         /// </typeparam>
         /// <param name="stream">
-        /// <para>A stream containing the <typeparam name="T"> structure.</para>
-        /// <para>Поток, содержащий структуру <typeparam name="T">.</para>
+        /// <para>A stream containing the <typeparam name="T"> structure value.</para>
+        /// <para>Поток, содержащий значение структуры типа <typeparam name="T">.</para>
         /// </param>
         /// <returns>
-        /// <para>The array with <typeparam name="T"> structures obtained from the <paramref name="stream"/>.</para>
-        /// <para>Массив с структурами <typeparam name="T"> прочитанными из потока <paramref name="stream"/>.</para>
+        /// <para>The array with <typeparam name="T"> structure values read from the <paramref name="stream"/>.</para>
+        /// <para>Массив с значениями структур типа <typeparam name="T">, прочитанными из потока <paramref name="stream"/>.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T[] ReadAll<T>(this Stream stream)
