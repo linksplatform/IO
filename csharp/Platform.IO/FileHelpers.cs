@@ -8,7 +8,7 @@ using Platform.Unsafe;
 namespace Platform.IO
 {
     /// <summary>
-    /// <para>Provides a set of helper methods for working with files.</para>
+    /// <para>Provides a set of helper methods to work with files.</para>
     /// <para>Предоставляет набор вспомогательных методов для работы с файлами.</para>
     /// </summary>
     public static class FileHelpers
@@ -29,7 +29,7 @@ namespace Platform.IO
         public static char[] ReadAllChars(string path) => File.ReadAllText(path).ToCharArray();
 
         /// <summary>
-        /// <para>Reads and return all <typeparamref name="T"/> structures from <paramref name="path"/>.</para>
+        /// <para>Reads and returns all <typeparamref name="T"/> structures from <paramref name="path"/>.</para>
         /// <para>Считывает и возвращает все структуры типа <typeparamref name="T"/> из <paramref name="path"/>.</para>
         /// </summary>
         /// <typeparam name="T">
@@ -54,19 +54,19 @@ namespace Platform.IO
 
         /// <summary>
         /// <para>Reads and returns <typeparamref name="T"/> struct from <paramref name="path"/>.</para>
-        /// <para>Считывае, и возвращает структуру типа <typeparamref name="T"/> из <paramref name="path"/>.</para>
+        /// <para>Считывает и возвращает структуру типа <typeparamref name="T"/> из <paramref name="path"/>.</para>
         /// </summary>
         /// <typeparam name="T">
         /// <para>The structure type.</para>
         /// <para>Тип являющийся структурой.</para>
         /// </typeparam>
         /// <param name="path">
-        /// <para>The path to the file, from which to read the array of <typeparamref name="T"/> structures.</para>
-        /// <para>Путь к файлу, из которого нужно прочитать массив структур типа <typeparamref name="T"/>.</para>
+        /// <para>The path to the file, from which to read the value of <typeparamref name="T"/> structure.</para>
+        /// <para>Путь к файлу, из которого нужно прочитать значение структуры типа <typeparamref name="T"/>.</para>
         /// </param>
         /// <returns>
-        /// <para>A <typeparamref name="T"/> struct valueif read from <paramref name="path"/> is successfull, otherwise the default struct.</para>
-        /// <para>Структура типа <typeparamref name="T"/> если чтение из <paramref name="path"/> прошло успешно, иначе значение структуры типа <typeparamref name="T"/> по умолчанию.</para>
+        /// <para>A <typeparamref name="T"/> struct value if read from <paramref name="path"/> is successfull, otherwise the default struct value.</para>
+        /// <para>Значение структуры типа <typeparamref name="T"/> если чтение из <paramref name="path"/> прошло успешно, иначе значение структуры типа <typeparamref name="T"/> по умолчанию.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T ReadFirstOrDefault<T>(string path)
@@ -85,7 +85,7 @@ namespace Platform.IO
         /// <para></para>
         /// </typeparam>
         /// <param name="path">
-        /// <para>The path to the file, that has to </para>
+        /// <para>The path to the file, that has to pass the validation.</para>
         /// <para>Путь к файлу, который должен пройти валидацию.</para>
         /// </param>
         /// <returns>
