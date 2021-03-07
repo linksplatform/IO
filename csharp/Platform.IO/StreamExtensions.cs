@@ -14,7 +14,7 @@ namespace Platform.IO
     {
         /// <summary>
         /// <para>Writes a byte sequence that represents the <paramref name="value"/> to the <paramref name="stream"/> and moves the current position of the <paramref name="stream"/> by the number of written bytes.</para>
-        /// <para>Записывает последовательность байт представляющую <paramref name="value"/> в поток <paramref name="stream"/> и перемещает текущую позицию в <paramref name="stream"/> вперед на число записанных байт.</para>
+        /// <para>Записывает последовательность байт представляющую <paramref name="value"/> в поток <paramref name="stream"/> и перемещает текущую позицию в <paramref name="stream"/> вперёд на число записанных байт.</para>
         /// </summary>
         /// <typeparam name="T">
         /// <para>The structure type.</para>
