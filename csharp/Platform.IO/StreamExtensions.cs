@@ -7,13 +7,13 @@ using Platform.Unsafe;
 namespace Platform.IO
 {
     /// <summary>
-    /// <para>Provides a set of helper methods for <see cref="Stream"/> objects.</para>
-    /// <para>Предоставляет набор вспомогательных методов для объектов <see cref="Stream"/>.</para>
+    /// <para>Provides a set of extension methods for <see cref="Stream"/> class instances.</para>
+    /// <para>Предоставляет набор методов расширения для эксземпляров класса <see cref="Stream"/>.</para>
     /// </summary>
     public static class StreamExtensions
     {
         /// <summary>
-        /// <para>Writes a sequence that represents the <paramref name="value"/> to the <paramref name="stream"/> and moves the current position of the <paramref name="stream"/> by the number of written bytes.</para>
+        /// <para>Writes a byte sequence that represents the <paramref name="value"/> to the <paramref name="stream"/> and moves the current position of the <paramref name="stream"/> by the number of written bytes.</para>
         /// <para>Записывает последовательность байт представляющую <paramref name="value"/> в поток <paramref name="stream"/> и перемещает текущую позицию в <paramref name="stream"/> вперед на число записанных байт.</para>
         /// </summary>
         /// <typeparam name="T">
@@ -37,8 +37,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Reads a sequence that represents the <typeparamref name="T"/> structure and moves the current position of the <paramref name="stream"/> by the number of read bytes.</para>
-        /// <para>Считывает последовательность байт представляющих структуру типа <typeparamref name="T"/> и перемещает текущую позицию в <paramref name="stream"/> вперед на число прочитанных байт.</para>
+        /// <para>Reads a byte sequence that represents the <typeparamref name="T"/> structure value and moves the current position of the <paramref name="stream"/> by the number of read bytes.</para>
+        /// <para>Считывает последовательность байт представляющих значение структуры типа <typeparamref name="T"/> и перемещает текущую позицию в <paramref name="stream"/> вперед на число прочитанных байт.</para>
         /// </summary>
         /// <typeparam name="T">
         /// <para>The structure type.</para>
@@ -49,8 +49,8 @@ namespace Platform.IO
         /// <para>Поток, содержащий значение структуры <typeparam name="T">.</para>
         /// </param>
         /// <returns>
-        /// <para>The <typeparam name="T"> structure, if its bytes from the <paramref name="stream"/> are read, otherwise the default value of the <typeparamref name="T"/> structure value.</para>
-        /// <para>Значение структуры <typeparam name="T">, если её байты из потока были прочитаны, иначе значение структуры типа <typeparamref name="T"/> по умолчанию.</para>
+        /// <para>The <typeparam name="T"> structure value, if its bytes from the <paramref name="stream"/> are read, otherwise the default <typeparamref name="T"/> structure value.</para>
+        /// <para>Значение структуры типа <typeparam name="T">, если её байты из потока были прочитаны, иначе значение структуры типа <typeparamref name="T"/> по умолчанию.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T ReadOrDefault<T>(this Stream stream)
@@ -71,7 +71,7 @@ namespace Platform.IO
         /// </typeparam>
         /// <param name="stream">
         /// <para>A stream containing the <typeparam name="T"> structure value.</para>
-        /// <para>Поток, содержащий значение структуры типа <typeparam name="T">.</para>
+        /// <para>Поток, содержащий значение структур типа <typeparam name="T">.</para>
         /// </param>
         /// <returns>
         /// <para>The array with <typeparam name="T"> structure values read from the <paramref name="stream"/>.</para>
