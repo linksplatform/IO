@@ -70,8 +70,8 @@ namespace Platform.IO
         /// <para>Тип являющийся структурой.</para>
         /// </typeparam>
         /// <param name="stream">
-        /// <para>A stream containing the <typeparam name="T"> structure value.</para>
-        /// <para>Поток, содержащий значение структур типа <typeparam name="T">.</para>
+        /// <para>A stream containing the <typeparam name="T"> structure values.</para>
+        /// <para>Поток, содержащий значения структур типа <typeparam name="T">.</para>
         /// </param>
         /// <returns>
         /// <para>The array with <typeparam name="T"> structure values read from the <paramref name="stream"/>.</para>
