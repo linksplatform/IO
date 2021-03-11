@@ -65,7 +65,7 @@ namespace Platform.IO
         /// <para>Путь к файлу, из которого нужно прочитать значение структуры типа <typeparamref name="T"/>.</para>
         /// </param>
         /// <returns>
-        /// <para>A <typeparamref name="T"/> struct value if read from <paramref name="path"/> is successfull, otherwise the default struct value.</para>
+        /// <para>A <typeparamref name="T"/> struct value if read from <paramref name="path"/> is successfull, otherwise the default <typeparamref name="T"/> struct value.</para>
         /// <para>Значение структуры типа <typeparamref name="T"/> если чтение из <paramref name="path"/> прошло успешно, иначе значение структуры типа <typeparamref name="T"/> по умолчанию.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
