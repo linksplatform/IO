@@ -121,6 +121,10 @@ namespace Platform.IO
             var fileSize = GetSize(path);
             if (fileSize % elementSize != 0)
             {
+                /// <exception cref="InvalidOperationException">
+                /// <para>Throws the error, if the file is not aligned to elements with size <paramref name="elementSize"/>.</para>
+                /// <para>Выбрасывает ошибку, если файл не соответсвует элементу размером <paramref name="elementSize"/>.</para>
+                /// </exception>
                 throw new InvalidOperationException($"File is not aligned to elements with size {elementSize}.");
             }
             return fileSize > 0 ? File.OpenRead(path) : null;
