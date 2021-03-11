@@ -95,6 +95,22 @@ namespace Platform.IO
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static FileStream GetValidFileStreamOrDefault<TStruct>(string path) where TStruct : struct => GetValidFileStreamOrDefault(path, Structure<TStruct>.Size);
 
+        /// <summary>
+        /// <para>Validates the file from <paramref name="path"/>.</para>
+        /// <para>Валидирует файл по пути <paramref name="path"/>.</para>
+        /// </summary>
+        /// <param name="path">
+        /// <para>The path to the file, that has to pass the validation.</para>
+        /// <para>Путь к файлу, который должен пройти валидацию.</para>
+        /// </param>
+        /// <param name="elementSize">
+        /// <para>The size of the file to be in <paramref name="path"/>.</para>
+        /// <para>Размер файла, который должен находиться в <paramref name="path"/>.</para>
+        /// </param>
+        /// <returns>
+        /// <para>A read only <see cref="FileStream"/> upon successfull validation, otherwise null.</para>
+        /// <para><see cref="FileStream"/> доступный только для чтения в случае успешной валидации, иначе null.</para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static FileStream GetValidFileStreamOrDefault(string path, int elementSize)
         {
@@ -110,6 +126,22 @@ namespace Platform.IO
             return fileSize > 0 ? File.OpenRead(path) : null;
         }
 
+        /// <summary>
+        /// <para>Reads and returns the last <typeparamref name="T"/> structure value from <typeparamref name="T"/>.</para>
+        /// <para>Считывает и возвращает последнее значение структуры типа <typeparamref name="T"/> из <paramref name="path"/>.</para>
+        /// </summary>
+        /// <typeparam name="T">
+        /// <para>The structure type.</para>
+        /// <para>Тип являющийся структурой.</para>
+        /// </typeparam>
+        /// <param name="path">
+        /// <para>The path to the <typeparamref name="T"/> structure values.</para>
+        /// <para>Путь к файлу с значениями структур типа <typeparamref name="T"/>.</para>
+        /// </param>
+        /// <returns>
+        /// <para>The <typeparamref name="T"/> structure value in case of success, otherwise the default <typeparamref name="T"/> structure value.</para>
+        /// <para>Значение структуры типа <typeparamref name="T"/> в случае успеха, иначе значение по умолчанию структуры типа <typeparamref name="T"/>.</para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static T ReadLastOrDefault<T>(string path)
             where T : struct
