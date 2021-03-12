@@ -201,6 +201,18 @@ namespace Platform.IO
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static FileStream Append(string path) => File.Open(path, FileMode.Append, FileAccess.Write);
 
+        /// <summary>
+        /// <para>Returns the file size from <paramref name="path"/> if file exists, otherwise 0.</para>
+        /// <para>Возвращает размер файла в <paramref name="path"/> если тот существует, иначе 0.</para>
+        /// </summary>
+        /// <param name="path">
+        /// <para>File to get size.</para>
+        /// <para>Файл, размер которого нужно получить.</para>
+        /// </param>
+        /// <returns>
+        /// <para>File size if file exists, otherwise 0.</para>
+        /// <para>Размер файла если файл существует, либо 0.</para>
+        /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static long GetSize(string path) => File.Exists(path) ? new FileInfo(path).Length : 0;
 
