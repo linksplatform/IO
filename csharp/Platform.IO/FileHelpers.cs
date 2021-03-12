@@ -238,6 +238,14 @@ namespace Platform.IO
             }
         }
 
+        /// <summary>
+        /// <para>Removes all files from the <paramref name="directory"/>.</para>
+        /// <para>Удаляет все файлы из директории <paramref name="directory"/>.</para>
+        /// </summary>
+        /// <param name="directory">
+        /// <para>Directory to be cleaned.</para>
+        /// <para>Директория для очистки.</para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void DeleteAll(string directory) => DeleteAll(directory, "*");
 
