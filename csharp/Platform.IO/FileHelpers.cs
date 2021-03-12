@@ -250,8 +250,8 @@ namespace Platform.IO
         public static void DeleteAll(string directory) => DeleteAll(directory, "*");
 
         /// <summary>
-        /// <para>Cleans up all files from the <paramref name="directory"/> according to the <paramref name="searchPattern"/>.</para>
-        /// <para>Очищает все файлы из директории <paramref name="directory"/> в соотвествии с <paramref name="searchPattern"/>.</para>
+        /// <para>Removes up all files from the <paramref name="directory"/> according to the <paramref name="searchPattern"/>.</para>
+        /// <para>Удаляет все файлы из директории <paramref name="directory"/> в соотвествии с <paramref name="searchPattern"/>.</para>
         /// </summary>
         /// <param name="directory">
         /// <para>Directory to be cleaned.</para>
@@ -265,8 +265,8 @@ namespace Platform.IO
         public static void DeleteAll(string directory, string searchPattern) => DeleteAll(directory, searchPattern, SearchOption.TopDirectoryOnly);
 
         /// <summary>
-        /// <para>Cleans up all files from the <paramref name="directory"/> according to the <paramref name="searchPattern"/> and the <paramref name="searchOption"/>.</para>
-        /// <para>Очищает все файлы из директории <paramref name="directory"/> в соотвествии с <paramref name="searchPattern"/> и <paramref name="searchOption"/>.</para>
+        /// <para>Removes up all files from the <paramref name="directory"/> according to the <paramref name="searchPattern"/> and the <paramref name="searchOption"/>.</para>
+        /// <para>Удаляет все файлы из директории <paramref name="directory"/> в соотвествии с <paramref name="searchPattern"/> и <paramref name="searchOption"/>.</para>
         /// </summary>
         /// <param name="directory">
         /// <para>Directory to be cleaned.</para>
