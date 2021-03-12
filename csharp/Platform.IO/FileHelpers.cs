@@ -191,8 +191,8 @@ namespace Platform.IO
         /// <para>Открывает или создает файл в <paramref name="path"/> и возвращает его <see cref="FileStream"/> с модом добавления в конец и доступом записи.</para>
         /// </summary>
         /// <param name="path">
-        /// <para>The path to the file.</para>
-        /// <para>Путь к файлу.</para>
+        /// <para>The path to the file to open.</para>
+        /// <para>Путь к файлу, который нужно открыть.</para>
         /// </param>
         /// <returns>
         /// <para>The <see cref="FileStream"/> with append mode and write access.</para>
