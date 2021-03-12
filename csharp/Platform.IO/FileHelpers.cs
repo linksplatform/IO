@@ -29,7 +29,7 @@ namespace Platform.IO
         public static char[] ReadAllChars(string path) => File.ReadAllText(path).ToCharArray();
 
         /// <summary>
-        /// <para>Reads and returns all <typeparamref name="T"/> structures from <paramref name="path"/>.</para>
+        /// <para>Reads and returns all <typeparamref name="T"/> structures from the <paramref name="path"/>.</para>
         /// <para>Считывает и возвращает все структуры типа <typeparamref name="T"/> из <paramref name="path"/>.</para>
         /// </summary>
         /// <typeparam name="T">
@@ -53,7 +53,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Reads and returns <typeparamref name="T"/> struct from <paramref name="path"/>.</para>
+        /// <para>Reads and returns <typeparamref name="T"/> struct from the <paramref name="path"/>.</para>
         /// <para>Считывает и возвращает структуру типа <typeparamref name="T"/> из <paramref name="path"/>.</para>
         /// </summary>
         /// <typeparam name="T">
@@ -77,7 +77,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Validates the file from <paramref name="path"/> and returns its <see cref="FileStream"/>.</para>
+        /// <para>Validates the file from the <paramref name="path"/> and returns its <see cref="FileStream"/>.</para>
         /// <para>Валидирует файл по пути <paramref name="path"/> и возвращает его <see cref="FileStream"/>.</para>
         /// </summary>
         /// <typeparam name="TStruct">
@@ -96,7 +96,7 @@ namespace Platform.IO
         private static FileStream GetValidFileStreamOrDefault<TStruct>(string path) where TStruct : struct => GetValidFileStreamOrDefault(path, Structure<TStruct>.Size);
 
         /// <summary>
-        /// <para>Validates the file from <paramref name="path"/> and returns its <see cref="FileStream"/>.</para>
+        /// <para>Validates the file from the <paramref name="path"/> and returns its <see cref="FileStream"/>.</para>
         /// <para>Валидирует файл по пути <paramref name="path"/> и возвращает его <see cref="FileStream"/>.</para>
         /// </summary>
         /// <param name="path">
@@ -131,7 +131,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Reads and returns the last <typeparamref name="T"/> structure value from <typeparamref name="T"/>.</para>
+        /// <para>Reads and returns the last <typeparamref name="T"/> structure value from the <paramref name="path"/>.</para>
         /// <para>Считывает и возвращает последнее значение структуры типа <typeparamref name="T"/> из <paramref name="path"/>.</para>
         /// </summary>
         /// <typeparam name="T">
