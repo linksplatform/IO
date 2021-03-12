@@ -241,6 +241,18 @@ namespace Platform.IO
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void DeleteAll(string directory) => DeleteAll(directory, "*");
 
+        /// <summary>
+        /// <para>Cleans up all files from the <paramref name="directory"/> according to the <paramref name="searchPattern"/>.</para>
+        /// <para>Очищает все файлы из директории <paramref name="directory"/> в соотвествии с <paramref name="searchPattern"/>.</para>
+        /// </summary>
+        /// <param name="directory">
+        /// <para>Directory to be cleaned.</para>
+        /// <para>Директория для очистки.</para>
+        /// </param>
+        /// <param name="searchPattern">
+        /// <para>Search pattern for files in the <paramref name="directory"/>.</para>
+        /// <para>Шаблон поиска для файлов в <paramref name="directory"/>.</para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void DeleteAll(string directory, string searchPattern) => DeleteAll(directory, searchPattern, SearchOption.TopDirectoryOnly);
 
@@ -249,7 +261,7 @@ namespace Platform.IO
         /// <para>Очищает все файлы из <paramref name="directory"/> в соотвествии с <paramref name="searchPattern"/> и <paramref name="searchOption"/>.</para>
         /// </summary>
         /// <param name="directory">
-        /// <para>Directory to be cleanuped.</para>
+        /// <para>Directory to be cleaned.</para>
         /// <para>Директория для очистки.</para>
         /// </param>
         /// <param name="searchPattern">
