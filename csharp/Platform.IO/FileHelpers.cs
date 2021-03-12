@@ -77,8 +77,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Validates the file from <paramref name="path"/>.</para>
-        /// <para>Валидирует файл по пути <paramref name="path"/>.</para>
+        /// <para>Validates the file from <paramref name="path"/> and returns its <see cref="FileStream"/>.</para>
+        /// <para>Валидирует файл по пути <paramref name="path"/> и возвращает его <see cref="FileStream"/>.</para>
         /// </summary>
         /// <typeparam name="TStruct">
         /// <para>The structure type.</para>
@@ -96,8 +96,8 @@ namespace Platform.IO
         private static FileStream GetValidFileStreamOrDefault<TStruct>(string path) where TStruct : struct => GetValidFileStreamOrDefault(path, Structure<TStruct>.Size);
 
         /// <summary>
-        /// <para>Validates the file from <paramref name="path"/>.</para>
-        /// <para>Валидирует файл по пути <paramref name="path"/>.</para>
+        /// <para>Validates the file from <paramref name="path"/> and returns its <see cref="FileStream"/>.</para>
+        /// <para>Валидирует файл по пути <paramref name="path"/> и возвращает его <see cref="FileStream"/>.</para>
         /// </summary>
         /// <param name="path">
         /// <para>The path to the file, that has to pass the validation.</para>
@@ -161,6 +161,22 @@ namespace Platform.IO
             return reader.ReadOrDefault<T>();
         }
 
+        /// <summary>
+        /// <para>Writes <typeparamref name="T"/> structure values at the beginning of the <paramref name="path"/>.</para>
+        /// <para>Записывает значения структур типа <typeparamref name="T"/> в начало <paramref name="path"/>.</para>
+        /// </summary>
+        /// <typeparam name="T">
+        /// <para>The structure type.</para>
+        /// <para>Тип являющийся структурой.</para>
+        /// </typeparam>
+        /// <param name="path">
+        /// <para>The path to the file to be changed.</para>
+        /// <para>Путь к файлу для изменения.</para>
+        /// </param>
+        /// <param name="value">
+        /// <para><typeparamref name="T"/> structure values to be written at the beginning of the <paramref name="path"/>.</para>
+        /// <para>Значения структур типа <typeparamref name="T"/> записываемых в начало <paramref name="path"/>.</para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void WriteFirst<T>(string path, T value)
             where T : struct
