@@ -244,6 +244,22 @@ namespace Platform.IO
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void DeleteAll(string directory, string searchPattern) => DeleteAll(directory, searchPattern, SearchOption.TopDirectoryOnly);
 
+        /// <summary>
+        /// <para>Cleans up all files from the <paramref name="directory"/> according to the <paramref name="searchPattern"/> and the <paramref name="searchOption"/>.</para>
+        /// <para>Очищает все файлы из <paramref name="directory"/> в соотвествии с <paramref name="searchPattern"/> и <paramref name="searchOption"/>.</para>
+        /// </summary>
+        /// <param name="directory">
+        /// <para>Directory to be cleanuped.</para>
+        /// <para>Директория для очистки.</para>
+        /// </param>
+        /// <param name="searchPattern">
+        /// <para>Search pattern for files in the <paramref name="directory"/>.</para>
+        /// <para>Шаблон поиска для файлов в <paramref name="directory"/>.</para>
+        /// </param>
+        /// <param name="searchOption">
+        /// <para>Specifies whether to seatch the current <paramref name="directory"/>, or the current <paramref name="directory"/> and all subdirectories.</para>
+        /// <para>Указывает следует ли искать только в текущей директории <paramref name="directory"/>, или также в субдиректориях.</para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void DeleteAll(string directory, string searchPattern, SearchOption searchOption)
         {
