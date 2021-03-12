@@ -170,12 +170,12 @@ namespace Platform.IO
         /// <para>Тип являющийся структурой.</para>
         /// </typeparam>
         /// <param name="path">
-        /// <para>The path to the file to be changed.</para>
-        /// <para>Путь к файлу для изменения.</para>
+        /// <para>The path to the file to be changed or created.</para>
+        /// <para>Путь к файлу для изменения или создания.</para>
         /// </param>
         /// <param name="value">
         /// <para><typeparamref name="T"/> structure values to be written at the beginning of the <paramref name="path"/>.</para>
-        /// <para>Значения структур типа <typeparamref name="T"/> записываемых в начало <paramref name="path"/>.</para>
+        /// <para>Значения структур типа <typeparamref name="T"/>, записываемых в начало <paramref name="path"/>.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void WriteFirst<T>(string path, T value)
