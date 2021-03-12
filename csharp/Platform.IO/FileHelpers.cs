@@ -77,20 +77,20 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para></para>
-        /// <para></para>
+        /// <para>Validates the file from <paramref name="path"/>.</para>
+        /// <para>Валидирует файл по пути <paramref name="path"/>.</para>
         /// </summary>
         /// <typeparam name="TStruct">
-        /// <para></para>
-        /// <para></para>
+        /// <para>The structure type.</para>
+        /// <para>Тип являющийся структурой.</para>
         /// </typeparam>
         /// <param name="path">
         /// <para>The path to the file, that has to pass the validation.</para>
         /// <para>Путь к файлу, который должен пройти валидацию.</para>
         /// </param>
         /// <returns>
-        /// <para></para>
-        /// <para></para>
+        /// <para>A read only <see cref="FileStream"/> upon successfull validation, otherwise null.</para>
+        /// <para><see cref="FileStream"/> доступный только для чтения в случае успешной валидации, иначе null.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static FileStream GetValidFileStreamOrDefault<TStruct>(string path) where TStruct : struct => GetValidFileStreamOrDefault(path, Structure<TStruct>.Size);
