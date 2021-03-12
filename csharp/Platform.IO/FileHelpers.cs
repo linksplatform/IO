@@ -191,8 +191,8 @@ namespace Platform.IO
         /// <para>Открывает или создает файл в <paramref name="path"/> и возвращает его <see cref="FileStream"/> с модом добавления в конец и доступом записи.</para>
         /// </summary>
         /// <param name="path">
-        /// <para>The path to the file to open.</para>
-        /// <para>Путь к файлу, который нужно открыть.</para>
+        /// <para>The path to the file to open or create.</para>
+        /// <para>Путь к файлу, который нужно открыть или создать.</para>
         /// </param>
         /// <returns>
         /// <para>The <see cref="FileStream"/> with append mode and write access.</para>
@@ -216,6 +216,18 @@ namespace Platform.IO
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static long GetSize(string path) => File.Exists(path) ? new FileInfo(path).Length : 0;
 
+        /// <summary>
+        /// <para>Sets the file size <paramref name="size"/> from the <paramref name="path"/>.</para>
+        /// <para>Устанавливает размер <paramref name="size"/> файлу из <paramref name="path"/>.</para>
+        /// </summary>
+        /// <param name="path">
+        /// <para>The path to the file to be resized.</para>
+        /// <para>Путь к файлу, размер которого нужно изменить.</para>
+        /// </param>
+        /// <param name="size">
+        /// <para>The size that will be asigned to the file from <paramref name="path"/>.</para>
+        /// <para>Размер который будет присвоен файлу из <paramref name="path"/>.</para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void SetSize(string path, long size)
         {
