@@ -206,8 +206,8 @@ namespace Platform.IO
         /// <para>Возвращает размер файла в <paramref name="path"/> если тот существует, иначе 0.</para>
         /// </summary>
         /// <param name="path">
-        /// <para>File to get size.</para>
-        /// <para>Файл, размер которого нужно получить.</para>
+        /// <para>The path to the file to get size.</para>
+        /// <para>Путь к файлу, размер которого нужно получить.</para>
         /// </param>
         /// <returns>
         /// <para>File size if file exists, otherwise 0.</para>
