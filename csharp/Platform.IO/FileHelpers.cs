@@ -85,7 +85,7 @@ namespace Platform.IO
         /// <para>Тип структуры.</para>
         /// </typeparam>
         /// <param name="path">
-        /// <para>The path to the file to be scanned.</para>
+        /// <para>The path to the file to validate.</para>
         /// <para>Путь к проверяемому файлу.</para>
         /// </param>
         /// <returns>
@@ -96,8 +96,8 @@ namespace Platform.IO
         private static FileStream GetValidFileStreamOrDefault<TStruct>(string path) where TStruct : struct => GetValidFileStreamOrDefault(path, Structure<TStruct>.Size);
 
         /// <summary>
-        /// <para>Returns the <see cref="FileStream"/> with opened file from the file at <paramref name="path"/> if its size is a multiple of the required <paramref name="elementSize"/>, otherwise <see langword="null"/>.</para>
-        /// <para>Возвращает <see cref="FileStream"/> с открытым файлом из файла по пути<paramref name="path"/>, если его размер кратен требуемому размеру элементов <paramref name="elementSize"/>, а иначе <see langword="null"/>.</para>
+        /// <para>Returns the <see cref="FileStream"/> opened for reading from the file at <paramref name="path"/> if its size is a multiple of the required <paramref name="elementSize"/>, otherwise <see langword="null"/>.</para>
+        /// <para>Возвращает открытый для чтения <see cref="FileStream"/> из файла по пути<paramref name="path"/>, если его размер кратен требуемому размеру элементов <paramref name="elementSize"/>, а иначе <see langword="null"/>.</para>
         /// </summary>
         /// <param name="path">
         /// <para>The path to the file to be scanned.</para>
