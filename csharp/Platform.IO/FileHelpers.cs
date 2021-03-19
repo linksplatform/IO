@@ -37,7 +37,7 @@ namespace Platform.IO
         /// <para>Тип структуры.</para>
         /// </typeparam>
         /// <param name="path">
-        /// <para>The path to the file, from which to read array of <typeparamref name="T"/> structure values.</para>
+        /// <para>The path to the file, from which to read <typeparamref name="T"/> structure values array.</para>
         /// <para>Путь к файлу, из которого нужно прочитать массив значений структур типа <typeparamref name="T"/>.</para>
         /// </param>
         /// <returns>
