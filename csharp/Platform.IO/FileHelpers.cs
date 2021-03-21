@@ -77,8 +77,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Returns the <see cref="FileStream"/> with opened file from the file at <paramref name="path"/> if its size is a multiple of the <typeparamref name="TStruct"/> structure value size, otherwise <see langword="null"/>.</para>
-        /// <para>Возвращает <see cref="FileStream"/> с открытым файлом из файла находящегося в <paramref name="path"/>, если его размер кратен размеру значения структуры типа <typeparamref name="TStruct"/>, а иначе <see langword="null"/>.</para>
+        /// <para>Returns the <see cref="FileStream"/> with opened file from the file at <paramref name="path"/> if file exists, not empty and its size is a multiple of the <typeparamref name="TStruct"/> structure size, otherwise <see langword="null"/>.</para>
+        /// <para>Возвращает <see cref="FileStream"/> с открытым файлом из файла находящегося в <paramref name="path"/>, если файл существует, не пуст и его размер кратен размеру структуры типа <typeparamref name="TStruct"/>, а иначе <see langword="null"/>.</para>
         /// </summary>
         /// <typeparam name="TStruct">
         /// <para>The structure type.</para>
@@ -89,31 +89,31 @@ namespace Platform.IO
         /// <para>Путь к проверяемому файлу.</para>
         /// </param>
         /// <returns>
-        /// <para>A read-only <see cref="FileStream"/> in the case of successful check, otherwise <see langword="null"/>.</para>
+        /// <para>A <see cref="FileStream"/> opened for reading in the case of successful check, otherwise <see langword="null"/>.</para>
         /// <para><see cref="FileStream"/> открытый для чтения в случае успешной проверки, а иначе <see langword="null"/>.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static FileStream GetValidFileStreamOrDefault<TStruct>(string path) where TStruct : struct => GetValidFileStreamOrDefault(path, Structure<TStruct>.Size);
 
         /// <summary>
-        /// <para>Returns the <see cref="FileStream"/> opened for reading from the file at <paramref name="path"/> if its size is a multiple of the required <paramref name="elementSize"/>, otherwise <see langword="null"/>.</para>
-        /// <para>Возвращает открытый для чтения <see cref="FileStream"/> из файла находящегося в <paramref name="path"/>, если его размер кратен требуемому размеру элементов <paramref name="elementSize"/>, а иначе <see langword="null"/>.</para>
+        /// <para>Returns the <see cref="FileStream"/> opened for reading from the file at <paramref name="path"/> if file exists, not empty and its size is a multiple of the required <paramref name="elementSize"/>, otherwise <see langword="null"/>.</para>
+        /// <para>Возвращает открытый для чтения <see cref="FileStream"/> из файла находящегося в <paramref name="path"/>, если файл существует, не пуст и его размер кратен размеру <paramref name="elementSize"/>, а иначе <see langword="null"/>.</para>
         /// </summary>
         /// <param name="path">
-        /// <para>The path to the file to be scanned.</para>
+        /// <para>The path to the file to validate.</para>
         /// <para>Путь к проверяемому файлу.</para>
         /// </param>
         /// <param name="elementSize">
         /// <para>Required size of elements located in the file at <paramref name="path"/>.</para>
-        /// <para>Требуемый размер элементов, находящихся в файленаходящегося в <paramref name="path"/>.</para>
+        /// <para>Требуемый размер элементов, находящихся в файле находящегося в <paramref name="path"/>.</para>
         /// </param>
         /// <returns>
-        /// <para>A read-only <see cref="FileStream"/> in the case of successful check, otherwise <see langword="null"/>.</para>
+        /// <para>A <see cref="FileStream"/> opened for reading in the case of successful check, otherwise <see langword="null"/>.</para>
         /// <para><see cref="FileStream"/> открытый для чтения в случае успешной проверки, а иначе <see langword="null"/>.</para>
         /// </returns>
         /// <exception cref="InvalidOperationException">
         /// <para>The size of the file at <paramref name="path"/> is not a multiple of the required <paramref name="elementSize"/>.</para>
-        /// <para>Размер файла находящегося в <paramref name="path"/> не кратен требуемому размеру элемента <paramref name="elementSize"/>.</para>
+        /// <para>Размер файла находящегося в <paramref name="path"/> не кратен требуемому размеру <paramref name="elementSize"/>.</para>
         /// </exception>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static FileStream GetValidFileStreamOrDefault(string path, int elementSize)
