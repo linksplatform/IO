@@ -49,7 +49,7 @@ namespace Platform.IO
         /// <para>Поток, содержащий значение структуры типа <typeparam name="T">.</para>
         /// </param>
         /// <returns>
-        /// <para>The <typeparam name="T"> structure value, if its bytes from the <paramref name="stream"/> are read, otherwise the default <typeparamref name="T"/> structure value.</para>
+        /// <para>The <typeparam name="T"> structure value, if its bytes from the <paramref name="stream"/> are read; otherwise the default <typeparamref name="T"/> structure value.</para>
         /// <para>Значение структуры типа <typeparam name="T">, если её байты из потока <paramref name="stream"/> были прочитаны, иначе значение структуры типа <typeparamref name="T"/> по умолчанию.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]

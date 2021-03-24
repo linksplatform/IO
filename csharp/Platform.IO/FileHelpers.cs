@@ -65,7 +65,7 @@ namespace Platform.IO
         /// <para>Путь к файлу, из которого нужно прочитать значение структуры типа <typeparamref name="T"/>.</para>
         /// </param>
         /// <returns>
-        /// <para>The <typeparamref name="T"/> structure value if read from the file at the <paramref name="path"/> is successful, otherwise the default <typeparamref name="T"/> structure value.</para>
+        /// <para>The <typeparamref name="T"/> structure value if read from the file at the <paramref name="path"/> is successful; otherwise the default <typeparamref name="T"/> structure value.</para>
         /// <para>Значение структуры типа <typeparamref name="T"/> если чтение из файла находящегося в <paramref name="path"/> прошло успешно, иначе значение структуры типа <typeparamref name="T"/> по умолчанию.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -77,7 +77,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Returns the <see cref="FileStream"/> opened for reading from the file at the <paramref name="path"/> if the file exists, not empty and its size is a multiple of the <typeparamref name="TStruct"/> structure size, otherwise <see langword="null"/>.</para>
+        /// <para>Returns the <see cref="FileStream"/> opened for reading from the file at the <paramref name="path"/> if the file exists, not empty and its size is a multiple of the <typeparamref name="TStruct"/> structure size; otherwise <see langword="null"/>.</para>
         /// <para>Возвращает <see cref="FileStream"/> открытый для чтения из файла находящегося в <paramref name="path"/>, если файл существует, не пуст и его размер кратен размеру структуры типа <typeparamref name="TStruct"/>, а иначе <see langword="null"/>.</para>
         /// </summary>
         /// <typeparam name="TStruct">
@@ -89,7 +89,7 @@ namespace Platform.IO
         /// <para>Путь к проверяемому файлу.</para>
         /// </param>
         /// <returns>
-        /// <para>A <see cref="FileStream"/> opened for reading in the case of successful check, otherwise <see langword="null"/>.</para>
+        /// <para>A <see cref="FileStream"/> opened for reading in the case of successful check; otherwise <see langword="null"/>.</para>
         /// <para><see cref="FileStream"/> открытый для чтения в случае успешной проверки, а иначе <see langword="null"/>.</para>
         /// </returns>
         /// <exception cref="InvalidOperationException">
@@ -100,7 +100,7 @@ namespace Platform.IO
         private static FileStream GetValidFileStreamOrDefault<TStruct>(string path) where TStruct : struct => GetValidFileStreamOrDefault(path, Structure<TStruct>.Size);
 
         /// <summary>
-        /// <para>Returns the <see cref="FileStream"/> opened for reading from the file at the <paramref name="path"/> if the file exists, not empty and its size is a multiple of the required <paramref name="elementSize"/>, otherwise <see langword="null"/>.</para>
+        /// <para>Returns the <see cref="FileStream"/> opened for reading from the file at the <paramref name="path"/> if the file exists, not empty and its size is a multiple of the required <paramref name="elementSize"/>; otherwise <see langword="null"/>.</para>
         /// <para>Возвращает <see cref="FileStream"/> открытый для чтения из файла находящегося в <paramref name="path"/>, если файл существует, не пуст и его размер кратен <paramref name="elementSize"/>, а иначе <see langword="null"/>.</para>
         /// </summary>
         /// <param name="path">
@@ -112,7 +112,7 @@ namespace Platform.IO
         /// <para>Требуемый размер элементов, находящихся в файле находящегося в <paramref name="path"/>.</para>
         /// </param>
         /// <returns>
-        /// <para>A <see cref="FileStream"/> opened for reading in the case of successful check, otherwise <see langword="null"/>.</para>
+        /// <para>A <see cref="FileStream"/> opened for reading in the case of successful check; otherwise <see langword="null"/>.</para>
         /// <para><see cref="FileStream"/> открытый для чтения в случае успешной проверки, а иначе <see langword="null"/>.</para>
         /// </returns>
         /// <exception cref="InvalidOperationException">
@@ -147,7 +147,7 @@ namespace Platform.IO
         /// <para>Путь к файлу с значениями структур типа <typeparamref name="T"/>.</para>
         /// </param>
         /// <returns>
-        /// <para>The last <typeparamref name="T"/> structure value from the file at the <paramref name="path"/> in the case of successful read, otherwise the default <typeparamref name="T"/> structure value.</para>
+        /// <para>The last <typeparamref name="T"/> structure value from the file at the <paramref name="path"/> in the case of successful read; otherwise the default <typeparamref name="T"/> structure value.</para>
         /// <para>Значение структуры типа <typeparamref name="T"/> из файла находящегося в <paramref name="path"/> в случае успешного чтения, иначе значение по умолчанию структуры типа <typeparamref name="T"/>.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -206,7 +206,7 @@ namespace Platform.IO
         public static FileStream Append(string path) => File.Open(path, FileMode.Append, FileAccess.Write);
 
         /// <summary>
-        /// <para>Returns the size of file at the <paramref name="path"/> if file exists, otherwise 0.</para>
+        /// <para>Returns the size of file at the <paramref name="path"/> if file exists; otherwise 0.</para>
         /// <para>Возвращает размер файла находящегося в <paramref name="path"/> если тот существует, иначе 0.</para>
         /// </summary>
         /// <param name="path">
@@ -214,7 +214,7 @@ namespace Platform.IO
         /// <para>Путь к файлу, размер которого нужно получить.</para>
         /// </param>
         /// <returns>
-        /// <para>Size of file at the <paramref name="path"/> if it exists, otherwise 0.</para>
+        /// <para>Size of file at the <paramref name="path"/> if it exists; otherwise 0.</para>
         /// <para>Размер файла если файл находящийся в <paramref name="path"/> существует, либо 0.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
