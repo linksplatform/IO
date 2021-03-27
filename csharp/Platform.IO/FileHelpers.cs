@@ -262,8 +262,8 @@ namespace Platform.IO
         /// <para>Путь к директории для очистки.</para>
         /// </param>
         /// <param name="searchPattern">
-        /// <para>A search pattern for files to be deleted.</para>
-        /// <para>Шаблон поиска для удаляемых файлов.</para>
+        /// <para>A search pattern for files to be deleted in the directory at the path <paramref name="directory"/>.</para>
+        /// <para>Шаблон поиска для удаляемых файлов в директории находящейся по пути <paramref name="directory"/>.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void DeleteAll(string directory, string searchPattern) => DeleteAll(directory, searchPattern, SearchOption.TopDirectoryOnly);
@@ -277,8 +277,8 @@ namespace Platform.IO
         /// <para>Путь к директории для очистки.</para>
         /// </param>
         /// <param name="searchPattern">
-        /// <para>A search pattern for files to be deleted.</para>
-        /// <para>Шаблон поиска для удаляемых файлов.</para>
+        /// <para>A search pattern for files to be deleted in the directory at the path <paramref name="directory"/>.</para>
+        /// <para>Шаблон поиска для удаляемых файлов в директории находящейся по пути <paramref name="directory"/> .</para>
         /// </param>
         /// <param name="searchOption">
         /// <para>A <see cref="SearchOption"/> value that determines whether to search only in the current the directory at the path <paramref name="directory"/>, or also in all subdirectories.</para>
