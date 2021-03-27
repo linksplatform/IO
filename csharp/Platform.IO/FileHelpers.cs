@@ -192,7 +192,7 @@ namespace Platform.IO
 
         /// <summary>
         /// <para>Opens or creates the file at the <paramref name="path"/> and returns its <see cref="FileStream"/> with append mode and write access.</para>
-        /// <para>Открывает или создает файл находящегося в <paramref name="path"/> и возвращает его <see cref="FileStream"/> с режимом дополнения и доступом записи.</para>
+        /// <para>Открывает или создает файл находящегося в <paramref name="path"/> и возвращает его <see cref="FileStream"/> с режимом дополнения и доступом на запись.</para>
         /// </summary>
         /// <param name="path">
         /// <para>The path to the file to open or create.</para>
@@ -200,7 +200,7 @@ namespace Platform.IO
         /// </param>
         /// <returns>
         /// <para>The <see cref="FileStream"/> with append mode and write access.</para>
-        /// <para><see cref="FileStream"/> с режимом дополнения и доступом записи.</para>
+        /// <para><see cref="FileStream"/> с режимом дополнения и доступом на запись.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static FileStream Append(string path) => File.Open(path, FileMode.Append, FileAccess.Write);
