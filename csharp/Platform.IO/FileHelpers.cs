@@ -53,8 +53,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Reads and returns the <typeparamref name="T"/> structure value from the file at the <paramref name="path"/>.</para>
-        /// <para>Считывает и возвращает значение структуры типа <typeparamref name="T"/> из файла находящегося в <paramref name="path"/>.</para>
+        /// <para>Reads and returns the first <typeparamref name="T"/> structure value from the file at the <paramref name="path"/>.</para>
+        /// <para>Считывает и возвращает первое значение структуры типа <typeparamref name="T"/> из файла находящегося в <paramref name="path"/>.</para>
         /// </summary>
         /// <typeparam name="T">
         /// <para>The structure type.</para>
@@ -255,34 +255,34 @@ namespace Platform.IO
 
         /// <summary>
         /// <para>Removes all files from the directory at the path <paramref name="directory"/> according to the <paramref name="searchPattern"/>.</para>
-        /// <para>Удаляет все файлы из директории находящейся по пути <paramref name="directory"/> в соотвествии с шаблоном поиска <paramref name="searchPattern"/>.</para>
+        /// <para>Удаляет все файлы из директории находящейся по пути <paramref name="directory"/> в соотвествии с <paramref name="searchPattern"/>.</para>
         /// </summary>
         /// <param name="directory">
         /// <para>The path to the directory to be cleaned.</para>
         /// <para>Путь к директории для очистки.</para>
         /// </param>
         /// <param name="searchPattern">
-        /// <para>Search pattern for files in the directory at the path <paramref name="directory"/>.</para>
-        /// <para>Шаблон поиска для файлов в директории находящейся по пути <paramref name="directory"/>.</para>
+        /// <para>A search pattern for files to be deleted.</para>
+        /// <para>Шаблон поиска для удаляемых файлов.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void DeleteAll(string directory, string searchPattern) => DeleteAll(directory, searchPattern, SearchOption.TopDirectoryOnly);
 
         /// <summary>
         /// <para>Removes all files from the directory at the path <paramref name="directory"/> according to the <paramref name="searchPattern"/> and the <paramref name="searchOption"/>.</para>
-        /// <para>Удаляет все файлы из директории находящейся по пути <paramref name="directory"/> в соотвествии с шаблоном поиска <paramref name="searchPattern"/> и настройкой поиска <paramref name="searchOption"/>.</para>
+        /// <para>Удаляет все файлы из директории находящейся по пути <paramref name="directory"/> в соотвествии с <paramref name="searchPattern"/> и <paramref name="searchOption"/>.</para>
         /// </summary>
         /// <param name="directory">
         /// <para>The path to the directory to be cleaned.</para>
         /// <para>Путь к директории для очистки.</para>
         /// </param>
         /// <param name="searchPattern">
-        /// <para>Search pattern for files in the directory at the path <paramref name="directory"/>.</para>
-        /// <para>Шаблон поиска для файлов в директории находящейся по пути <paramref name="directory"/>.</para>
+        /// <para>A search pattern for files to be deleted.</para>
+        /// <para>Шаблон поиска для удаляемых файлов.</para>
         /// </param>
         /// <param name="searchOption">
-        /// <para>Specifies whether to search only in the current the directory at the path <paramref name="directory"/>, or also in subdirectories.</para>
-        /// <para>Указывает следует ли искать только в текущей директории находящейся по пути <paramref name="directory"/>, или также в субдиректориях.</para>
+        /// <para>A <see cref="SearchOption"/> value that determines whether to search only in the current the directory at the path <paramref name="directory"/>, or also in all subdirectories.</para>
+        /// <para>Значение <see cref="SearchOption"/> определяющее искать ли только в текущей директории находящейся по пути <paramref name="directory"/>, или также во всех субдиректориях.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void DeleteAll(string directory, string searchPattern, SearchOption searchOption)
