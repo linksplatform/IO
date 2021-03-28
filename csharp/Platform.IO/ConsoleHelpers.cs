@@ -9,7 +9,7 @@ namespace Platform.IO
 {
     /// <summary>
     /// <para>Provides the set of helper methods to work with the console.</para>
-    /// <para>Предоставляет набор вспомогательных методов для работы с консолью</para>
+    /// <para>Предоставляет набор вспомогательных методов для работы с консолью.</para>
     /// </summary>
     public static class ConsoleHelpers
     {
