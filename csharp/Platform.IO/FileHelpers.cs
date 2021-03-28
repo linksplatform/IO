@@ -147,7 +147,7 @@ namespace Platform.IO
         /// <para>Путь к файлу с значениями структур типа <typeparamref name="T"/>.</para>
         /// </param>
         /// <returns>
-        /// <para>The last <typeparamref name="T"/> structure value from the file at the <paramref name="path"/> in the case of successful read; otherwise the default <typeparamref name="T"/> structure value.</para>
+        /// <para>The <typeparamref name="T"/> structure value from the file at the <paramref name="path"/> in the case of successful read; otherwise the default <typeparamref name="T"/> structure value.</para>
         /// <para>Значение структуры типа <typeparamref name="T"/> из файла находящегося в <paramref name="path"/> в случае успешного чтения, иначе значение по умолчанию структуры типа <typeparamref name="T"/>.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -254,8 +254,8 @@ namespace Platform.IO
         public static void DeleteAll(string directory) => DeleteAll(directory, "*");
 
         /// <summary>
-        /// <para>Removes all files from the directory at the path <paramref name="directory"/> according to the <paramref name="searchPattern"/>.</para>
-        /// <para>Удаляет все файлы из директории находящейся по пути <paramref name="directory"/> в соотвествии с <paramref name="searchPattern"/>.</para>
+        /// <para>Removes files from the directory at the path <paramref name="directory"/> according to the <paramref name="searchPattern"/>.</para>
+        /// <para>Удаляет файлы из директории находящейся по пути <paramref name="directory"/> в соотвествии с <paramref name="searchPattern"/>.</para>
         /// </summary>
         /// <param name="directory">
         /// <para>The path to the directory to be cleaned.</para>
@@ -269,8 +269,8 @@ namespace Platform.IO
         public static void DeleteAll(string directory, string searchPattern) => DeleteAll(directory, searchPattern, SearchOption.TopDirectoryOnly);
 
         /// <summary>
-        /// <para>Removes all files from the directory at the path <paramref name="directory"/> according to the <paramref name="searchPattern"/> and the <paramref name="searchOption"/>.</para>
-        /// <para>Удаляет все файлы из директории находящейся по пути <paramref name="directory"/> в соотвествии с <paramref name="searchPattern"/> и <paramref name="searchOption"/>.</para>
+        /// <para>Removes files from the directory at the path <paramref name="directory"/> according to the <paramref name="searchPattern"/> and the <paramref name="searchOption"/>.</para>
+        /// <para>Удаляет файлы из директории находящейся по пути <paramref name="directory"/> в соотвествии с <paramref name="searchPattern"/> и <paramref name="searchOption"/>.</para>
         /// </summary>
         /// <param name="directory">
         /// <para>The path to the directory to be cleaned.</para>
