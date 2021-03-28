@@ -52,8 +52,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Reads and returns the <typeparamref name="T"/> structure value from the file at the <paramref name="path"/>.</para>
-        /// <para>Считывает и возвращает значение структуры типа <typeparamref name="T"/> из файла находящегося в <paramref name="path"/>.</para>
+        /// <para>Reads and returns the first <typeparamref name="T"/> structure value from the file at the <paramref name="path"/>.</para>
+        /// <para>Считывает и возвращает первое значение структуры типа <typeparamref name="T"/> из файла находящегося в <paramref name="path"/>.</para>
         /// </summary>
         /// <typeparam name="T">
         /// <para>The structure type.</para>
@@ -146,7 +146,7 @@ namespace Platform.IO
         /// <para>Путь к файлу с значениями структур типа <typeparamref name="T"/>.</para>
         /// </param>
         /// <returns>
-        /// <para>The last <typeparamref name="T"/> structure value from the file at the <paramref name="path"/> in the case of successful read; otherwise the default <typeparamref name="T"/> structure value.</para>
+        /// <para>The <typeparamref name="T"/> structure value from the file at the <paramref name="path"/> in the case of successful read; otherwise the default <typeparamref name="T"/> structure value.</para>
         /// <para>Значение структуры типа <typeparamref name="T"/> из файла находящегося в <paramref name="path"/> в случае успешного чтения, иначе значение по умолчанию структуры типа <typeparamref name="T"/>.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -191,7 +191,7 @@ namespace Platform.IO
 
         /// <summary>
         /// <para>Opens or creates the file at the <paramref name="path"/> and returns its <see cref="FileStream"/> with append mode and write access.</para>
-        /// <para>Открывает или создает файл находящегося в <paramref name="path"/> и возвращает его <see cref="FileStream"/> с режимом дополнения и доступом записи.</para>
+        /// <para>Открывает или создает файл находящегося в <paramref name="path"/> и возвращает его <see cref="FileStream"/> с режимом дополнения и доступом на запись.</para>
         /// </summary>
         /// <param name="path">
         /// <para>The path to the file to open or create.</para>
@@ -199,7 +199,7 @@ namespace Platform.IO
         /// </param>
         /// <returns>
         /// <para>The <see cref="FileStream"/> with append mode and write access.</para>
-        /// <para><see cref="FileStream"/> с режимом дополнения и доступом записи.</para>
+        /// <para><see cref="FileStream"/> с режимом дополнения и доступом на запись.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static FileStream Append(string path) => File.Open(path, FileMode.Append, FileAccess.Write);
@@ -253,35 +253,35 @@ namespace Platform.IO
         public static void DeleteAll(string directory) => DeleteAll(directory, "*");
 
         /// <summary>
-        /// <para>Removes all files from the directory at the path <paramref name="directory"/> according to the <paramref name="searchPattern"/>.</para>
-        /// <para>Удаляет все файлы из директории находящейся по пути <paramref name="directory"/> в соотвествии с шаблоном поиска <paramref name="searchPattern"/>.</para>
+        /// <para>Removes files from the directory at the path <paramref name="directory"/> according to the <paramref name="searchPattern"/>.</para>
+        /// <para>Удаляет файлы из директории находящейся по пути <paramref name="directory"/> в соотвествии с <paramref name="searchPattern"/>.</para>
         /// </summary>
         /// <param name="directory">
         /// <para>The path to the directory to be cleaned.</para>
         /// <para>Путь к директории для очистки.</para>
         /// </param>
         /// <param name="searchPattern">
-        /// <para>Search pattern for files in the directory at the path <paramref name="directory"/>.</para>
-        /// <para>Шаблон поиска для файлов в директории находящейся по пути <paramref name="directory"/>.</para>
+        /// <para>A search pattern for files to be deleted in the directory at the path <paramref name="directory"/>.</para>
+        /// <para>Шаблон поиска для удаляемых файлов в директории находящейся по пути <paramref name="directory"/>.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void DeleteAll(string directory, string searchPattern) => DeleteAll(directory, searchPattern, SearchOption.TopDirectoryOnly);
 
         /// <summary>
-        /// <para>Removes all files from the directory at the path <paramref name="directory"/> according to the <paramref name="searchPattern"/> and the <paramref name="searchOption"/>.</para>
-        /// <para>Удаляет все файлы из директории находящейся по пути <paramref name="directory"/> в соотвествии с шаблоном поиска <paramref name="searchPattern"/> и настройкой поиска <paramref name="searchOption"/>.</para>
+        /// <para>Removes files from the directory at the path <paramref name="directory"/> according to the <paramref name="searchPattern"/> and the <paramref name="searchOption"/>.</para>
+        /// <para>Удаляет файлы из директории находящейся по пути <paramref name="directory"/> в соотвествии с <paramref name="searchPattern"/> и <paramref name="searchOption"/>.</para>
         /// </summary>
         /// <param name="directory">
         /// <para>The path to the directory to be cleaned.</para>
         /// <para>Путь к директории для очистки.</para>
         /// </param>
         /// <param name="searchPattern">
-        /// <para>Search pattern for files in the directory at the path <paramref name="directory"/>.</para>
-        /// <para>Шаблон поиска для файлов в директории находящейся по пути <paramref name="directory"/>.</para>
+        /// <para>A search pattern for files to be deleted in the directory at the path <paramref name="directory"/>.</para>
+        /// <para>Шаблон поиска для удаляемых файлов в директории находящейся по пути <paramref name="directory"/> .</para>
         /// </param>
         /// <param name="searchOption">
-        /// <para>Specifies whether to search only in the current the directory at the path <paramref name="directory"/>, or also in subdirectories.</para>
-        /// <para>Указывает следует ли искать только в текущей директории находящейся по пути <paramref name="directory"/>, или также в субдиректориях.</para>
+        /// <para>A <see cref="SearchOption"/> value that determines whether to search only in the current the directory at the path <paramref name="directory"/>, or also in all subdirectories.</para>
+        /// <para>Значение <see cref="SearchOption"/> определяющее искать ли только в текущей директории находящейся по пути <paramref name="directory"/>, или также во всех субдиректориях.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void DeleteAll(string directory, string searchPattern, SearchOption searchOption)

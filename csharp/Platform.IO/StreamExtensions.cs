@@ -61,7 +61,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Reads and returns the  <typeparam name="T"> structure values array from the <paramref name="stream"/>.</para>
+        /// <para>Reads and returns all <typeparam name="T"> structure values array from the <paramref name="stream"/>.</para>
         /// <para>Прочитывает и возвращает массив всех значений структур типа <typeparam name="T"> из потока <paramref name="stream"/>.</para>
         /// </summary>
         /// <typeparam name="T">
