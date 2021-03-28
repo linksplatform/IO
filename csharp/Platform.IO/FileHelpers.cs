@@ -214,7 +214,7 @@ namespace Platform.IO
         /// </param>
         /// <returns>
         /// <para>Size of file at the <paramref name="path"/> if it exists; otherwise 0.</para>
-        /// <para>Размер файла если файл находящийся в <paramref name="path"/> существует, либо 0.</para>
+        /// <para>Размер файла если файл находящийся в <paramref name="path"/> существует, иначе 0.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static long GetSize(string path) => File.Exists(path) ? new FileInfo(path).Length : 0;
