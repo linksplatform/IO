@@ -3,7 +3,6 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using Platform.Unsafe;
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 namespace Platform.IO
 {
@@ -93,8 +92,8 @@ namespace Platform.IO
         /// <para><see cref="FileStream"/> открытый для чтения в случае успешной проверки, а иначе <see langword="null"/>.</para>
         /// </returns>
         /// <exception cref="InvalidOperationException">
-        /// <para>The size of the file at the <paramref name="path"/> is not a multiple of the required <paramref name="elementSize"/>.</para>
-        /// <para>Размер файла находящегося в <paramref name="path"/> не кратен требуемому <paramref name="elementSize"/>.</para>
+        /// <para>The size of the file at the <paramref name="path"/> is not a multiple of the required <typeparamref name="TStruct"/> structure size.</para>
+        /// <para>Размер файла находящегося в <paramref name="path"/> не кратен требуемому размеру структуры типа <typeparamref name="TStruct"/>.</para>
         /// </exception>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static FileStream GetValidFileStreamOrDefault<TStruct>(string path) where TStruct : struct => GetValidFileStreamOrDefault(path, Structure<TStruct>.Size);
