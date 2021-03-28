@@ -4,10 +4,13 @@ using System.Runtime.CompilerServices;
 using Platform.Collections;
 using Platform.Collections.Arrays;
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
 
 namespace Platform.IO
 {
+    /// <summary>
+    /// <para>Provides the set of helper methods to work with the console.</para>
+    /// <para>Предоставляет набор вспомогательных методов для работы с консолью</para>
+    /// </summary>
     public static class ConsoleHelpers
     {
         /// <summary>
