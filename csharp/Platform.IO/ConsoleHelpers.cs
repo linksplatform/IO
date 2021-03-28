@@ -25,7 +25,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Gets the argument's value with the specified <paramref name="index" /> from the <paramref name="args"/> array and if it's absent requests a user to input it in the console.</para>
+        /// <para>Gets the argument's value with the specified <paramref name="index"/> from the <paramref name="args"/> array and if it's absent requests a user to input it in the console.</para>
         /// <para>Получает значение аргумента с указанным <paramref name="index"/> из массива <paramref name="args"/>, a если оно отсутствует запрашивает его ввод в консоли у пользователя.</para>
         /// </summary>
         /// <param name="index">
@@ -44,7 +44,7 @@ namespace Platform.IO
         public static string GetOrReadArgument(int index, params string[] args) => GetOrReadArgument(index, $"{index + 1} argument", args);
 
         /// <summary>
-        /// <para>Gets the argument's value with the specified <paramref name="index" /> from the <paramref name="args"/> array and if it's absent requests a user to input it in the console.</para>
+        /// <para>Gets the argument's value with the specified <paramref name="index"/> from the <paramref name="args"/> array and if it's absent requests a user to input it in the console.</para>
         /// <para>Получает значение аргумента с указанным <paramref name="index"/> из массива <paramref name="args"/>, a если оно отсутствует запрашивает его ввод в консоли у пользователя.</para>
         /// </summary>
         /// <param name="index">
@@ -82,8 +82,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Outputs the <paramref name="string" /> to the console.</para>
-        /// <para>Выводит <paramref name="string" /> в консоль.</para>
+        /// <para>Outputs the <paramref name="string"/> to the console.</para>
+        /// <para>Выводит <paramref name="string"/> в консоль.</para>
         /// </summary>
         /// <param name="string">
         /// <para>The string to output to the console.</para>
@@ -97,7 +97,7 @@ namespace Platform.IO
         public static void Debug(string @string) => Console.WriteLine(@string);
 
         /// <summary>
-        /// <para>Writes text representations of objects of the specified <paramref name="args"/> array, followed by the current line terminator, to the standard output stream using the specified <paramref name="format"/>.</para>
+        /// <para>Writes text representations of the specified <paramref name="args"/> array objects, followed by the current line terminator, to the standard output stream using the specified <paramref name="format"/>.</para>
         /// <para>Записывает текстовые представления объектов заданного массива <paramref name="args"/>, за которым следует текущий признак конца строки, в стандартный выходной поток с использованием заданного <paramref name="format"/>.</para>
         /// </summary>
         /// <param name="format">
@@ -105,8 +105,8 @@ namespace Platform.IO
         /// <para>Строка составного формата.</para>
         /// </param>
         /// <param name="args">
-        /// <para>The object array to write to the standard output stream using <paramref name="format" />.</para>
-        /// <para>Массив объектов для записи в стандартный выходной поток с использованием <paramref name="format" />.</para>
+        /// <para>The object array to write to the standard output stream using <paramref name="format"/>.</para>
+        /// <para>Массив объектов для записи в стандартный выходной поток с использованием <paramref name="format"/>.</para>
         /// </param>
         /// <remarks>
         /// <para>The method is only executed if the application was compiled with the DEBUG directive.</para>
