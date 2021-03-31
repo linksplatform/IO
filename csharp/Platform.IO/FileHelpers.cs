@@ -7,8 +7,8 @@ using Platform.Unsafe;
 namespace Platform.IO
 {
     /// <summary>
-    /// <para>Provides the set of helper methods to work with files.</para>
-    /// <para>Предоставляет набор вспомогательных методов для работы с файлами.</para>
+    /// <para>Represents the set of helper methods to work with files.</para>
+    /// <para>Представляет набор вспомогательных методов для работы с файлами.</para>
     /// </summary>
     public static class FileHelpers
     {
