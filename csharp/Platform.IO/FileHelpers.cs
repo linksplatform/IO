@@ -3,13 +3,11 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using Platform.Unsafe;
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
 namespace Platform.IO
 {
     /// <summary>
-    /// <para>Provides a set of helper methods to work with files.</para>
-    /// <para>Предоставляет набор вспомогательных методов для работы с файлами.</para>
+    /// <para>Represents the set of helper methods to work with files.</para>
+    /// <para>Представляет набор вспомогательных методов для работы с файлами.</para>
     /// </summary>
     public static class FileHelpers
     {
@@ -93,8 +91,8 @@ namespace Platform.IO
         /// <para><see cref="FileStream"/> открытый для чтения в случае успешной проверки, а иначе <see langword="null"/>.</para>
         /// </returns>
         /// <exception cref="InvalidOperationException">
-        /// <para>The size of the file at the <paramref name="path"/> is not a multiple of the required <paramref name="elementSize"/>.</para>
-        /// <para>Размер файла находящегося в <paramref name="path"/> не кратен требуемому <paramref name="elementSize"/>.</para>
+        /// <para>The size of the file at the <paramref name="path"/> is not a multiple of the required <typeparamref name="TStruct"/> structure size.</para>
+        /// <para>Размер файла находящегося в <paramref name="path"/> не кратен требуемому размеру структуры типа <typeparamref name="TStruct"/>.</para>
         /// </exception>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static FileStream GetValidFileStreamOrDefault<TStruct>(string path) where TStruct : struct => GetValidFileStreamOrDefault(path, Structure<TStruct>.Size);
@@ -192,7 +190,7 @@ namespace Platform.IO
 
         /// <summary>
         /// <para>Opens or creates the file at the <paramref name="path"/> and returns its <see cref="FileStream"/> with append mode and write access.</para>
-        /// <para>Открывает или создает файл находящегося в <paramref name="path"/> и возвращает его <see cref="FileStream"/> с режимом дополнения и доступом на запись.</para>
+        /// <para>Открывает или создаёт файл находящийся в <paramref name="path"/> и возвращает его <see cref="FileStream"/> с режимом дополнения и доступом на запись.</para>
         /// </summary>
         /// <param name="path">
         /// <para>The path to the file to open or create.</para>
@@ -215,7 +213,7 @@ namespace Platform.IO
         /// </param>
         /// <returns>
         /// <para>Size of file at the <paramref name="path"/> if it exists; otherwise 0.</para>
-        /// <para>Размер файла если файл находящийся в <paramref name="path"/> существует, либо 0.</para>
+        /// <para>Размер файла если файл находящийся в <paramref name="path"/> существует, иначе 0.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static long GetSize(string path) => File.Exists(path) ? new FileInfo(path).Length : 0;

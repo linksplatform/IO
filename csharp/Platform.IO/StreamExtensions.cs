@@ -2,13 +2,11 @@
 using System.Runtime.CompilerServices;
 using Platform.Unsafe;
 
-#pragma warning disable CS1591 // Missing XML comment for publicly visible type or member
-
 namespace Platform.IO
 {
     /// <summary>
-    /// <para>Provides a set of extension methods for <see cref="Stream"/> class instances.</para>
-    /// <para>Предоставляет набор методов расширения для эксземпляров класса <see cref="Stream"/>.</para>
+    /// <para>Represents the set of extension methods for <see cref="Stream"/> class instances.</para>
+    /// <para>Представляет набор методов расширения для экземпляров класса <see cref="Stream"/>.</para>
     /// </summary>
     public static class StreamExtensions
     {
