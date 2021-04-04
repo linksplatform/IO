@@ -3,7 +3,6 @@ using System.IO;
 using System.Runtime.CompilerServices;
 using Platform.Unsafe;
 
-
 namespace Platform.IO
 {
     /// <summary>

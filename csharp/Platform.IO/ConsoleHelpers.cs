@@ -4,7 +4,6 @@ using System.Runtime.CompilerServices;
 using Platform.Collections;
 using Platform.Collections.Arrays;
 
-
 namespace Platform.IO
 {
     /// <summary>
