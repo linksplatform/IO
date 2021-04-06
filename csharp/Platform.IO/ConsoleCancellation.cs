@@ -10,18 +10,30 @@ namespace Platform.IO
 {
     public class ConsoleCancellation : DisposableBase
     {
+        /// <summary>
+        /// <para>Returns the <see cref="CancellationTokenSource"></see> object.</para>
+        /// <para>Возвращает объект <see cref="CancellationTokenSource"></see>.</para>
+        /// </summary>
         public CancellationTokenSource Source
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get;
         }
 
+        /// <summary>
+        /// <para>Returns the <see cref="CancellationToken"></see> object.</para>
+        /// <para>Возвращает объект <see cref="CancellationToken"></see>.</para>
+        /// </summary>
         public CancellationToken Token
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
             get;
         }
 
+        /// <summary>
+        /// <para>Gets whether cancellation has been requested for this <see cref="CancellationTokenSource"></see>.</para>
+        /// <para>Получает была ли получена отмена для <see cref="CancellationTokenSource"></see>.</para>
+        /// </summary>
         public bool IsRequested
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
