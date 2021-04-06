@@ -101,6 +101,18 @@ namespace Platform.IO
             }
         }
 
+        /// <summary>
+        /// <para>Requests cancellation if cancellation was not requested.</para>
+        /// <para>Запрашивает отмену если отмена не запрашивалась.</para>
+        /// </summary>
+        /// <param name="sender">
+        /// <para>The event source.</para>
+        /// <para>Источник события.</para>
+        /// </param>
+        /// <param name="e">
+        /// <para>The <see cref="ConsoleCancelEventArgs"/> instance that provides data for the CancelKeyPress event.</para>
+        /// <para>Экземпляр <see cref="ConsoleCancelEventArgs"/> предоставляющий данные для события CancelKeyPress.</para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void OnCancelKeyPress(object sender, ConsoleCancelEventArgs e)
         {
