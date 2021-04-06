@@ -11,8 +11,8 @@ namespace Platform.IO
     public class ConsoleCancellation : DisposableBase
     {
         /// <summary>
-        /// <para>Returns the <see cref="CancellationTokenSource"></see> object.</para>
-        /// <para>Возвращает объект <see cref="CancellationTokenSource"></see>.</para>
+        /// <para>Returns the <see cref="CancellationTokenSource"/> object.</para>
+        /// <para>Возвращает объект <see cref="CancellationTokenSource"/>.</para>
         /// </summary>
         public CancellationTokenSource Source
         {
@@ -21,8 +21,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Returns the <see cref="CancellationToken"></see> object.</para>
-        /// <para>Возвращает объект <see cref="CancellationToken"></see>.</para>
+        /// <para>Returns the <see cref="CancellationToken"/> object.</para>
+        /// <para>Возвращает объект <see cref="CancellationToken"/>.</para>
         /// </summary>
         public CancellationToken Token
         {
@@ -31,8 +31,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Gets whether cancellation has been requested for this <see cref="CancellationTokenSource"></see>.</para>
-        /// <para>Получает значение, указывающее, была ли получена отмена для <see cref="CancellationTokenSource"></see>.</para>
+        /// <para>Gets whether cancellation has been requested for this <see cref="CancellationTokenSource"/>.</para>
+        /// <para>Получает значение, указывающее, была ли получена отмена для <see cref="CancellationTokenSource"/>.</para>
         /// </summary>
         public bool IsRequested
         {
@@ -41,8 +41,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Gets whether cancellation has not been requested for this <see cref="CancellationTokenSource"></see>.</para>
-        /// <para>Получает не была ли получена отмена для <see cref="CancellationTokenSource"></see>.</para>
+        /// <para>Gets whether cancellation has not been requested for this <see cref="CancellationTokenSource"/>.</para>
+        /// <para>Получает не была ли получена отмена для <see cref="CancellationTokenSource"/>.</para>
         /// </summary>
         public bool NotRequested
         {
@@ -51,8 +51,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="CancellationTokenSource"></see>.</para>
-        /// <para>Инициализирует новый экземпляр <see cref="CancellationTokenSource"></see>.</para>
+        /// <para>Initializes a new instance of the <see cref="CancellationTokenSource"/>.</para>
+        /// <para>Инициализирует новый экземпляр <see cref="CancellationTokenSource"/>.</para>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public ConsoleCancellation()
@@ -83,7 +83,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para></para>
+        /// <para>Removes <see cref="Console.CancelKeyPress"/> handler</para>
         /// <para></para>
         /// </summary>
         /// <param name="manual"></param>
