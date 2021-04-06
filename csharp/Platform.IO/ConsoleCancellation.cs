@@ -62,6 +62,10 @@ namespace Platform.IO
             Console.CancelKeyPress += OnCancelKeyPress;
         }
 
+        /// <summary>
+        /// <para>Communicates a request for cancellation.</para>
+        /// <para>Передает запрос на отмену.</para>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void ForceCancellation() => Source.Cancel();
 
