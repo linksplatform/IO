@@ -69,6 +69,10 @@ namespace Platform.IO
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void ForceCancellation() => Source.Cancel();
 
+        /// <summary>
+        /// <para>Suspends the current thread until a cancellation request.</para>
+        /// <para>Приостанавливает текущий поток до запроса на отмену.</para>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void Wait()
         {
