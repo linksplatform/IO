@@ -82,6 +82,15 @@ namespace Platform.IO
             }
         }
 
+        /// <summary>
+        /// <para></para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="manual"></param>
+        /// <param name="wasDisposed">
+        /// <para>Specifies whether the <see cref="Source"/> was disposed.</para>
+        /// <para>Указывает были ли освобождены ресурсы, используемые <see cref="Source"/>.</para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected override void Dispose(bool manual, bool wasDisposed)
         {
