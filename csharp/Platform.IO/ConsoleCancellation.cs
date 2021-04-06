@@ -51,8 +51,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Initializes a new instance of the <see cref="CancellationTokenSource"/>.</para>
-        /// <para>Инициализирует новый экземпляр <see cref="CancellationTokenSource"/>.</para>
+        /// <para>Initializes the <see cref="CancellationTokenSource"/> instance, assigns token to <see cref="Token"/>, adds the <see cref="OnCancelKeyPress(object, ConsoleCancelEventArgs)"/> handler for the <see cref="Console.CancelKeyPress"/>.</para>
+        /// <para>Инициализирует экземпляр <see cref="CancellationTokenSource"/>, присваивает <see cref="Token"/> токен, добавляет обработчик <see cref="OnCancelKeyPress(object, ConsoleCancelEventArgs)"/> для события <see cref="Console.CancelKeyPress"/>.</para>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public ConsoleCancellation()
