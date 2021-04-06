@@ -63,7 +63,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Communicates a request for cancellation.</para>
+        /// <para>Communicates a cancellation request.</para>
         /// <para>Передает запрос на отмену.</para>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
