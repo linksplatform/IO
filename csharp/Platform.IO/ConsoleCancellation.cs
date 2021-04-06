@@ -32,7 +32,7 @@ namespace Platform.IO
 
         /// <summary>
         /// <para>Gets whether cancellation has been requested for this <see cref="CancellationTokenSource"></see>.</para>
-        /// <para>Получает была ли получена отмена для <see cref="CancellationTokenSource"></see>.</para>
+        /// <para>Получает значение, указывающее, была ли получена отмена для <see cref="CancellationTokenSource"></see>.</para>
         /// </summary>
         public bool IsRequested
         {
