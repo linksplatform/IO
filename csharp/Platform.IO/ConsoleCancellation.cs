@@ -50,6 +50,10 @@ namespace Platform.IO
             get => !Source.IsCancellationRequested;
         }
 
+        /// <summary>
+        /// <para>Initializes a new instance of the <see cref="CancellationTokenSource"></see>.</para>
+        /// <para>Инициализирует новый экземпляр <see cref="CancellationTokenSource"></see>.</para>
+        /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public ConsoleCancellation()
         {
