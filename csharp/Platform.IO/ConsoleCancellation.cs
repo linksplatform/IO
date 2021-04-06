@@ -42,7 +42,7 @@ namespace Platform.IO
 
         /// <summary>
         /// <para>Gets whether cancellation has not been requested for this <see cref="CancellationTokenSource"/>.</para>
-        /// <para>Получает не была ли получена отмена для <see cref="CancellationTokenSource"/>.</para>
+        /// <para>Получает значение, указывающее, не была ли получена отмена для <see cref="CancellationTokenSource"/>.</para>
         /// </summary>
         public bool NotRequested
         {
@@ -51,8 +51,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Initializes the <see cref="CancellationTokenSource"/> instance, assigns token to <see cref="Token"/>, adds the <see cref="OnCancelKeyPress(object, ConsoleCancelEventArgs)"/> handler for the <see cref="Console.CancelKeyPress"/>.</para>
-        /// <para>Инициализирует экземпляр <see cref="CancellationTokenSource"/>, присваивает <see cref="Token"/> токен, добавляет обработчик <see cref="OnCancelKeyPress(object, ConsoleCancelEventArgs)"/> для события <see cref="Console.CancelKeyPress"/>.</para>
+        /// <para>Initializes the <see cref="ConsoleCancellation"/> instance, assigns a token to the <see cref="Token"/>, adds the <see cref="OnCancelKeyPress(object, ConsoleCancelEventArgs)"/> handler for the <see cref="Console.CancelKeyPress"/>.</para>
+        /// <para>Инициализирует экземпляр <see cref="ConsoleCancellation"/>, присваивает <see cref="Token"/> токен, добавляет обработчик <see cref="OnCancelKeyPress(object, ConsoleCancelEventArgs)"/> для события <see cref="Console.CancelKeyPress"/>.</para>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public ConsoleCancellation()
@@ -83,8 +83,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Removes <see cref="Console.CancelKeyPress"/> handler</para>
-        /// <para></para>
+        /// <para>Removes <see cref="Console.CancelKeyPress"/> handler.</para>
+        /// <para>Удаляет обработчик <see cref="Console.CancelKeyPress"/>.</para>
         /// </summary>
         /// <param name="manual"></param>
         /// <param name="wasDisposed">
