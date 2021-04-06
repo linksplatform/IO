@@ -63,8 +63,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Communicates a cancellation request.</para>
-        /// <para>Передает запрос на отмену.</para>
+        /// <para>Requests cancellation.</para>
+        /// <para>Запрашивает отмену.</para>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void ForceCancellation() => Source.Cancel();
