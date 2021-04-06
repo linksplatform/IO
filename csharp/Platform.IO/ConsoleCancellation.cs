@@ -40,6 +40,10 @@ namespace Platform.IO
             get => Source.IsCancellationRequested;
         }
 
+        /// <summary>
+        /// <para>Gets whether cancellation has not been requested for this <see cref="CancellationTokenSource"></see>.</para>
+        /// <para>Получает не была ли получена отмена для <see cref="CancellationTokenSource"></see>.</para>
+        /// </summary>
         public bool NotRequested
         {
             [MethodImpl(MethodImplOptions.AggressiveInlining)]
