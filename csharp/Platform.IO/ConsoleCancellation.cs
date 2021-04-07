@@ -51,8 +51,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Initializes the <see cref="ConsoleCancellation"/> instance, assigns a token to the <see cref="Token"/>, adds the <see cref="OnCancelKeyPress(object, ConsoleCancelEventArgs)"/> handler for the <see cref="Console.CancelKeyPress"/>.</para>
-        /// <para>Инициализирует экземпляр <see cref="ConsoleCancellation"/>, присваивает <see cref="Token"/> токен, добавляет обработчик <see cref="OnCancelKeyPress(object, ConsoleCancelEventArgs)"/> для события <see cref="Console.CancelKeyPress"/>.</para>
+        /// <para>Initializes the <see cref="ConsoleCancellation"/> class instance, assigns a token to the <see cref="Token"/>, adds the <see cref="OnCancelKeyPress(object, ConsoleCancelEventArgs)"/> handler for the <see cref="Console.CancelKeyPress"/> event.</para>
+        /// <para>Инициализирует экземпляр класса <see cref="ConsoleCancellation"/>, присваивает <see cref="Token"/> токен, добавляет обработчик <see cref="OnCancelKeyPress(object, ConsoleCancelEventArgs)"/> для события <see cref="Console.CancelKeyPress"/>.</para>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public ConsoleCancellation()
@@ -110,8 +110,8 @@ namespace Platform.IO
         /// <para>Источник события.</para>
         /// </param>
         /// <param name="e">
-        /// <para>The <see cref="ConsoleCancelEventArgs"/> instance that provides data for the CancelKeyPress event.</para>
-        /// <para>Экземпляр <see cref="ConsoleCancelEventArgs"/> предоставляющий данные для события CancelKeyPress.</para>
+        /// <para>The <see cref="ConsoleCancelEventArgs"/> class instance that provides data for the CancelKeyPress event.</para>
+        /// <para>Экземпляр класса <see cref="ConsoleCancelEventArgs"/> предоставляющий данные для события CancelKeyPress.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void OnCancelKeyPress(object sender, ConsoleCancelEventArgs e)
