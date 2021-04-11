@@ -12,7 +12,7 @@ namespace Platform.IO
     {
         /// <summary>
         /// <para>Gets the <see cref="CancellationTokenSource"/> class instance.</para>
-        /// <para>Получает экземпляр класса <see cref="CancellationTokenSource"/>.</para>
+        /// <para>Возвращает экземпляр класса <see cref="CancellationTokenSource"/>.</para>
         /// </summary>
         public CancellationTokenSource Source
         {
@@ -22,7 +22,7 @@ namespace Platform.IO
 
         /// <summary>
         /// <para>Gets the <see cref="CancellationToken"/> class instance.</para>
-        /// <para>Получает экземпляр класса <see cref="CancellationToken"/>.</para>
+        /// <para>Возвращает экземпляр класса <see cref="CancellationToken"/>.</para>
         /// </summary>
         public CancellationToken Token
         {
@@ -32,7 +32,7 @@ namespace Platform.IO
 
         /// <summary>
         /// <para>Gets whether cancellation has been requested for the <see cref="CancellationTokenSource"/>.</para>
-        /// <para>Получает значение, определяющее, была ли запрошена отмена для <see cref="CancellationTokenSource"/>.</para>
+        /// <para>Возвращает значение, определяющее, была ли запрошена отмена для <see cref="CancellationTokenSource"/>.</para>
         /// </summary>
         public bool IsRequested
         {
@@ -42,7 +42,7 @@ namespace Platform.IO
 
         /// <summary>
         /// <para>Gets whether cancellation has not been requested for the <see cref="CancellationTokenSource"/>.</para>
-        /// <para>Получает значение, определяющее, не была ли запрошена отмена для <see cref="CancellationTokenSource"/>.</para>
+        /// <para>Возвращает значение, определяющее, не была ли запрошена отмена для <see cref="CancellationTokenSource"/>.</para>
         /// </summary>
         public bool NotRequested
         {
