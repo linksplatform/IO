@@ -11,8 +11,8 @@ namespace Platform.IO
     public class ConsoleCancellation : DisposableBase
     {
         /// <summary>
-        /// <para>Returns the <see cref="CancellationTokenSource"/> object.</para>
-        /// <para>Возвращает объект <see cref="CancellationTokenSource"/>.</para>
+        /// <para>Gets the <see cref="CancellationTokenSource"/> class instance.</para>
+        /// <para>Получает экземпляр класса <see cref="CancellationTokenSource"/>.</para>
         /// </summary>
         public CancellationTokenSource Source
         {
@@ -21,8 +21,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Returns the <see cref="CancellationToken"/> object.</para>
-        /// <para>Возвращает объект <see cref="CancellationToken"/>.</para>
+        /// <para>Gets the <see cref="CancellationToken"/> class instance.</para>
+        /// <para>Получает экземпляр класса <see cref="CancellationToken"/>.</para>
         /// </summary>
         public CancellationToken Token
         {
@@ -31,8 +31,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Gets whether cancellation has been requested for this <see cref="CancellationTokenSource"/>.</para>
-        /// <para>Получает значение, указывающее, была ли запрошена отмена для <see cref="CancellationTokenSource"/>.</para>
+        /// <para>Gets whether cancellation has been requested for the <see cref="CancellationTokenSource"/>.</para>
+        /// <para>Получает значение, определяющее, была ли запрошена отмена для <see cref="CancellationTokenSource"/>.</para>
         /// </summary>
         public bool IsRequested
         {
@@ -41,8 +41,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Gets whether cancellation has not been requested for this <see cref="CancellationTokenSource"/>.</para>
-        /// <para>Получает значение, указывающее, не была ли запрошена отмена для <see cref="CancellationTokenSource"/>.</para>
+        /// <para>Gets whether cancellation has not been requested for the <see cref="CancellationTokenSource"/>.</para>
+        /// <para>Получает значение, определяющее, не была ли запрошена отмена для <see cref="CancellationTokenSource"/>.</para>
         /// </summary>
         public bool NotRequested
         {
@@ -51,8 +51,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Initializes the <see cref="ConsoleCancellation"/> class instance, assigns a token to the <see cref="Token"/>, adds the <see cref="OnCancelKeyPress(object, ConsoleCancelEventArgs)"/> handler for the <see cref="Console.CancelKeyPress"/> event.</para>
-        /// <para>Инициализирует экземпляр класса <see cref="ConsoleCancellation"/>, присваивает <see cref="Token"/> токен, добавляет обработчик <see cref="OnCancelKeyPress(object, ConsoleCancelEventArgs)"/> для события <see cref="Console.CancelKeyPress"/>.</para>
+        /// <para>Initializes the <see cref="ConsoleCancellation"/> class instance, using <see cref="Token"/>, adding the <see cref="OnCancelKeyPress"/> handler for the <see cref="Console.CancelKeyPress"/> event.</para>
+        /// <para>Инициализирует экземпляр класса <see cref="ConsoleCancellation"/>, используя <see cref="Token"/>, добавляя обработчик <see cref="OnCancelKeyPress"/> для события <see cref="Console.CancelKeyPress"/>.</para>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public ConsoleCancellation()
@@ -63,8 +63,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Requests cancellation.</para>
-        /// <para>Запрашивает отмену.</para>
+        /// <para>Requests force cancellation.</para>
+        /// <para>Принудительно запрашивает отмену.</para>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public void ForceCancellation() => Source.Cancel();
@@ -83,8 +83,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Removes <see cref="Console.CancelKeyPress"/> handler.</para>
-        /// <para>Удаляет обработчик <see cref="Console.CancelKeyPress"/>.</para>
+        /// <para>Removes the <see cref="OnCancelKeyPress"/> handler.</para>
+        /// <para>Удаляет обработчик <see cref="OnCancelKeyPress"/>.</para>
         /// </summary>
         /// <param name="manual"></param>
         /// <param name="wasDisposed">
