@@ -83,8 +83,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Removes the <see cref="OnCancelKeyPress"/> handler.</para>
-        /// <para>Удаляет обработчик <see cref="OnCancelKeyPress"/>.</para>
+        /// <para>Removes the <see cref="OnCancelKeyPress"/> handle, for the <see cref="Console.CancelKeyPress"/> event and attempts to dispose the object..</para>
+        /// <para>Удаляет обработчик <see cref="OnCancelKeyPress"/> для события <see cref="Console.CancelKeyPress"/> и выполняет попытку высвободить объект.</para>
         /// </summary>
         /// <param name="manual"></param>
         /// <param name="wasDisposed">
