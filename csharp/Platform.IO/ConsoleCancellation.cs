@@ -83,13 +83,13 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Removes the <see cref="OnCancelKeyPress"/> handle, for the <see cref="Console.CancelKeyPress"/> event and attempts to dispose the object..</para>
+        /// <para>Removes the <see cref="OnCancelKeyPress"/> handler, for the <see cref="Console.CancelKeyPress"/> event and attempts to dispose the object.</para>
         /// <para>Удаляет обработчик <see cref="OnCancelKeyPress"/> для события <see cref="Console.CancelKeyPress"/> и выполняет попытку высвободить объект.</para>
         /// </summary>
         /// <param name="manual"></param>
         /// <param name="wasDisposed">
-        /// <para>Specifies whether the <see cref="Source"/> was disposed.</para>
-        /// <para>Указывает были ли освобождены ресурсы, используемые <see cref="Source"/>.</para>
+        /// <para>A <see cref="Boolean"/> value that determines whether the <see cref="Source"/> was disposed.</para>
+        /// <para>Значение типа <see cref="Boolean"/> определяющее были ли освобождены ресурсы, используемые <see cref="Source"/>.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected override void Dispose(bool manual, bool wasDisposed)
