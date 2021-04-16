@@ -83,13 +83,16 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Removes the <see cref="OnCancelKeyPress"/> handler, for the <see cref="Console.CancelKeyPress"/> event and attempts to dispose the object.</para>
-        /// <para>Удаляет обработчик <see cref="OnCancelKeyPress"/> для события <see cref="Console.CancelKeyPress"/> и выполняет попытку высвободить объект.</para>
+        /// <para>Unsubscribes from the <see cref="Console.CancelKeyPress"/> event and attempts to dispose the <see cref="CancellationTokenSource"/>.</para>
+        /// <para>Отписывается от события <see cref="Console.CancelKeyPress"/> и пытается высвободить ресурсы, используемые <see cref="CancellationTokenSource"/>.</para>
         /// </summary>
-        /// <param name="manual"></param>
+        /// <param name="manual">
+        /// <para>A value that determines whether the disposal was triggered manually (by the developer's code) or was executed automatically without an explicit indication from the developer.</para>
+        /// <para>Значение определяющие было ли высвобождение вызвано вручную (кодом разработчика) или же выполнилось автоматически без явного указания со стороны разработчика.</para>
+        /// </param>
         /// <param name="wasDisposed">
-        /// <para>A <see cref="Boolean"/> value that determines whether the <see cref="Source"/> was disposed.</para>
-        /// <para>Значение типа <see cref="Boolean"/> определяющее были ли освобождены ресурсы, используемые <see cref="Source"/>.</para>
+        /// <para>A <see cref="Boolean"/> value that determines whether the <see cref="ConsoleCancellation"/> was released before the call to this method.</para>
+        /// <para>Значение типа <see cref="Boolean"/>, определяющие были ли освобождены ресурсы, используемые <see cref="ConsoleCancellation"/> до вызова данного метода.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected override void Dispose(bool manual, bool wasDisposed)
@@ -108,10 +111,6 @@ namespace Platform.IO
         /// <param name="sender">
         /// <para>The event source.</para>
         /// <para>Источник события.</para>
-        /// </param>
-        /// <param name="e">
-        /// <para>The <see cref="ConsoleCancelEventArgs"/> class instance that provides data for the CancelKeyPress event.</para>
-        /// <para>Экземпляр класса <see cref="ConsoleCancelEventArgs"/> предоставляющий данные для события CancelKeyPress.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void OnCancelKeyPress(object sender, ConsoleCancelEventArgs e)
