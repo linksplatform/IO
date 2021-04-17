@@ -176,7 +176,7 @@ namespace Platform.IO
         /// <para>Путь к файлу, который будет изменён или создан.</para>
         /// </param>
         /// <param name="value">
-        /// <para><typeparamref name="T"/> structure value to be written at the beginning of the file at the <paramref name="path"/>.</para>
+        /// <para>The <typeparamref name="T"/> structure value to be written at the beginning of the file at the <paramref name="path"/>.</para>
         /// <para>Значение структуры типа <typeparamref name="T"/>, записываемое в начало файла находящегося в <paramref name="path"/>.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
