@@ -67,7 +67,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Requests force cancellation.</para>
+        /// <para>Forces cancellation request.</para>
         /// <para>Принудительно запрашивает отмену.</para>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
