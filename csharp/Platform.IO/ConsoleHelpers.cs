@@ -24,7 +24,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Gets the argument's value with the specified <paramref name="index"/> from the <paramref name="args"/> array and if it's absent requests a user to input it in the console.</para>
+        /// <para>Gets an argument's value with the specified <paramref name="index"/> from the <paramref name="args"/> array and if it's absent requests a user to input it in the console.</para>
         /// <para>Получает значение аргумента с указанным <paramref name="index"/> из массива <paramref name="args"/>, a если оно отсутствует запрашивает его ввод в консоли у пользователя.</para>
         /// </summary>
         /// <param name="index">
@@ -36,14 +36,14 @@ namespace Platform.IO
         /// <para>Массив аргументов переданных приложению.</para>
         /// </param>
         /// <returns>
-        /// <para>The value with the specified <paramref name="index"/> extracted from the <paramref name="args"/> array or entered by a user in the console.</para>
+        /// <para>A value with the specified <paramref name="index"/> extracted from the <paramref name="args"/> array or entered by a user in the console.</para>
         /// <para>Значение с указанным <paramref name="index"/>, извлечённое из массива <paramref name="args"/>, или введённое пользователем в консоли.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static string GetOrReadArgument(int index, params string[] args) => GetOrReadArgument(index, $"{index + 1} argument", args);
 
         /// <summary>
-        /// <para>Gets the argument's value with the specified <paramref name="index"/> from the <paramref name="args"/> array and if it's absent requests a user to input it in the console.</para>
+        /// <para>Gets an argument's value with the specified <paramref name="index"/> from the <paramref name="args"/> array and if it's absent requests a user to input it in the console.</para>
         /// <para>Получает значение аргумента с указанным <paramref name="index"/> из массива <paramref name="args"/>, a если оно отсутствует запрашивает его ввод в консоли у пользователя.</para>
         /// </summary>
         /// <param name="index">
@@ -59,7 +59,7 @@ namespace Platform.IO
         /// <para>Массив аргументов переданных приложению.</para>
         /// </param>
         /// <returns>
-        /// <para>The value with the specified <paramref name="index"/> extracted from the <paramref name="args"/> array or entered by a user in the console.</para>
+        /// <para>A value with the specified <paramref name="index"/> extracted from the <paramref name="args"/> array or entered by a user in the console.</para>
         /// <para>Значение с указанным <paramref name="index"/>, извлечённое из массива <paramref name="args"/>, или введённое пользователем в консоли.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
