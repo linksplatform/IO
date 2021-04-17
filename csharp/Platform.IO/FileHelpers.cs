@@ -220,7 +220,7 @@ namespace Platform.IO
 
         /// <summary>
         /// <para>Sets the <paramref name="size"/> for the file at the <paramref name="path"/>.</para>
-        /// <para>Устанавливает <paramref name="size"/> файлу находящемуся в <paramref name="path"/>.</para>
+        /// <para>Устанавливает <paramref name="size"/> файлу находящемуся по пути <paramref name="path"/>.</para>
         /// </summary>
         /// <param name="path">
         /// <para>The path to the file to be resized.</para>
@@ -228,7 +228,7 @@ namespace Platform.IO
         /// </param>
         /// <param name="size">
         /// <para>The size to assign to the file at the <paramref name="path"/>.</para>
-        /// <para>Размер который будет присвоен файлу находящемуся в <paramref name="path"/>.</para>
+        /// <para>Размер который будет присвоен файлу находящемуся по пути <paramref name="path"/>.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void SetSize(string path, long size)
