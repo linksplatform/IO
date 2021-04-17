@@ -59,7 +59,7 @@ namespace Platform.IO
         /// <para>Тип структуры.</para>
         /// </typeparam>
         /// <param name="path">
-        /// <para>The path to the file, from which to read the first<typeparamref name="T"/> structure value.</para>
+        /// <para>The path to the file, from which to read the first <typeparamref name="T"/> structure value.</para>
         /// <para>Путь к файлу, из которого нужно прочитать значение первой структуры типа <typeparamref name="T"/>.</para>
         /// </param>
         /// <returns>
@@ -76,7 +76,7 @@ namespace Platform.IO
 
         /// <summary>
         /// <para>Returns the <see cref="FileStream"/> opened for reading from the file at the <paramref name="path"/> if the file exists, not empty and its size is a multiple of the <typeparamref name="TStruct"/> structure size; otherwise <see langword="null"/>.</para>
-        /// <para>Возвращает <see cref="FileStream"/> открытый для чтения из файла находящегося в <paramref name="path"/>, если файл существует, не пуст и его размер кратен размеру структуры типа <typeparamref name="TStruct"/>, а иначе <see langword="null"/>.</para>
+        /// <para>Возвращает <see cref="FileStream"/>, открытый для чтения из файла находящегося в <paramref name="path"/>, если файл существует, не пуст и его размер кратен размеру структуры типа <typeparamref name="TStruct"/>, а иначе <see langword="null"/>.</para>
         /// </summary>
         /// <typeparam name="TStruct">
         /// <para>The structure type.</para>
@@ -88,7 +88,7 @@ namespace Platform.IO
         /// </param>
         /// <returns>
         /// <para>A <see cref="FileStream"/> opened for reading in the case of successful check; otherwise <see langword="null"/>.</para>
-        /// <para><see cref="FileStream"/> открытый для чтения в случае успешной проверки, а иначе <see langword="null"/>.</para>
+        /// <para><see cref="FileStream"/>, открытый для чтения в случае успешной проверки, а иначе <see langword="null"/>.</para>
         /// </returns>
         /// <exception cref="InvalidOperationException">
         /// <para>The size of the file at the <paramref name="path"/> is not a multiple of the required <typeparamref name="TStruct"/> structure size.</para>
@@ -99,7 +99,7 @@ namespace Platform.IO
 
         /// <summary>
         /// <para>Returns the <see cref="FileStream"/> opened for reading from the file at the <paramref name="path"/> if the file exists, not empty and its size is a multiple of the required <paramref name="elementSize"/>; otherwise <see langword="null"/>.</para>
-        /// <para>Возвращает <see cref="FileStream"/> открытый для чтения из файла находящегося в <paramref name="path"/>, если файл существует, не пуст и его размер кратен <paramref name="elementSize"/>, а иначе <see langword="null"/>.</para>
+        /// <para>Возвращает <see cref="FileStream"/>, открытый для чтения из файла находящегося в <paramref name="path"/>, если файл существует, не пуст и его размер кратен <paramref name="elementSize"/>, а иначе <see langword="null"/>.</para>
         /// </summary>
         /// <param name="path">
         /// <para>The path to the file to validate.</para>
@@ -111,7 +111,7 @@ namespace Platform.IO
         /// </param>
         /// <returns>
         /// <para>A <see cref="FileStream"/> opened for reading in the case of successful check; otherwise <see langword="null"/>.</para>
-        /// <para><see cref="FileStream"/> открытый для чтения в случае успешной проверки, а иначе <see langword="null"/>.</para>
+        /// <para><see cref="FileStream"/>, открытый для чтения в случае успешной проверки, а иначе <see langword="null"/>.</para>
         /// </returns>
         /// <exception cref="InvalidOperationException">
         /// <para>The size of the file at the <paramref name="path"/> is not a multiple of the required <paramref name="elementSize"/>.</para>
