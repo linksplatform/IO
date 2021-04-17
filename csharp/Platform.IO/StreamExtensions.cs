@@ -19,7 +19,7 @@ namespace Platform.IO
         /// <para>Тип структуры.</para>
         /// </typeparam>
         /// <param name="stream">
-        /// <para>A stream to write to.</para>
+        /// <para>The stream to write to.</para>
         /// <para>Поток, в который осуществляется запись.</para>
         /// </param>
         /// <param name="value">
@@ -43,7 +43,7 @@ namespace Platform.IO
         /// <para>Тип структуры.</para>
         /// </typeparam>
         /// <param name="stream">
-        /// <para>A stream containing the <typeparamref name="T"/> structure value.</para>
+        /// <para>The stream containing the <typeparamref name="T"/> structure value.</para>
         /// <para>Поток, содержащий значение структуры типа <typeparamref name="T"/>.</para>
         /// </param>
         /// <returns>
@@ -68,7 +68,7 @@ namespace Platform.IO
         /// <para>Тип структуры.</para>
         /// </typeparam>
         /// <param name="stream">
-        /// <para>A stream containing the <typeparamref name="T"/> structure values.</para>
+        /// <para>The stream containing the <typeparamref name="T"/> structure values.</para>
         /// <para>Поток, содержащий значения структур типа <typeparamref name="T"/>.</para>
         /// </param>
         /// <returns>
