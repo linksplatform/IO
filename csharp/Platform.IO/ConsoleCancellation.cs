@@ -91,7 +91,7 @@ namespace Platform.IO
         /// <para>Отписывается от события <see cref="Console.CancelKeyPress"/> и пытается высвободить ресурсы, используемые <see cref="CancellationTokenSource"/>.</para>
         /// </summary>
         /// <param name="manual">
-        /// <para>A <see cref="Boolean"/> value that determines whether the disposal was triggered manually (by the developer's code) or was executed automatically without an explicit indication from the developer.</para>
+        /// <para>A <see cref="Boolean"/> value that determines whether the disposal was triggered manually (by the developer's code) or was executed automatically without an explicit indication from a developer.</para>
         /// <para>Значение типа <see cref="Boolean"/>, определяющие было ли высвобождение вызвано вручную (кодом разработчика) или же выполнилось автоматически без явного указания со стороны разработчика.</para>
         /// </param>
         /// <param name="wasDisposed">
