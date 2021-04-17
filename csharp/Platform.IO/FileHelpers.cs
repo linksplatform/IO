@@ -12,22 +12,22 @@ namespace Platform.IO
     public static class FileHelpers
     {
         /// <summary>
-        /// <para>Reads all the text and returns character array from the file at the <paramref name="path"/>.</para>
+        /// <para>Reads all the text and returns character array from a file at the <paramref name="path"/>.</para>
         /// <para>Читает весь текст и возвращает массив символов из файла находящегося в <paramref name="path"/>.</para>
         /// </summary>
         /// <param name="path">
-        /// <para>The path to the file, from which to read the character array.</para>
+        /// <para>The path to a file, from which to read the character array.</para>
         /// <para>Путь к файлу, из которого нужно прочитать массив символов.</para>
         /// </param>
         /// <returns>
-        /// <para>The character array from the file at the <paramref name="path"/>.</para>
+        /// <para>The character array from a file at the <paramref name="path"/>.</para>
         /// <para>Массив символов из файла находящегося в <paramref name="path"/>.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static char[] ReadAllChars(string path) => File.ReadAllText(path).ToCharArray();
 
         /// <summary>
-        /// <para>Reads and returns all <typeparamref name="T"/> structure values from the file at the <paramref name="path"/>.</para>
+        /// <para>Reads and returns all <typeparamref name="T"/> structure values from a file at the <paramref name="path"/>.</para>
         /// <para>Считывает и возвращает все значения структур типа <typeparamref name="T"/> из файла находящегося в <paramref name="path"/>.</para>
         /// </summary>
         /// <typeparam name="T">
@@ -35,7 +35,7 @@ namespace Platform.IO
         /// <para>Тип структуры.</para>
         /// </typeparam>
         /// <param name="path">
-        /// <para>The path to the file, from which to read <typeparamref name="T"/> structure values array.</para>
+        /// <para>The path to a file, from which to read <typeparamref name="T"/> structure values array.</para>
         /// <para>Путь к файлу, из которого нужно прочитать массив значений структур типа <typeparamref name="T"/>.</para>
         /// </param>
         /// <returns>
@@ -51,7 +51,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Reads and returns the first <typeparamref name="T"/> structure value from the file at the <paramref name="path"/>.</para>
+        /// <para>Reads and returns the first <typeparamref name="T"/> structure value from a file at the <paramref name="path"/>.</para>
         /// <para>Считывает и возвращает первое значение структуры типа <typeparamref name="T"/> из файла находящегося в <paramref name="path"/>.</para>
         /// </summary>
         /// <typeparam name="T">
@@ -59,11 +59,11 @@ namespace Platform.IO
         /// <para>Тип структуры.</para>
         /// </typeparam>
         /// <param name="path">
-        /// <para>The path to the file, from which to read the first <typeparamref name="T"/> structure value.</para>
+        /// <para>The path to a file, from which to read the first <typeparamref name="T"/> structure value.</para>
         /// <para>Путь к файлу, из которого нужно прочитать значение первой структуры типа <typeparamref name="T"/>.</para>
         /// </param>
         /// <returns>
-        /// <para>The <typeparamref name="T"/> structure value if read from the file at the <paramref name="path"/> is successful; otherwise the default <typeparamref name="T"/> structure value.</para>
+        /// <para>The <typeparamref name="T"/> structure value if read from a file at the <paramref name="path"/> is successful; otherwise the default <typeparamref name="T"/> structure value.</para>
         /// <para>Значение структуры типа <typeparamref name="T"/> если чтение из файла находящегося в <paramref name="path"/> прошло успешно, иначе значение структуры типа <typeparamref name="T"/> по умолчанию.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -75,7 +75,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Returns the <see cref="FileStream"/> opened for reading from the file at the <paramref name="path"/> if the file exists, not empty and its size is a multiple of the <typeparamref name="TStruct"/> structure size; otherwise <see langword="null"/>.</para>
+        /// <para>Returns the <see cref="FileStream"/> opened for reading from a file at the <paramref name="path"/> if the file exists, not empty and its size is a multiple of the <typeparamref name="TStruct"/> structure size; otherwise <see langword="null"/>.</para>
         /// <para>Возвращает <see cref="FileStream"/>, открытый для чтения из файла находящегося в <paramref name="path"/>, если файл существует, не пуст и его размер кратен размеру структуры типа <typeparamref name="TStruct"/>, а иначе <see langword="null"/>.</para>
         /// </summary>
         /// <typeparam name="TStruct">
@@ -83,7 +83,7 @@ namespace Platform.IO
         /// <para>Тип структуры.</para>
         /// </typeparam>
         /// <param name="path">
-        /// <para>The path to the file to validate.</para>
+        /// <para>The path to a file to validate.</para>
         /// <para>Путь к проверяемому файлу.</para>
         /// </param>
         /// <returns>
@@ -91,22 +91,22 @@ namespace Platform.IO
         /// <para><see cref="FileStream"/>, открытый для чтения в случае успешной проверки, а иначе <see langword="null"/>.</para>
         /// </returns>
         /// <exception cref="InvalidOperationException">
-        /// <para>The size of the file at the <paramref name="path"/> is not a multiple of the required <typeparamref name="TStruct"/> structure size.</para>
+        /// <para>The size of a file at the <paramref name="path"/> is not a multiple of the required <typeparamref name="TStruct"/> structure size.</para>
         /// <para>Размер файла находящегося в <paramref name="path"/> не кратен требуемому размеру структуры типа <typeparamref name="TStruct"/>.</para>
         /// </exception>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static FileStream GetValidFileStreamOrDefault<TStruct>(string path) where TStruct : struct => GetValidFileStreamOrDefault(path, Structure<TStruct>.Size);
 
         /// <summary>
-        /// <para>Returns the <see cref="FileStream"/> opened for reading from the file at the <paramref name="path"/> if the file exists, not empty and its size is a multiple of the required <paramref name="elementSize"/>; otherwise <see langword="null"/>.</para>
+        /// <para>Returns the <see cref="FileStream"/> opened for reading from a file at the <paramref name="path"/> if the file exists, not empty and its size is a multiple of the required <paramref name="elementSize"/>; otherwise <see langword="null"/>.</para>
         /// <para>Возвращает <see cref="FileStream"/>, открытый для чтения из файла находящегося в <paramref name="path"/>, если файл существует, не пуст и его размер кратен <paramref name="elementSize"/>, а иначе <see langword="null"/>.</para>
         /// </summary>
         /// <param name="path">
-        /// <para>The path to the file to validate.</para>
+        /// <para>The path to a file to validate.</para>
         /// <para>Путь к проверяемому файлу.</para>
         /// </param>
         /// <param name="elementSize">
-        /// <para>Required size of elements located in the file at the <paramref name="path"/>.</para>
+        /// <para>Required size of elements located in a file at the <paramref name="path"/>.</para>
         /// <para>Требуемый размер элементов, находящихся в файле находящегося в <paramref name="path"/>.</para>
         /// </param>
         /// <returns>
@@ -114,7 +114,7 @@ namespace Platform.IO
         /// <para><see cref="FileStream"/>, открытый для чтения в случае успешной проверки, а иначе <see langword="null"/>.</para>
         /// </returns>
         /// <exception cref="InvalidOperationException">
-        /// <para>The size of the file at the <paramref name="path"/> is not a multiple of the required <paramref name="elementSize"/>.</para>
+        /// <para>The size of a file at the <paramref name="path"/> is not a multiple of the required <paramref name="elementSize"/>.</para>
         /// <para>Размер файла находящегося в <paramref name="path"/> не кратен требуемому <paramref name="elementSize"/>.</para>
         /// </exception>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -133,7 +133,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Reads and returns the last <typeparamref name="T"/> structure value from the file at the <paramref name="path"/>.</para>
+        /// <para>Reads and returns the last <typeparamref name="T"/> structure value from a file at the <paramref name="path"/>.</para>
         /// <para>Считывает и возвращает последнее значение структуры типа <typeparamref name="T"/> из файла находящегося в <paramref name="path"/>.</para>
         /// </summary>
         /// <typeparam name="T">
@@ -141,11 +141,11 @@ namespace Platform.IO
         /// <para>Тип структуры.</para>
         /// </typeparam>
         /// <param name="path">
-        /// <para>The path to the file, from which to read the last <typeparamref name="T"/> structure value.</para>
+        /// <para>The path to a file, from which to read the last <typeparamref name="T"/> structure value.</para>
         /// <para>Путь к файлу, из которого нужно прочитать значение последней структуры типа <typeparamref name="T"/>.</para>
         /// </param>
         /// <returns>
-        /// <para>The <typeparamref name="T"/> structure value if read from the file at the <paramref name="path"/> is successful; otherwise the default <typeparamref name="T"/> structure value.</para>
+        /// <para>The <typeparamref name="T"/> structure value if read from a file at the <paramref name="path"/> is successful; otherwise the default <typeparamref name="T"/> structure value.</para>
         /// <para>Значение структуры типа <typeparamref name="T"/> из файла находящегося в <paramref name="path"/> в случае успешного чтения, иначе значение по умолчанию структуры типа <typeparamref name="T"/>.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -164,7 +164,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Writes <typeparamref name="T"/> structure value at the beginning of the file at the <paramref name="path"/>.</para>
+        /// <para>Writes <typeparamref name="T"/> structure value at the beginning of a file at the <paramref name="path"/>.</para>
         /// <para>Записывает значение структуры типа <typeparamref name="T"/> в начало файла находящегося в <paramref name="path"/>.</para>
         /// </summary>
         /// <typeparam name="T">
@@ -172,11 +172,11 @@ namespace Platform.IO
         /// <para>Тип структуры.</para>
         /// </typeparam>
         /// <param name="path">
-        /// <para>The path to the file to be changed or created.</para>
+        /// <para>The path to a file to be changed or created.</para>
         /// <para>Путь к файлу, который будет изменён или создан.</para>
         /// </param>
         /// <param name="value">
-        /// <para>The <typeparamref name="T"/> structure value to be written at the beginning of the file at the <paramref name="path"/>.</para>
+        /// <para>The <typeparamref name="T"/> structure value to be written at the beginning of a file at the <paramref name="path"/>.</para>
         /// <para>Значение структуры типа <typeparamref name="T"/>, записываемое в начало файла находящегося в <paramref name="path"/>.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -189,11 +189,11 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Opens or creates the file at the <paramref name="path"/> and returns its <see cref="FileStream"/> with append mode and write access.</para>
+        /// <para>Opens or creates a file at the <paramref name="path"/> and returns its <see cref="FileStream"/> with append mode and write access.</para>
         /// <para>Открывает или создаёт файл находящийся в <paramref name="path"/> и возвращает его <see cref="FileStream"/> с режимом дополнения и доступом на запись.</para>
         /// </summary>
         /// <param name="path">
-        /// <para>The path to the file to open or create.</para>
+        /// <para>The path to a file to open or create.</para>
         /// <para>Путь к файлу, который нужно открыть или создать.</para>
         /// </param>
         /// <returns>
@@ -204,30 +204,30 @@ namespace Platform.IO
         public static FileStream Append(string path) => File.Open(path, FileMode.Append, FileAccess.Write);
 
         /// <summary>
-        /// <para>Returns the size of file at the <paramref name="path"/> if file exists; otherwise 0.</para>
+        /// <para>Returns the size of a file at the <paramref name="path"/> if the file exists; otherwise 0.</para>
         /// <para>Возвращает размер файла находящегося в <paramref name="path"/> если тот существует, иначе 0.</para>
         /// </summary>
         /// <param name="path">
-        /// <para>The path to the file to get size.</para>
+        /// <para>The path to a file to get size.</para>
         /// <para>Путь к файлу, размер которого нужно получить.</para>
         /// </param>
         /// <returns>
-        /// <para>Size of file at the <paramref name="path"/> if it exists; otherwise 0.</para>
+        /// <para>Size of a file at the <paramref name="path"/> if it exists; otherwise 0.</para>
         /// <para>Размер файла если файл находящийся в <paramref name="path"/> существует, иначе 0.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static long GetSize(string path) => File.Exists(path) ? new FileInfo(path).Length : 0;
 
         /// <summary>
-        /// <para>Sets the <paramref name="size"/> for the file at the <paramref name="path"/>.</para>
+        /// <para>Sets the <paramref name="size"/> for a file at the <paramref name="path"/>.</para>
         /// <para>Устанавливает <paramref name="size"/> файлу находящемуся по пути <paramref name="path"/>.</para>
         /// </summary>
         /// <param name="path">
-        /// <para>The path to the file to be resized.</para>
+        /// <para>The path to a file to be resized.</para>
         /// <para>Путь к файлу, размер которого нужно изменить.</para>
         /// </param>
         /// <param name="size">
-        /// <para>The size to assign to the file at the <paramref name="path"/>.</para>
+        /// <para>The size to assign to a file at the <paramref name="path"/>.</para>
         /// <para>Размер который будет присвоен файлу находящемуся по пути <paramref name="path"/>.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
