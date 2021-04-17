@@ -59,8 +59,8 @@ namespace Platform.IO
         /// <para>Тип структуры.</para>
         /// </typeparam>
         /// <param name="path">
-        /// <para>The path to the file, from which to read the <typeparamref name="T"/> structure value.</para>
-        /// <para>Путь к файлу, из которого нужно прочитать значение структуры типа <typeparamref name="T"/>.</para>
+        /// <para>The path to the file, from which to read the first<typeparamref name="T"/> structure value.</para>
+        /// <para>Путь к файлу, из которого нужно прочитать значение первой структуры типа <typeparamref name="T"/>.</para>
         /// </param>
         /// <returns>
         /// <para>The <typeparamref name="T"/> structure value if read from the file at the <paramref name="path"/> is successful; otherwise the default <typeparamref name="T"/> structure value.</para>
@@ -141,8 +141,8 @@ namespace Platform.IO
         /// <para>Тип структуры.</para>
         /// </typeparam>
         /// <param name="path">
-        /// <para>The path to the <typeparamref name="T"/> structure values.</para>
-        /// <para>Путь к файлу с значениями структур типа <typeparamref name="T"/>.</para>
+        /// <para>The path to the file, from which to read the last <typeparamref name="T"/> structure value.</para>
+        /// <para>Путь к файлу, из которого нужно прочитать значение последней структуры типа <typeparamref name="T"/>.</para>
         /// </param>
         /// <returns>
         /// <para>The <typeparamref name="T"/> structure value if read from the file at the <paramref name="path"/> is successful; otherwise the default <typeparamref name="T"/> structure value.</para>
