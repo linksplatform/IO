@@ -11,7 +11,7 @@ namespace Platform.IO
     public static class StreamExtensions
     {
         /// <summary>
-        /// <para>Writes a byte sequence that represents the <typeparamref name="T"/> <paramref name="value"/> to the <paramref name="stream"/> and moves the current position of the <paramref name="stream"/> by the number of written bytes.</para>
+        /// <para>Writes a byte sequence that represents the <typeparamref name="T"/> structure <paramref name="value"/> to the <paramref name="stream"/> and moves the current position of the <paramref name="stream"/> by the number of written bytes.</para>
         /// <para>Записывает последовательность байт представляющую <paramref name="value"/> типа <typeparamref name="T"/> в поток <paramref name="stream"/> и перемещает текущую позицию в <paramref name="stream"/> вперёд на число записанных байт.</para>
         /// </summary>
         /// <typeparam name="T">
