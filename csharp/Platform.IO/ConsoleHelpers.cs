@@ -36,7 +36,7 @@ namespace Platform.IO
         /// <para>Массив аргументов переданных приложению.</para>
         /// </param>
         /// <returns>
-        /// <para>A value with the specified <paramref name="index"/> extracted from the <paramref name="args"/> array or entered by a user in the console.</para>
+        /// <para>The value with the specified <paramref name="index"/> extracted from the <paramref name="args"/> array or entered by a user in the console.</para>
         /// <para>Значение с указанным <paramref name="index"/>, извлечённое из массива <paramref name="args"/>, или введённое пользователем в консоли.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -59,7 +59,7 @@ namespace Platform.IO
         /// <para>Массив аргументов переданных приложению.</para>
         /// </param>
         /// <returns>
-        /// <para>A value with the specified <paramref name="index"/> extracted from the <paramref name="args"/> array or entered by a user in the console.</para>
+        /// <para>The value with the specified <paramref name="index"/> extracted from the <paramref name="args"/> array or entered by a user in the console.</para>
         /// <para>Значение с указанным <paramref name="index"/>, извлечённое из массива <paramref name="args"/>, или введённое пользователем в консоли.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
