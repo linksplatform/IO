@@ -95,7 +95,7 @@ namespace Platform.IO
         /// <para>Значение типа <see cref="Boolean"/>, определяющие было ли высвобождение вызвано вручную (кодом разработчика) или же выполнилось автоматически без явного указания со стороны разработчика.</para>
         /// </param>
         /// <param name="wasDisposed">
-        /// <para>A <see cref="Boolean"/> value that determines whether the <see cref="ConsoleCancellation"/> was released before the call to this method.</para>
+        /// <para>A <see cref="Boolean"/> value that determines whether the <see cref="ConsoleCancellation"/> was released before a call to this method.</para>
         /// <para>Значение типа <see cref="Boolean"/>, определяющие были ли освобождены ресурсы, используемые <see cref="ConsoleCancellation"/> до вызова данного метода.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
