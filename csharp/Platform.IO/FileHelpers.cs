@@ -145,7 +145,7 @@ namespace Platform.IO
         /// <para>Путь к файлу с значениями структур типа <typeparamref name="T"/>.</para>
         /// </param>
         /// <returns>
-        /// <para>The <typeparamref name="T"/> structure value from the file at the <paramref name="path"/> in the case of successful read; otherwise the default <typeparamref name="T"/> structure value.</para>
+        /// <para>The <typeparamref name="T"/> structure value if read from the file at the <paramref name="path"/> is successful; otherwise the default <typeparamref name="T"/> structure value.</para>
         /// <para>Значение структуры типа <typeparamref name="T"/> из файла находящегося в <paramref name="path"/> в случае успешного чтения, иначе значение по умолчанию структуры типа <typeparamref name="T"/>.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
