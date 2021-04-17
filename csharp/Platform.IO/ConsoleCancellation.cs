@@ -45,7 +45,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Gets a <see cref="Boolean"/> value that determines whether cancellation was requested for the <see cref="CancellationTokenSource"/>.</para>
+        /// <para>Gets a <see cref="Boolean"/> value that determines whether cancellation was not requested for the <see cref="CancellationTokenSource"/>.</para>
         /// <para>Возвращает значение типа <see cref="Boolean"/>, определяющее, не запрошена ли отмена для <see cref="CancellationTokenSource"/>.</para>
         /// </summary>
         public bool NotRequested
