@@ -55,7 +55,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Initializes the <see cref="ConsoleCancellation"/> class instance, using an <see cref="CancellationTokenSource"/> and its token. The <see cref="ConsoleCancellation"/> subscribes to the <see cref="Console.CancelKeyPress"/> event on initialization.</para>
+        /// <para>Initializes a <see cref="ConsoleCancellation"/> class instance, using a <see cref="CancellationTokenSource"/> and its token. The <see cref="ConsoleCancellation"/> subscribes to the <see cref="Console.CancelKeyPress"/> event on initialization.</para>
         /// <para>Инициализирует экземпляр класса <see cref="ConsoleCancellation"/>, используя <see cref="CancellationTokenSource"/> и его токен. <see cref="ConsoleCancellation"/> подписывается на событие <see cref="Console.CancelKeyPress"/> при инициализации.</para>
         /// </summary>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
