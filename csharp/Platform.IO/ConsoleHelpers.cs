@@ -90,7 +90,7 @@ namespace Platform.IO
         /// </param>
         /// <remarks>
         /// <para>The method is only executed if the application was compiled with the DEBUG directive.</para>
-        /// <para>Метод выполняется только в том случае, если приложение было скомпилировано с директивой DEBUG.</para>
+        /// <para>Метод выполняется только если приложение было скомпилировано с директивой DEBUG.</para>
         /// </remarks>
         [Conditional("DEBUG")]
         public static void Debug(string @string) => Console.WriteLine(@string);
@@ -109,7 +109,7 @@ namespace Platform.IO
         /// </param>
         /// <remarks>
         /// <para>The method is only executed if the application was compiled with the DEBUG directive.</para>
-        /// <para>Метод выполняется только в том случае, если приложение было скомпилировано с директивой DEBUG.</para>
+        /// <para>Метод выполняется только если приложение было скомпилировано с директивой DEBUG.</para>
         /// </remarks>
         [Conditional("DEBUG")]
         public static void Debug(string format, params object[] args) => Console.WriteLine(format, args);
