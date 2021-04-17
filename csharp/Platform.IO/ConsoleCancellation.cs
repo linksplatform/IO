@@ -8,6 +8,10 @@ using Platform.Threading;
 
 namespace Platform.IO
 {
+    /// <summary>
+    /// <para>Represent the set of helper methods to work with tasks cancellation through console.</para>
+    /// <para>Представляет набор вспомогательных методов для работы с отменой задач через консоль.</para>
+    /// </summary>
     public class ConsoleCancellation : DisposableBase
     {
         /// <summary>
