@@ -30,7 +30,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.IO.ConsoleCancellation.html",
-          "hash": "yTDYMiYFggaNq0DwMcuqjg=="
+          "hash": "knVgheC9wShHz1VXBY8mow=="
         }
       },
       "is_incremental": false,
@@ -42,7 +42,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.IO.ConsoleHelpers.html",
-          "hash": "9UCKPLP1mBwHpA/UMIb9ew=="
+          "hash": "bqZno+kbpaDTBg8wiQl2aA=="
         }
       },
       "is_incremental": false,
@@ -54,7 +54,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.IO.FileHelpers.html",
-          "hash": "2mhMTYZCl5Jbih4VThsw+w=="
+          "hash": "xVsLqBQ4rdjQYd/7sRT3bg=="
         }
       },
       "is_incremental": false,
@@ -66,7 +66,19 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.IO.StreamExtensions.html",
-          "hash": "rGpJFb4SW6zzKI2YLcXNgw=="
+          "hash": "Pk9UABPhV4feO1htYs/fsg=="
+        }
+      },
+      "is_incremental": false,
+      "version": ""
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "obj/api/Platform.IO.TemporaryFile.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Platform.IO.TemporaryFile.html",
+          "hash": "W1GXrWaLezSE8DS4F7yA+w=="
         }
       },
       "is_incremental": false,
@@ -78,7 +90,7 @@
       "output": {
         ".html": {
           "relative_path": "api/Platform.IO.html",
-          "hash": "52QVl04TusNK/O16iS3Rag=="
+          "hash": "2XpJyLeoSmqAsoJ/MLwYqQ=="
         }
       },
       "is_incremental": false,
@@ -90,7 +102,7 @@
       "output": {
         ".html": {
           "relative_path": "api/toc.html",
-          "hash": "bkjKAF1GTApeuRex/pisrw=="
+          "hash": "6PHMsTdZB4pWtWIsRlsm5w=="
         }
       },
       "is_incremental": false,
@@ -132,7 +144,7 @@
         "ManagedReferenceDocumentProcessor": {
           "can_incremental": false,
           "incrementalPhase": "build",
-          "total_file_count": 5,
+          "total_file_count": 6,
           "skipped_file_count": 0
         },
         "TocDocumentProcessor": {
