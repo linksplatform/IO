@@ -13,7 +13,8 @@ namespace TemporaryFileTest
         static void Main(string[] args)
         {
             TemporaryFile tempFile = new TemporaryFile();
-            Console.WriteLine($"File exists? {File.Exists(tempFile.Filename)}");
+            Console.WriteLine(File.Exists(tempFile.Filename));
+            Console.WriteLine(tempFile.Filename);
         }
     }
 }
