@@ -19,17 +19,19 @@ namespace Platform.IO.Tests
             this.output = output;
         }
         [Fact]
-        public void TemporaryFileExistsTest()
+        public void TemporaryFileTest()
         {
             using Process process = new Process();
-            process.StartInfo.FileName = AppDomain.CurrentDomain.BaseDirectory;
+            process.StartInfo.FileName = Path.GetFullPath(Path.Combine(AppDomain.CurrentDomain.BaseDirectory, @"..\..\..\..\TemporaryFileTest\bin\Debug\net5.0\TemporaryFileTest.exe"));
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardOutput = true;
             process.Start();
 
-            Console.WriteLine(process.StandardOutput.ReadToEnd());
-
+            string path = process.StandardOutput.ReadLine();
+            Assert.True(File.Exists(path));
             process.WaitForExit();
+
+            Assert.False(File.Exists(path));
         }
 
     }
