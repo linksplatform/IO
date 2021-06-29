@@ -22,7 +22,7 @@ namespace Platform.IO.Tests
         public void TemporaryFileTest()
         {
             using Process process = new Process();
-            process.StartInfo.FileName = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\..\TemporaryFileTest\bin\Debug\net5.0\TemporaryFileTest.exe"));
+            process.StartInfo.FileName = @"..\..\..\..\TemporaryFileTest\bin\Debug\net5.0\TemporaryFileTest.exe";
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardOutput = true;
             process.Start();
