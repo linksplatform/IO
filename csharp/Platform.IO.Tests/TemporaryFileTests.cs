@@ -27,11 +27,12 @@ namespace Platform.IO.Tests
             bool isLinux = System.Runtime.InteropServices.RuntimeInformation
                                                .IsOSPlatform(OSPlatform.Linux);
             using Process process = new Process();
-            //process.StartInfo.FileName = @"..\..\..\..\TemporaryFileTest\bin\Debug\net5.0\TemporaryFileTest.exe";
+            process.StartInfo.FileName = @"..\..\..\..\TemporaryFileTest\bin\Debug\net5.0\TemporaryFileTest.exe";
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardOutput = true;
-            Process.Start(@"cd ..\..\..\..\TemporaryFileTest\bin\Debug\net5.0 && ls");
+            process.Start();
             output.WriteLine(process.StartInfo.FileName);
+            output.WriteLine($"{File.Exists(process.StartInfo.FileName)}");
 
             string path = process.StandardOutput.ReadLine();
             Assert.True(File.Exists(path));
