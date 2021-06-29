@@ -8,6 +8,7 @@ using Platform.IO;
 using System.IO;
 using System.Diagnostics;
 using Xunit.Abstractions;
+using System.Runtime.InteropServices;
 
 namespace Platform.IO.Tests
 {
@@ -21,11 +22,16 @@ namespace Platform.IO.Tests
         [Fact]
         public void TemporaryFileTest()
         {
+            bool isWindows = System.Runtime.InteropServices.RuntimeInformation
+                                                .IsOSPlatform(OSPlatform.Windows);
+            bool isLinux = System.Runtime.InteropServices.RuntimeInformation
+                                               .IsOSPlatform(OSPlatform.Linux);
             using Process process = new Process();
-            process.StartInfo.FileName = @"..\..\..\..\TemporaryFileTest\bin\Debug\net5.0\TemporaryFileTest.exe";
+            //process.StartInfo.FileName = @"..\..\..\..\TemporaryFileTest\bin\Debug\net5.0\TemporaryFileTest.exe";
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardOutput = true;
-            process.Start();
+            Process.Start(@"cd ..\..\..\..\TemporaryFileTest\bin\Debug\net5.0 && ls");
+            output.WriteLine(process.StartInfo.FileName);
 
             string path = process.StandardOutput.ReadLine();
             Assert.True(File.Exists(path));
