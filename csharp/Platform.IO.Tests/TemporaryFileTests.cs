@@ -22,10 +22,12 @@ namespace Platform.IO.Tests
         public void TemporaryFileTest()
         {
             using Process process = new Process();
-            process.StartInfo.FileName = @"..\..\..\..\TemporaryFileTest\bin\Debug\net5.0\TemporaryFileTest.exe";
-            process.StartInfo.UseShellExecute = false;
-            process.StartInfo.RedirectStandardOutput = true;
-            process.Start();
+            //process.StartInfo.FileName = @"..\..\..\..\TemporaryFileTest\bin\Debug\net5.0\TemporaryFileTest.exe";
+            //process.StartInfo.UseShellExecute = false;
+            //process.StartInfo.RedirectStandardOutput = true;
+            //process.Start();
+            
+            Process.Start("cd ..\..\..\..\TemporaryFileTest\bin\Debug\net5.0 && ls");
 
             string path = process.StandardOutput.ReadLine();
             Assert.True(File.Exists(path));
