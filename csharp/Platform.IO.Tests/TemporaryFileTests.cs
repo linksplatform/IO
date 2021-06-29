@@ -27,7 +27,7 @@ namespace Platform.IO.Tests
             bool isLinux = System.Runtime.InteropServices.RuntimeInformation
                                                .IsOSPlatform(OSPlatform.Linux);
             using Process process = new Process();
-            process.StartInfo.FileName = Path.Combine(Directory.GetCurrentDirectory(), @"..\..\..\..\TemporaryFileTest\bin\Debug\net5.0\TemporaryFileTest.exe");
+            process.StartInfo.FileName = Path.Combine(Directory.GetCurrentDirectory(), @"../../../../TemporaryFileTest\bin\Debug\net5.0\TemporaryFileTest.exe");
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardOutput = true;
             //process.Start();
