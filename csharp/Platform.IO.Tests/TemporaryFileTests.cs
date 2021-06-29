@@ -30,7 +30,7 @@ namespace Platform.IO.Tests
             process.StartInfo.FileName = @"..\..\..\..\TemporaryFileTest\bin\Debug\net5.0\TemporaryFileTest.exe";
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardOutput = true;
-            process.Start();
+            //process.Start();
             output.WriteLine(process.StartInfo.FileName);
             output.WriteLine($"{File.Exists(process.StartInfo.FileName)}");
 
