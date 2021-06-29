@@ -30,13 +30,12 @@ namespace Platform.IO.Tests
             process.StartInfo.FileName = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", "..", "TemporaryFileTest", "bin", "bin", "Debug", "net5.0", "TemporaryFileTest"));
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardOutput = true;
-            process.Start();
+            output.WriteLine("");
             output.WriteLine(process.StartInfo.FileName);
             output.WriteLine($"{File.Exists(process.StartInfo.FileName)}");
-            foreach (var item in Directory.GetFiles(process.StartInfo.FileName, "*.*", SearchOption.AllDirectories))
-            {
-                output.WriteLine(item);
-            }
+            output.WriteLine("");
+            process.Start();
+
 
             string path = process.StandardOutput.ReadLine();
             Assert.True(File.Exists(path));
