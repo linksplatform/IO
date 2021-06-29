@@ -33,7 +33,7 @@ namespace Platform.IO.Tests
             //process.Start();
             output.WriteLine(process.StartInfo.FileName);
             output.WriteLine($"{File.Exists(process.StartInfo.FileName)}");
-            foreach (var item in Directory.GetFiles(process.StartInfo.FileName))
+            foreach (var item in Directory.GetDirectories(process.StartInfo.FileName))
             {
                 output.WriteLine(item);
             }
