@@ -29,7 +29,5 @@ namespace Platform.IO.Tests
 
             Assert.False(File.Exists(path));
         }
-
     }
-
 }
