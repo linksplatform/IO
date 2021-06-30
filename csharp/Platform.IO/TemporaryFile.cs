@@ -14,6 +14,10 @@ namespace Platform.IO
     /// </summary>
     public class TemporaryFile : DisposableBase
     {
+        /// <summary>
+        /// <para>Temp file path.</para>
+        /// <para>Путь к временному файлу.</para>
+        /// </summary>
         public readonly string Filename;
 
         public TemporaryFile()
