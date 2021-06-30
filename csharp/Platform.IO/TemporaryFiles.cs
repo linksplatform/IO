@@ -30,6 +30,14 @@ namespace Platform.IO
             return Assembly.GetEntryAssembly().Location + UserFilesListFileNamePrefix;
         }
 
+        /// <summary>
+        /// <para>Adds a filename to the used files list.</para>
+        /// <para>Добавляет путь к файлу в список использованных файлов.</para>
+        /// </summary>
+        /// <param name="filename">
+        /// <para>The filename to be added to the used files list.</para>
+        /// <para>Путь к файлу для добавления в список использованных файлов.</para>
+        /// </param>
         private static void AddToUsedFilesList(string filename)
         {
             lock (UsedFilesListLock)
