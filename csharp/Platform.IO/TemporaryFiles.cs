@@ -62,6 +62,10 @@ namespace Platform.IO
             return filename;
         }
 
+        /// <summary>
+        /// <para>Deletes used files and clears the used files list.</para>
+        /// <para>Удаляет использованные файлы и очищает список использованных файлов</para>
+        /// </summary>
         public static void DeleteAllPreviouslyUsed()
         {
             lock (UsedFilesListLock)
