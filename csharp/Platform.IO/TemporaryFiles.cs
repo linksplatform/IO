@@ -47,6 +47,14 @@ namespace Platform.IO
             }
         }
 
+        /// <summary>
+        /// <para>Gets temp file and adds it to the used files list.</para>
+        /// <para>Получает временный файл и добавляет его в список использованных файлов.</para>
+        /// </summary>
+        /// <returns>
+        /// <para>Temp file path.</para>
+        /// <para>Путь временного файла.</para>
+        /// </returns>
         public static string UseNew()
         {
             var filename = Path.GetTempFileName();
