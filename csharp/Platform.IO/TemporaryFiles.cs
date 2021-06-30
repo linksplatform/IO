@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace Platform.IO
 {
+    /// <summary>
+    /// <para>Represents the set of helper methods to work with temp files.</para>
+    /// <para>Представляет набор вспомогательных методов для работы с временными файлами.</para>
+    /// </summary>
     class TemporaryFiles
     {
         private const string UserFilesListFileNamePrefix = ".used-temporary-files.txt";
