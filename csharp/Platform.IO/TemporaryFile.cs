@@ -20,6 +20,10 @@ namespace Platform.IO
         /// </summary>
         public readonly string Filename;
 
+        /// <summary>
+        /// <para>Gets a <see cref="TemporaryFile"/> instance.</para>
+        /// <para>Возвращает экземпляр класса <see cref="TemporaryFile"/>.</para>
+        /// </summary>
         public TemporaryFile()
         {
             Filename = TemporaryFiles.UseNew();
