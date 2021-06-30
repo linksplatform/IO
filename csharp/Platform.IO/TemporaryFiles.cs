@@ -19,11 +19,11 @@ namespace Platform.IO
 
         /// <summary>
         /// <para>Returns used files list file location.</para>
-        /// <para>Возвращает местоположение файла содержащего лист использованных файлов.</para>
+        /// <para>Возвращает местоположение файла содержащего список использованных файлов.</para>
         /// </summary>
         /// <returns>
         /// <para>Used files list file location.</para>
-        /// <para>Местоположение файла содержащего лист использованных файлов.</para>
+        /// <para>Местоположение файла содержащего список использованных файлов.</para>
         /// </returns>
         private static string GetUsedFilesListFilename()
         {
