@@ -8,6 +8,10 @@ using System.Threading.Tasks;
 
 namespace Platform.IO
 {
+    /// <summary>
+    /// <para>Represents a self-deleting temporary file.</para>
+    /// <para>Представляет самоудаляющийся временный файл.</para>
+    /// </summary>
     public class TemporaryFile : DisposableBase
     {
         public readonly string Filename;
