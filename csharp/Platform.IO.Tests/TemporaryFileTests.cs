@@ -9,7 +9,7 @@ namespace Platform.IO.Tests
         [Fact]
         public void TemporaryFileTest()
         {
-            using Process Process = new();
+            using Process process = new();
             process.StartInfo.FileName = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", "..", "TemporaryFileTest", "bin", "Debug", "net5", "TemporaryFileTest"));
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardOutput = true;
