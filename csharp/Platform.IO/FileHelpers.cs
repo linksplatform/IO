@@ -290,5 +290,11 @@ namespace Platform.IO
                 File.Delete(file);
             }
         }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void Truncate(string filename)
+        {
+            File.Open(filename, FileMode.Truncate);
+        }
     }
 }
