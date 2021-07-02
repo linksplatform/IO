@@ -303,15 +303,15 @@ namespace Platform.IO
         public static void Truncate(string path) => File.Open(path, FileMode.Truncate).Dispose();
 
         /// <summary>
-        /// <para>Appends the <paramref name="content"/> to the <paramref name="path"/>.</para>
-        /// <para>Добавляет <paramref name="content"/> в конец <paramref name="path"/>.</para>
+        /// <para>Appends the <paramref name="content"/> to the file at <paramref name="path"/>.</para>
+        /// <para>Добавляет <paramref name="content"/> в конец файла по пути <paramref name="path"/>.</para>
         /// </summary>
         /// <param name="path">
         /// <para>The path to a file to be appended by the <paramref name="content"/>.</para>
         /// <para>Путь к файлу для добавления содержимого <paramref name="content"/> в конец файла.</para>
         /// </param>
         /// <param name="content">
-        /// <para>A content to be appended to the file at the <paramref name="path"/>.</para>
+        /// <para>A content to be appended to the file at the file at <paramref name="path"/>.</para>
         /// <para>Содержимое для добавления в конец файла по пути <paramref name="path"/>.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
@@ -324,7 +324,10 @@ namespace Platform.IO
         /// <summary>
         /// 
         /// </summary>
-        /// <param name="path"></param>
+        /// <param name="path">
+        /// <para>A path to a file to be read</para>
+        /// <para></para>
+        /// </param>
         /// <param name="action">
         /// <para></para>
         /// <para></para>
