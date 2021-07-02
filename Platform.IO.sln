@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.IO", "csharp\Platf
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.IO.Tests", "csharp\Platform.IO.Tests\Platform.IO.Tests.csproj", "{A3ACEE51-4281-4024-8558-24E5ED8D5E1A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "TemporaryFileTest", "csharp\TemporaryFileTest\TemporaryFileTest.csproj", "{DCA635ED-E76E-4548-BE1F-6B87E64E5AB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.IO.Tests.TemporaryFileTest", "csharp\TemporaryFileTest\Platform.IO.Tests.TemporaryFileTest.csproj", "{DCA635ED-E76E-4548-BE1F-6B87E64E5AB2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
