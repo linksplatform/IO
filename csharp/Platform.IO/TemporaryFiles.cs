@@ -54,13 +54,13 @@ namespace Platform.IO
         {
             lock (UsedFilesListLock)
             {
-                var usedFilesListFilename = UsedFilesListFilename;
-                if (!File.Exists(usedFilesListFilename))
+                var listFilename = UsedFilesListFilename;
+                if (!File.Exists(listFilename))
                 {
                     return;
                 };
-                using (var listFile = File.Open(usedFilesListFilename, FileMode.Open))
-                using (var reader = new StreamReader(listFile))
+                using (var file = File.Open(listFilename, FileMode.Open))
+                using (var reader = new StreamReader(file))
                 {
                     string tempFileToDelete;
                     while ((tempFileToDelete = reader.ReadLine()) != null)
@@ -68,7 +68,7 @@ namespace Platform.IO
                         File.Delete(tempFileToDelete);
                     }
                 }
-                FileHelpers.Truncate(usedFilesListFilename);
+                FileHelpers.Truncate(listFilename);
             }
         }
     }
