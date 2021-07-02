@@ -67,7 +67,6 @@ namespace Platform.IO
                         }
                     }
                 }
-
                 using (File.Open(usedFilesListFilename, FileMode.Truncate)) { }
             }
         }
