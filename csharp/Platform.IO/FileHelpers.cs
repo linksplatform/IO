@@ -291,10 +291,12 @@ namespace Platform.IO
             }
         }
 
+        /// <summary>
+        /// <para></para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="filename"></param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void Truncate(string filename)
-        {
-            using (File.Open(filename, FileMode.Truncate)) ;
-        }
+        public static void Truncate(string filename) => File.Open(filename, FileMode.Truncate).Dispose();
     }
 }
