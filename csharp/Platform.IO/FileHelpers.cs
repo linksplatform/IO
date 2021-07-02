@@ -303,24 +303,32 @@ namespace Platform.IO
         public static void Truncate(string filename) => File.Open(filename, FileMode.Truncate).Dispose();
 
         /// <summary>
-        /// <para>Appends <paramref name="content"/> to the <paramref name="filename"/>.</para>
-        /// <para>Добавляет <paramref name="content"/> в конец <paramref name="filename"/>.</para>
+        /// <para>Appends the <paramref name="content"/> to the <paramref name="path"/>.</para>
+        /// <para>Добавляет <paramref name="content"/> в конец <paramref name="path"/>.</para>
         /// </summary>
-        /// <param name="filename">
-        /// <para>The filename to be appended by <paramref name="content"/>.</para>
-        /// <para>Путь к файлу для добавления <paramref name="content"/> в конец файла.</para>
+        /// <param name="path">
+        /// <para>The path to a file to be appended by the <paramref name="content"/>.</para>
+        /// <para>Путь к файлу для добавления содержимого <paramref name="content"/> в конец файла.</para>
         /// </param>
         /// <param name="content">
-        /// <para>The content to be appended to <paramref name="filename"/>.</para>
-        /// <para>Контент для добавления в конец <paramref name="filename"/>.</para>
+        /// <para>A content to be appended to the file at the <paramref name="path"/>.</para>
+        /// <para>Содержимое для добавления в конец файла по пути <paramref name="path"/>.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void AppendLine(string filename, string content)
+        public static void AppendLine(string path, string content)
         {
-            using var writer = File.AppendText(filename);
+            using var writer = File.AppendText(path);
             writer.WriteLine(content);
         }
 
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <param name="path"></param>
+        /// <param name="action">
+        /// <para></para>
+        /// <para></para>
+        /// </param>
         public static void EachLine(string path, Action<string> action)
         {
             using var reader = new StreamReader(path);
