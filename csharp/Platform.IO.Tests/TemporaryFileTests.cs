@@ -23,8 +23,6 @@ namespace Platform.IO.Tests
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardOutput = true;
             process.Start();
-            output.WriteLine(Environment.CurrentDirectory);
-            output.WriteLine(Assembly.GetExecutingAssembly().Location);
             string path = process.StandardOutput.ReadLine();
             Assert.True(File.Exists(path));
             process.WaitForExit();
@@ -40,8 +38,6 @@ namespace Platform.IO.Tests
                 fileName = tempFile.Filename;
                 Assert.True(File.Exists(fileName));
             }
-            output.WriteLine(Environment.CurrentDirectory);
-            output.WriteLine(Assembly.GetExecutingAssembly().Location);
             Assert.False(File.Exists(fileName));
         }
     }
