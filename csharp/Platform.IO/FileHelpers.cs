@@ -322,7 +322,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Performs the <paramref name="action"/> for each line of the file at the <paramref name="path"/>.</para>
+        /// <para>Performs the <paramref name="action"/> for each line of a file at the <paramref name="path"/>.</para>
         /// <para>Выполняет <paramref name="action"/> для каждой строчки файла по пути <paramref name="path"/>.</para>
         /// </summary>
         /// <param name="path">
