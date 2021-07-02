@@ -17,13 +17,13 @@ namespace Platform.IO
         private const string UserFilesListFileNamePrefix = ".used-temporary-files.txt";
         static private readonly object UsedFilesListLock = new object();
 
-        private static string GetUsedFilesListFilename() => Assembly.GetExecutingAssembly().Location + UserFilesListFileNamePrefix;
+        private static readonly string UsedFilesListFilename = Assembly.GetExecutingAssembly().Location + UserFilesListFileNamePrefix;
 
         private static void AddToUsedFilesList(string filename)
         {
             lock (UsedFilesListLock)
             {
-                using var writer = File.AppendText(GetUsedFilesListFilename());
+                using var writer = File.AppendText(UsedFilesListFilename);
                 writer.WriteLine(filename);
             }
         }
@@ -51,7 +51,7 @@ namespace Platform.IO
         {
             lock (UsedFilesListLock)
             {
-                var usedFilesListFilename = GetUsedFilesListFilename();
+                var usedFilesListFilename = UsedFilesListFilename;
 
                 if (!File.Exists(usedFilesListFilename)) return;
 
