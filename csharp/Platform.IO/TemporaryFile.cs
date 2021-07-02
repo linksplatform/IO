@@ -21,7 +21,10 @@ namespace Platform.IO
         /// <para>Converts the <see cref="TemporaryFile"/> instance to <see cref="string"/> using the <see cref="Filename"/> field value.</para>
         /// <para>Преобразует экземпляр <see cref="TemporaryFile"/> в <see cref="string"/> используя поле <see cref="Filename"/>.</para>
         /// </summary>
-        /// <param name="file"></param>
+        /// <param name="file">
+        /// <para>A <see cref="TemporaryFile"/> instance.</para>
+        /// <para>Экземпляр <see cref="TemporaryFile"/>.</para>
+        /// </param>
         public static implicit operator string(TemporaryFile file) => file.Filename;
 
         /// <summary>
