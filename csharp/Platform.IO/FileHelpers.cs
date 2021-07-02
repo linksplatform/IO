@@ -292,10 +292,13 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para></para>
-        /// <para></para>
+        /// <para>Trincates the <paramref name="filename"/>.</para>
+        /// <para>Очищает содержимое <paramref name="filename"/>.</para>
         /// </summary>
-        /// <param name="filename"></param>
+        /// <param name="filename">
+        /// <para>A filename to be truncated.</para>
+        /// <para>Путь к файлу для очистки содержимого.</para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Truncate(string filename) => File.Open(filename, FileMode.Truncate).Dispose();
     }
