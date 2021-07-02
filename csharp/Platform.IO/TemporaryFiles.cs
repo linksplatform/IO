@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -18,6 +19,7 @@ namespace Platform.IO
         private static readonly object UsedFilesListLock = new object();
         private static readonly string UsedFilesListFilename = Assembly.GetExecutingAssembly().Location + UserFilesListFileNamePrefix;
 
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void AddToUsedFilesList(string filename)
         {
             lock (UsedFilesListLock)
@@ -35,6 +37,7 @@ namespace Platform.IO
         /// <para>The temporary file path.</para>
         /// <para>Путь временного файла.</para>
         /// </returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static string UseNew()
         {
             var filename = Path.GetTempFileName();
@@ -46,6 +49,7 @@ namespace Platform.IO
         /// <para>Deletes all previously used temporary files and clears the files list.</para>
         /// <para>Удаляет все ранее использованные временные файлы и очищает список файлов.</para>
         /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void DeleteAllPreviouslyUsed()
         {
             lock (UsedFilesListLock)
