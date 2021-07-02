@@ -7,7 +7,7 @@ namespace TemporaryFileTest
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
             using TemporaryFile tempFile = new();
             Console.WriteLine(tempFile);
