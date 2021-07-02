@@ -292,8 +292,8 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Trincates the <paramref name="path"/>.</para>
-        /// <para>Очищает содержимое <paramref name="path"/>.</para>
+        /// <para>Trincates the file at the <paramref name="path"/>.</para>
+        /// <para>Очищает содержимое файла по пути <paramref name="path"/>.</para>
         /// </summary>
         /// <param name="path">
         /// <para>A path to a file to be truncated.</para>
