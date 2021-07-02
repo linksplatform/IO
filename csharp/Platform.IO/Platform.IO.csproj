@@ -24,7 +24,8 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <LangVersion>latest</LangVersion>
-    <PackageReleaseNotes>TemporaryFiles, TemporaryFile classes are added.</PackageReleaseNotes>
+    <PackageReleaseNotes>TemporaryFiles, TemporaryFile classes are added.
+		Truncate, AppendLine, EachLine methods are added to the FileHelpers class.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup Condition="$(TargetFramework.StartsWith('net4')) AND '$(MSBuildRuntimeType)' == 'Core' AND '$(OS)' != 'Windows_NT'">
