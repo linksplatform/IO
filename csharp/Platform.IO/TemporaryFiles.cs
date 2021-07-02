@@ -61,7 +61,10 @@ namespace Platform.IO
                     string tempFileToDelete;
                     while ((tempFileToDelete = reader.ReadLine()) != null)
                     {
-                        if (File.Exists(tempFileToDelete)) File.Delete(tempFileToDelete);
+                        if (File.Exists(tempFileToDelete))
+                        {
+                            File.Delete(tempFileToDelete);
+                        }
                     }
                 }
 
