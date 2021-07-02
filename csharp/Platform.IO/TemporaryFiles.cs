@@ -59,13 +59,13 @@ namespace Platform.IO
                 {
                     return;
                 }
-                using (var file = File.Open(listFilename, FileMode.Open))
-                using (var reader = new StreamReader(file))
+                using (var listFile = File.Open(listFilename, FileMode.Open))
+                using (var reader = new StreamReader(listFile))
                 {
-                    string tempFileToDelete;
-                    while ((tempFileToDelete = reader.ReadLine()) != null)
+                    string temporaryFile;
+                    while ((temporaryFile = reader.ReadLine()) != null)
                     {
-                        File.Delete(tempFileToDelete);
+                        File.Delete(temporaryFile);
                     }
                 }
                 FileHelpers.Truncate(listFilename);
