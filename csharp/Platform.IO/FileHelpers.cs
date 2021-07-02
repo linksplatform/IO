@@ -308,7 +308,7 @@ namespace Platform.IO
         /// </summary>
         /// <param name="path">
         /// <para>The path to a file to be appended by the <paramref name="content"/>.</para>
-        /// <para>Путь к файлу для добавления содержимого <paramref name="content"/> в конец файла.</para>
+        /// <para>Путь к файлу для добавления <paramref name="content"/> в конец файла.</para>
         /// </param>
         /// <param name="content">
         /// <para>A content to be appended to the file at the file at the <paramref name="path"/>.</para>
