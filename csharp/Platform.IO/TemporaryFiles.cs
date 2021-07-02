@@ -59,7 +59,7 @@ namespace Platform.IO
                 {
                     return;
                 }
-                using (var listFile = File.Open(listFilename, FileMode.Open))
+                using (FileStream listFile = File.Open(listFilename, FileMode.Open))
                 using (var reader = new StreamReader(listFile))
                 {
                     string temporaryFile;
