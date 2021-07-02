@@ -24,7 +24,7 @@ namespace Platform.IO.Tests
         public void TemporaryFileTestWithoutConsoleApp()
         {
             string fileName;
-            using (TemporaryFile tempFile = new TemporaryFile())
+            using (var tempFile = new TemporaryFile())
             {
                 fileName = tempFile;
                 Assert.True(File.Exists(fileName));
