@@ -294,7 +294,7 @@ namespace Platform.IO
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Truncate(string filename)
         {
-            File.Open(filename, FileMode.Truncate);
+            using (File.Open(filename, FileMode.Truncate)) ;
         }
     }
 }
