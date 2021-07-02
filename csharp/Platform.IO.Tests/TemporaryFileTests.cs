@@ -26,7 +26,7 @@ namespace Platform.IO.Tests
             string fileName;
             using (TemporaryFile tempFile = new TemporaryFile())
             {
-                fileName = tempFile.Filename;
+                fileName = tempFile;
                 Assert.True(File.Exists(fileName));
             }
             Assert.False(File.Exists(fileName));
