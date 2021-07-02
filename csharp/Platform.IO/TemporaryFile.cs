@@ -15,7 +15,7 @@ namespace Platform.IO
     public class TemporaryFile : DisposableBase
     {
         /// <summary>
-        /// <para>Gets a temp file path.</para>
+        /// <para>Gets a temporary file path.</para>
         /// <para>Возвращает путь к временному файлу.</para>
         /// </summary>
         public readonly string Filename;
@@ -30,7 +30,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Deletes the temp file.</para>
+        /// <para>Deletes the temporary file.</para>
         /// <para>Удаляет временный файл.</para>
         /// </summary>
         /// <param name="manual">
