@@ -21,8 +21,8 @@ namespace Platform.IO
         public readonly string Filename;
 
         /// <summary>
-        /// <para>Gets a <see cref="TemporaryFile"/> instance.</para>
-        /// <para>Возвращает экземпляр класса <see cref="TemporaryFile"/>.</para>
+        /// <para>Initializes a <see cref="TemporaryFile"/> instance.</para>
+        /// <para>Инициализирует экземпляр класса <see cref="TemporaryFile"/>.</para>
         /// </summary>
         public TemporaryFile()
         {
