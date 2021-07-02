@@ -9,7 +9,7 @@ namespace TemporaryFileTest
     {
         static void Main(string[] args)
         {
-            TemporaryFile tempFile = new TemporaryFile();
+            using var tempFile = new TemporaryFile();
             Console.WriteLine(tempFile);
         }
     }
