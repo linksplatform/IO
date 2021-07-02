@@ -71,7 +71,7 @@ namespace Platform.IO
                         }
                     }
                 }
-                using (File.Open(usedFilesListFilename, FileMode.Truncate)) { }
+                FileHelpers.Truncate(usedFilesListFilename);
             }
         }
     }
