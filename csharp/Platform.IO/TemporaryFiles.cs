@@ -51,12 +51,10 @@ namespace Platform.IO
             lock (UsedFilesListLock)
             {
                 var usedFilesListFilename = UsedFilesListFilename;
-
                 if (!File.Exists(usedFilesListFilename))
                 {
                     return;
                 };
-
                 using (var listFile = File.Open(usedFilesListFilename, FileMode.Open))
                 using (var reader = new StreamReader(listFile))
                 {
