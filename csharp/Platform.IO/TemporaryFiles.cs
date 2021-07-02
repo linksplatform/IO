@@ -52,7 +52,10 @@ namespace Platform.IO
             {
                 var usedFilesListFilename = UsedFilesListFilename;
 
-                if (!File.Exists(usedFilesListFilename)) return;
+                if (!File.Exists(usedFilesListFilename))
+                {
+                    return;
+                };
 
                 using (var listFile = File.Open(usedFilesListFilename, FileMode.Open))
                 using (var reader = new StreamReader(listFile))
