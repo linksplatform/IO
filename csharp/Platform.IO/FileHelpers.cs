@@ -322,15 +322,16 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// 
+        /// <para>Performs the <paramref name="action"/> for each line of the file at the <paramref name="path"/>.</para>
+        /// <para>Выполняет <paramref name="action"/> для каждой строчки файла по пути <paramref name="path"/>.</para>
         /// </summary>
         /// <param name="path">
-        /// <para>A path to a file to be read</para>
-        /// <para></para>
+        /// <para>A path to a file to perform the <paramref name="action"/> for each line of the file.</para>
+        /// <para>Путь к файлу для выполнения <paramref name="action"/> для каждой строки файла.</para>
         /// </param>
         /// <param name="action">
-        /// <para></para>
-        /// <para></para>
+        /// <para>An action to be performed for each line of a file at the <paramref name="path"/>.</para>
+        /// <para>Действие выполняемое для каждой строчки файла по пути <paramref name="path"/>.</para>
         /// </param>
         public static void EachLine(string path, Action<string> action)
         {
