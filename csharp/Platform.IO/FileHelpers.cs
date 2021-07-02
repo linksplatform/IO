@@ -290,5 +290,58 @@ namespace Platform.IO
                 File.Delete(file);
             }
         }
+
+        /// <summary>
+        /// <para>Trincates the file at the <paramref name="path"/>.</para>
+        /// <para>Очищает содержимое файла по пути <paramref name="path"/>.</para>
+        /// </summary>
+        /// <param name="path">
+        /// <para>A path to a file to be truncated.</para>
+        /// <para>Путь к файлу для очистки содержимого.</para>
+        /// </param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void Truncate(string path) => File.Open(path, FileMode.Truncate).Dispose();
+
+        /// <summary>
+        /// <para>Appends the <paramref name="content"/> to a file at the <paramref name="path"/>.</para>
+        /// <para>Добавляет <paramref name="content"/> в конец файла по пути <paramref name="path"/>.</para>
+        /// </summary>
+        /// <param name="path">
+        /// <para>The path to a file to be appended by the <paramref name="content"/>.</para>
+        /// <para>Путь к файлу для добавления <paramref name="content"/> в конец файла.</para>
+        /// </param>
+        /// <param name="content">
+        /// <para>A content to be appended to a file at the file at the <paramref name="path"/>.</para>
+        /// <para>Содержимое для добавления в конец файла по пути <paramref name="path"/>.</para>
+        /// </param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void AppendLine(string path, string content)
+        {
+            using var writer = File.AppendText(path);
+            writer.WriteLine(content);
+        }
+
+        /// <summary>
+        /// <para>Performs the <paramref name="action"/> for each line of a file at the <paramref name="path"/>.</para>
+        /// <para>Выполняет <paramref name="action"/> для каждой строчки файла по пути <paramref name="path"/>.</para>
+        /// </summary>
+        /// <param name="path">
+        /// <para>A path to a file to perform the <paramref name="action"/> for each line of the file.</para>
+        /// <para>Путь к файлу для выполнения <paramref name="action"/> для каждой строки файла.</para>
+        /// </param>
+        /// <param name="action">
+        /// <para>An action to be performed for each line of a file at the <paramref name="path"/>.</para>
+        /// <para>Действие выполняемое для каждой строчки файла по пути <paramref name="path"/>.</para>
+        /// </param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void EachLine(string path, Action<string> action)
+        {
+            using var reader = new StreamReader(path);
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+                action(line);
+            }
+        }
     }
 }

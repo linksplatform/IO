@@ -4,7 +4,7 @@
     <Description>LinksPlatform's Platform.IO Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.IO</AssemblyTitle>
-    <VersionPrefix>0.2.1</VersionPrefix>
+    <VersionPrefix>0.2.2</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFrameworks>net472;netstandard2.0;netstandard2.1;net5</TargetFrameworks>
     <AssemblyName>Platform.IO</AssemblyName>
@@ -24,10 +24,8 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <LangVersion>latest</LangVersion>
-    <PackageReleaseNotes>Platform.Threading dependency updated from 0.2.0 to 0.2.1.
-Platform.Unsafe dependency updated from 0.4.0 to 0.4.1.
-ConsoleHelpers.Debug method with single string argument added.
-Refactoring, issues fix.</PackageReleaseNotes>
+    <PackageReleaseNotes>TemporaryFiles, TemporaryFile classes are added.
+Truncate, AppendLine, EachLine methods are added to the FileHelpers class.</PackageReleaseNotes>
   </PropertyGroup>
 
   <ItemGroup Condition="$(TargetFramework.StartsWith('net4')) AND '$(MSBuildRuntimeType)' == 'Core' AND '$(OS)' != 'Windows_NT'">
