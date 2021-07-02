@@ -49,12 +49,11 @@ namespace Platform.IO
             lock (UsedFilesListLock)
             {
                 var listFilename = UsedFilesListFilename;
-                if (!File.Exists(listFilename))
+                if (File.Exists(listFilename))
                 {
-                    return;
+                    FileHelpers.EachLine(listFilename, File.Delete);
+                    FileHelpers.Truncate(listFilename);
                 }
-                FileHelpers.EachLine(listFilename, File.Delete);
-                FileHelpers.Truncate(listFilename);
             }
         }
     }
