@@ -65,10 +65,7 @@ namespace Platform.IO
                     string tempFileToDelete;
                     while ((tempFileToDelete = reader.ReadLine()) != null)
                     {
-                        if (File.Exists(tempFileToDelete))
-                        {
-                            File.Delete(tempFileToDelete);
-                        }
+                        File.Delete(tempFileToDelete);
                     }
                 }
                 FileHelpers.Truncate(usedFilesListFilename);
