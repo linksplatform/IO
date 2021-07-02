@@ -320,5 +320,15 @@ namespace Platform.IO
             using var writer = File.AppendText(filename);
             writer.WriteLine(content);
         }
+
+        public static void EachLine(string path, Action<string> action)
+        {
+            using var reader = new StreamReader(path);
+            string line;
+            while ((line = reader.ReadLine()) != null)
+            {
+                action(line);
+            }
+        }
     }
 }
