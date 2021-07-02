@@ -14,7 +14,7 @@ namespace Platform.IO.Tests
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardOutput = true;
             process.Start();
-            string path = process.StandardOutput.ReadLine();
+            var path = process.StandardOutput.ReadLine();
             Assert.True(File.Exists(path));
             process.WaitForExit();
             Assert.False(File.Exists(path));
