@@ -17,6 +17,8 @@ namespace Platform.IO
         /// </summary>
         public readonly string Filename;
 
+        public static implicit operator string(TemporaryFile file) => file.Filename;
+
         /// <summary>
         /// <para>Initializes a <see cref="TemporaryFile"/> instance.</para>
         /// <para>Инициализирует экземпляр класса <see cref="TemporaryFile"/>.</para>
