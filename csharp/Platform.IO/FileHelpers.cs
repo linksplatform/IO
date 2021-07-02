@@ -311,7 +311,7 @@ namespace Platform.IO
         /// <para>Путь к файлу для добавления <paramref name="content"/> в конец файла.</para>
         /// </param>
         /// <param name="content">
-        /// <para>A content to be appended to the file at the file at the <paramref name="path"/>.</para>
+        /// <para>A content to be appended to a file at the file at the <paramref name="path"/>.</para>
         /// <para>Содержимое для добавления в конец файла по пути <paramref name="path"/>.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
