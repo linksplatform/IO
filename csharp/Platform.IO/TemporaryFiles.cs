@@ -28,11 +28,11 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Gets temporary file and adds it to the used files list.</para>
+        /// <para>Gets a temporary file and adds it to the used files list.</para>
         /// <para>Получает временный файл и добавляет его в список использованных файлов.</para>
         /// </summary>
         /// <returns>
-        /// <para>Temporary file path.</para>
+        /// <para>The temporary file path.</para>
         /// <para>Путь временного файла.</para>
         /// </returns>
         public static string UseNew()
@@ -43,7 +43,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Deletes used files and clears the used files list.</para>
+        /// <para>Deletes the used files and clears the used files list.</para>
         /// <para>Удаляет использованные файлы и очищает список использованных файлов</para>
         /// </summary>
         public static void DeleteAllPreviouslyUsed()
