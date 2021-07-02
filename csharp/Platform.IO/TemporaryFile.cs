@@ -3,6 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
+using System.Runtime.CompilerServices;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -24,6 +25,7 @@ namespace Platform.IO
         /// <para>Initializes a <see cref="TemporaryFile"/> instance.</para>
         /// <para>Инициализирует экземпляр класса <see cref="TemporaryFile"/>.</para>
         /// </summary>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public TemporaryFile() => Filename = TemporaryFiles.UseNew();
 
         /// <summary>
@@ -38,6 +40,7 @@ namespace Platform.IO
         /// <para>A <see cref="Boolean"/> value that determines whether the <see cref="TemporaryFile"/> was released before a call to this method.</para>
         /// <para>Значение типа <see cref="Boolean"/>, определяющие были ли освобождены ресурсы, используемые <see cref="TemporaryFile"/> до вызова данного метода.</para>
         /// </param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         protected override void Dispose(bool manual, bool wasDisposed)
         {
             if (!wasDisposed)
