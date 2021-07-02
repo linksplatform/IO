@@ -12,7 +12,7 @@ namespace Platform.IO
     /// <para>Represents the set of helper methods to work with temporary files.</para>
     /// <para>Представляет набор вспомогательных методов для работы с временными файлами.</para>
     /// </summary>
-    class TemporaryFiles
+    public class TemporaryFiles
     {
         private const string UserFilesListFileNamePrefix = ".used-temporary-files.txt";
         private static readonly object UsedFilesListLock = new object();
