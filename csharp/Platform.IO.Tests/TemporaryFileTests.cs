@@ -1,15 +1,6 @@
-﻿using System;
-using Xunit;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Platform.IO;
+﻿using Xunit;
 using System.IO;
 using System.Diagnostics;
-using Xunit.Abstractions;
-using System.Runtime.InteropServices;
-using System.Reflection;
 
 namespace Platform.IO.Tests
 {
