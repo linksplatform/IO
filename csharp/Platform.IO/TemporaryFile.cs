@@ -25,6 +25,10 @@ namespace Platform.IO
         /// <para>A <see cref="TemporaryFile"/> instance.</para>
         /// <para>Экземпляр <see cref="TemporaryFile"/>.</para>
         /// </param>
+        /// <returns>
+        /// <para>Path to the temporary file.</para>
+        /// <para>Путь к временному файлу.</para>
+        /// </returns>
         public static implicit operator string(TemporaryFile file) => file.Filename;
 
         /// <summary>
