@@ -58,7 +58,7 @@ namespace Platform.IO
                 if (!File.Exists(listFilename))
                 {
                     return;
-                };
+                }
                 using (var file = File.Open(listFilename, FileMode.Open))
                 using (var reader = new StreamReader(file))
                 {
