@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using Platform.IO;
 using System.IO;
+using System.Reflection;
 
 namespace TemporaryFileTest
 {
@@ -14,6 +15,9 @@ namespace TemporaryFileTest
         {
             TemporaryFile tempFile = new TemporaryFile();
             Console.WriteLine(tempFile.Filename);
+            Console.WriteLine(Assembly.GetEntryAssembly().Location);
+            Console.WriteLine(Directory.GetCurrentDirectory());
+            Console.WriteLine(Environment.CurrentDirectory);
         }
     }
 }
