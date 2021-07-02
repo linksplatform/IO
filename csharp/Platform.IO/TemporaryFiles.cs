@@ -19,8 +19,7 @@ namespace Platform.IO
         {
             lock (UsedFilesListLock)
             {
-                using var writer = File.AppendText(UsedFilesListFilename);
-                writer.WriteLine(filename);
+                FileHelpers.AppendLine(UsedFilesListFilename, filename);
             }
         }
 
