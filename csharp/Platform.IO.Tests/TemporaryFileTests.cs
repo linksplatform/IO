@@ -38,5 +38,19 @@ namespace Platform.IO.Tests
 
             Assert.False(File.Exists(path));
         }
+
+        [Fact]
+        public void TemporaryFileTestWithoutConsoleApp()
+        {
+            string fileName;
+            using (TemporaryFile tempFile = new TemporaryFile())
+            {
+                fileName = tempFile.Filename;
+                Assert.True(File.Exists(fileName));
+            }
+            output.WriteLine(Environment.CurrentDirectory);
+            output.WriteLine(Assembly.GetExecutingAssembly().Location);
+            Assert.False(File.Exists(fileName));
+        }
     }
 }
