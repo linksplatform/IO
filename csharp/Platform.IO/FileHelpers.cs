@@ -301,5 +301,24 @@ namespace Platform.IO
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void Truncate(string filename) => File.Open(filename, FileMode.Truncate).Dispose();
+
+        /// <summary>
+        /// <para>Appends <paramref name="content"/> to the <paramref name="filename"/>.</para>
+        /// <para>Добавляет <paramref name="content"/> в конец <paramref name="filename"/>.</para>
+        /// </summary>
+        /// <param name="filename">
+        /// <para>The filename to be appended by <paramref name="content"/>.</para>
+        /// <para>Путь к файлу для добавления <paramref name="content"/> в конец файла.</para>
+        /// </param>
+        /// <param name="content">
+        /// <para>The content to be appended to <paramref name="filename"/>.</para>
+        /// <para>Контент для добавления в конец <paramref name="filename"/>.</para>
+        /// </param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void AppendLine(string filename, string content)
+        {
+            using var writer = File.AppendText(filename);
+            writer.WriteLine(content);
+        }
     }
 }
