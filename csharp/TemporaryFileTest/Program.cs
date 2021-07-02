@@ -18,6 +18,7 @@ namespace TemporaryFileTest
             Console.WriteLine(Assembly.GetEntryAssembly().Location);
             Console.WriteLine(Directory.GetCurrentDirectory());
             Console.WriteLine(Environment.CurrentDirectory);
+            Console.WriteLine(Assembly.GetExecutingAssembly().Location);
         }
     }
 }

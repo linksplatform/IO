@@ -17,7 +17,7 @@ namespace Platform.IO
         private const string UserFilesListFileNamePrefix = ".used-temporary-files.txt";
         static private readonly object UsedFilesListLock = new object();
 
-        private static string GetUsedFilesListFilename() => Assembly.GetEntryAssembly().Location + UserFilesListFileNamePrefix;
+        private static string GetUsedFilesListFilename() => Assembly.GetExecutingAssembly().Location + UserFilesListFileNamePrefix;
 
         private static void AddToUsedFilesList(string filename)
         {

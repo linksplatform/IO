@@ -9,11 +9,17 @@ using System.IO;
 using System.Diagnostics;
 using Xunit.Abstractions;
 using System.Runtime.InteropServices;
+using System.Reflection;
 
 namespace Platform.IO.Tests
 {
     public class TemporaryFileTests
     {
+        private readonly ITestOutputHelper output;
+        public TemporaryFileTests(ITestOutputHelper output)
+        {
+            this.output = output;
+        }
         [Fact]
         public void TemporaryFileTest()
         {
@@ -22,6 +28,8 @@ namespace Platform.IO.Tests
             process.StartInfo.UseShellExecute = false;
             process.StartInfo.RedirectStandardOutput = true;
             process.Start();
+            output.WriteLine(Environment.CurrentDirectory);
+            output.WriteLine(Assembly.GetExecutingAssembly().Location);
 
             string path = process.StandardOutput.ReadLine();
 
