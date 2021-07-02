@@ -53,8 +53,7 @@ namespace Platform.IO
                 {
                     return;
                 }
-                using (FileStream listFile = File.Open(listFilename, FileMode.Open))
-                using (var reader = new StreamReader(listFile))
+                using (var reader = new StreamReader(listFilename))
                 {
                     string temporaryFile;
                     while ((temporaryFile = reader.ReadLine()) != null)
