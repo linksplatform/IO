@@ -18,6 +18,7 @@ namespace Platform.IO
         static private readonly object UsedFilesListLock = new object();
 
         private static string GetUsedFilesListFilename() => Assembly.GetEntryAssembly().Location + UserFilesListFileNamePrefix;
+
         private static void AddToUsedFilesList(string filename)
         {
             lock (UsedFilesListLock)
