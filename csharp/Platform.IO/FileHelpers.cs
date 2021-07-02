@@ -333,6 +333,7 @@ namespace Platform.IO
         /// <para>An action to be performed for each line of a file at the <paramref name="path"/>.</para>
         /// <para>Действие выполняемое для каждой строчки файла по пути <paramref name="path"/>.</para>
         /// </param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void EachLine(string path, Action<string> action)
         {
             using var reader = new StreamReader(path);
