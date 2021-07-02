@@ -24,10 +24,7 @@ namespace Platform.IO
         /// <para>Initializes a <see cref="TemporaryFile"/> instance.</para>
         /// <para>Инициализирует экземпляр класса <see cref="TemporaryFile"/>.</para>
         /// </summary>
-        public TemporaryFile()
-        {
-            Filename = TemporaryFiles.UseNew();
-        }
+        public TemporaryFile() => Filename = TemporaryFiles.UseNew();
 
         /// <summary>
         /// <para>Deletes the temporary file.</para>
