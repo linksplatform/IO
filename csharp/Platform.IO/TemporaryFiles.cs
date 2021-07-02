@@ -45,7 +45,7 @@ namespace Platform.IO
 
         /// <summary>
         /// <para>Deletes all previously used temporary files and clears the files list.</para>
-        /// <para>Удаляет использованные файлы и очищает список использованных файлов.</para>
+        /// <para>Удаляет все ранее использованные временные файлы и очищает список файлов.</para>
         /// </summary>
         public static void DeleteAllPreviouslyUsed()
         {
