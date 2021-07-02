@@ -30,12 +30,9 @@ namespace Platform.IO.Tests
             process.Start();
             output.WriteLine(Environment.CurrentDirectory);
             output.WriteLine(Assembly.GetExecutingAssembly().Location);
-
             string path = process.StandardOutput.ReadLine();
-
             Assert.True(File.Exists(path));
             process.WaitForExit();
-
             Assert.False(File.Exists(path));
         }
 
