@@ -53,14 +53,7 @@ namespace Platform.IO
                 {
                     return;
                 }
-                using (var reader = new StreamReader(listFilename))
-                {
-                    string temporaryFile;
-                    while ((temporaryFile = reader.ReadLine()) != null)
-                    {
-                        File.Delete(temporaryFile);
-                    }
-                }
+                FileHelpers.EachLine(listFilename, File.Delete);
                 FileHelpers.Truncate(listFilename);
             }
         }
