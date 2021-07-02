@@ -7,7 +7,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.IO", "csharp\Platf
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.IO.Tests", "csharp\Platform.IO.Tests\Platform.IO.Tests.csproj", "{A3ACEE51-4281-4024-8558-24E5ED8D5E1A}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.IO.Tests.TemporaryFileTest", "csharp\TemporaryFileTest\Platform.IO.Tests.TemporaryFileTest.csproj", "{DCA635ED-E76E-4548-BE1F-6B87E64E5AB2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Platform.IO.Tests.TemporaryFileTest", "csharp\Platform.IO.Tests.TemporaryFileTest\Platform.IO.Tests.TemporaryFileTest.csproj", "{36FF2FA0-A4E9-43A1-9889-2954DCBAAA46}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -23,10 +23,10 @@ Global
 		{A3ACEE51-4281-4024-8558-24E5ED8D5E1A}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{A3ACEE51-4281-4024-8558-24E5ED8D5E1A}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{A3ACEE51-4281-4024-8558-24E5ED8D5E1A}.Release|Any CPU.Build.0 = Release|Any CPU
-		{DCA635ED-E76E-4548-BE1F-6B87E64E5AB2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{DCA635ED-E76E-4548-BE1F-6B87E64E5AB2}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{DCA635ED-E76E-4548-BE1F-6B87E64E5AB2}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{DCA635ED-E76E-4548-BE1F-6B87E64E5AB2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{36FF2FA0-A4E9-43A1-9889-2954DCBAAA46}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{36FF2FA0-A4E9-43A1-9889-2954DCBAAA46}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{36FF2FA0-A4E9-43A1-9889-2954DCBAAA46}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{36FF2FA0-A4E9-43A1-9889-2954DCBAAA46}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
