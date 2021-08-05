@@ -39,7 +39,7 @@ Platform.Unsafe dependency updated from 0.4.1 to 0.5.0.</PackageReleaseNotes>
 
   <ItemGroup>
     <PackageReference Include="Platform.Threading" Version="0.3.0" />
-    <PackageReference Include="Platform.Unsafe" Version="0.5.0" />
+    <PackageReference Include="Platform.Unsafe" Version="0.5.1" />
   </ItemGroup>
 
 </Project>
