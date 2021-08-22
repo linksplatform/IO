@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Runtime.CompilerServices;
 using System.Threading;
 using Platform.Disposables;
@@ -106,6 +106,20 @@ namespace Platform.IO
             }
         }
 
+        /// <summary>
+        /// <para>
+        /// Ons the cancel key press using the specified sender.
+        /// </para>
+        /// <para></para>
+        /// </summary>
+        /// <param name="sender">
+        /// <para>The sender.</para>
+        /// <para></para>
+        /// </param>
+        /// <param name="e">
+        /// <para>The .</para>
+        /// <para></para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void OnCancelKeyPress(object sender, ConsoleCancelEventArgs e)
         {

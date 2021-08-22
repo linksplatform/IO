@@ -1,4 +1,4 @@
-﻿using Platform.Disposables;
+using Platform.Disposables;
 using System;
 using System.IO;
 using System.Runtime.CompilerServices;
