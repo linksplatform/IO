@@ -10,26 +10,8 @@ namespace Platform.IO
     /// </summary>
     public class TemporaryFiles
     {
-        /// <summary>
-        /// <para>
-        /// The user files list file name prefix.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         private const string UserFilesListFileNamePrefix = ".used-temporary-files.txt";
-        /// <summary>
-        /// <para>
-        /// The used files list lock.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         private static readonly object UsedFilesListLock = new();
-        /// <summary>
-        /// <para>
-        /// The user files list file name prefix.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         private static readonly string UsedFilesListFilename = Assembly.GetExecutingAssembly().Location + UserFilesListFileNamePrefix;
 
         /// <summary>
