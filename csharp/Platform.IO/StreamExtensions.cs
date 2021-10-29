@@ -4,7 +4,8 @@ using Platform.Unsafe;
 
 namespace Platform.IO
 {
-    private instances.</para>
+    /// <summary>
+    /// <para>Represents the set of extension methods for <see cref="Stream"/> class instances.</para>
     /// <para>Представляет набор методов расширения для экземпляров класса <see cref="Stream"/>.</para>
     /// </summary>
     public static class StreamExtensions
