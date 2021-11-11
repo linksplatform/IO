@@ -73,51 +73,9 @@ namespace Platform.IO
             using var fileStream = GetValidFileStreamOrDefault<T>(path);
             return fileStream?.ReadOrDefault<T>() ?? default;
         }
-
-        /// <summary>
-        /// <para>Returns the <see cref="FileStream"/> opened for reading from a file at the <paramref name="path"/> if the file exists, not empty and its size is a multiple of the <typeparamref name="TStruct"/> structure size; otherwise <see langword="null"/>.</para>
-        /// <para>Возвращает <see cref="FileStream"/>, открытый для чтения из файла находящегося в <paramref name="path"/>, если файл существует, не пуст и его размер кратен размеру структуры типа <typeparamref name="TStruct"/>, а иначе <see langword="null"/>.</para>
-        /// </summary>
-        /// <typeparam name="TStruct">
-        /// <para>The structure type.</para>
-        /// <para>Тип структуры.</para>
-        /// </typeparam>
-        /// <param name="path">
-        /// <para>The path to a file to validate.</para>
-        /// <para>Путь к проверяемому файлу.</para>
-        /// </param>
-        /// <returns>
-        /// <para>A <see cref="FileStream"/> opened for reading in the case of successful check; otherwise <see langword="null"/>.</para>
-        /// <para><see cref="FileStream"/>, открытый для чтения в случае успешной проверки, а иначе <see langword="null"/>.</para>
-        /// </returns>
-        /// <exception cref="InvalidOperationException">
-        /// <para>The size of a file at the <paramref name="path"/> is not a multiple of the required <typeparamref name="TStruct"/> structure size.</para>
-        /// <para>Размер файла находящегося в <paramref name="path"/> не кратен требуемому размеру структуры типа <typeparamref name="TStruct"/>.</para>
-        /// </exception>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+[MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static FileStream GetValidFileStreamOrDefault<TStruct>(string path) where TStruct : struct => GetValidFileStreamOrDefault(path, Structure<TStruct>.Size);
-
-        /// <summary>
-        /// <para>Returns the <see cref="FileStream"/> opened for reading from a file at the <paramref name="path"/> if the file exists, not empty and its size is a multiple of the required <paramref name="elementSize"/>; otherwise <see langword="null"/>.</para>
-        /// <para>Возвращает <see cref="FileStream"/>, открытый для чтения из файла находящегося в <paramref name="path"/>, если файл существует, не пуст и его размер кратен <paramref name="elementSize"/>, а иначе <see langword="null"/>.</para>
-        /// </summary>
-        /// <param name="path">
-        /// <para>The path to a file to validate.</para>
-        /// <para>Путь к проверяемому файлу.</para>
-        /// </param>
-        /// <param name="elementSize">
-        /// <para>Required size of elements located in a file at the <paramref name="path"/>.</para>
-        /// <para>Требуемый размер элементов, находящихся в файле находящегося в <paramref name="path"/>.</para>
-        /// </param>
-        /// <returns>
-        /// <para>A <see cref="FileStream"/> opened for reading in the case of successful check; otherwise <see langword="null"/>.</para>
-        /// <para><see cref="FileStream"/>, открытый для чтения в случае успешной проверки, а иначе <see langword="null"/>.</para>
-        /// </returns>
-        /// <exception cref="InvalidOperationException">
-        /// <para>The size of a file at the <paramref name="path"/> is not a multiple of the required <paramref name="elementSize"/>.</para>
-        /// <para>Размер файла находящегося в <paramref name="path"/> не кратен требуемому <paramref name="elementSize"/>.</para>
-        /// </exception>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+[MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static FileStream GetValidFileStreamOrDefault(string path, int elementSize)
         {
             if (!File.Exists(path))

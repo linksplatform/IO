@@ -105,22 +105,7 @@ namespace Platform.IO
                 Source.DisposeIfPossible();
             }
         }
-
-        /// <summary>
-        /// <para>
-        /// Ons the cancel key press using the specified sender.
-        /// </para>
-        /// <para></para>
-        /// </summary>
-        /// <param name="sender">
-        /// <para>The sender.</para>
-        /// <para></para>
-        /// </param>
-        /// <param name="e">
-        /// <para>The .</para>
-        /// <para></para>
-        /// </param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+[MethodImpl(MethodImplOptions.AggressiveInlining)]
         private void OnCancelKeyPress(object sender, ConsoleCancelEventArgs e)
         {
             e.Cancel = true;

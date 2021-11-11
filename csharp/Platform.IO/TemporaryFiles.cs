@@ -10,39 +10,10 @@ namespace Platform.IO
     /// </summary>
     public class TemporaryFiles
     {
-        /// <summary>
-        /// <para>
-        /// The user files list file name prefix.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         private const string UserFilesListFileNamePrefix = ".used-temporary-files.txt";
-        /// <summary>
-        /// <para>
-        /// The used files list lock.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         private static readonly object UsedFilesListLock = new();
-        /// <summary>
-        /// <para>
-        /// The user files list file name prefix.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         private static readonly string UsedFilesListFilename = Assembly.GetExecutingAssembly().Location + UserFilesListFileNamePrefix;
-
-        /// <summary>
-        /// <para>
-        /// Adds the to used files list using the specified filename.
-        /// </para>
-        /// <para></para>
-        /// </summary>
-        /// <param name="filename">
-        /// <para>The filename.</para>
-        /// <para></para>
-        /// </param>
-        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+[MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void AddToUsedFilesList(string filename)
         {
             lock (UsedFilesListLock)
