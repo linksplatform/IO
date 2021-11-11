@@ -5,6 +5,12 @@ using System.Reflection;
 
 namespace Platform.IO.Tests.TemporaryFileTest
 {
+    /// <summary>
+    /// <para>
+    /// Represents the program.
+    /// </para>
+    /// <para></para>
+    /// </summary>
     class Program
     {
         /// <summary>
