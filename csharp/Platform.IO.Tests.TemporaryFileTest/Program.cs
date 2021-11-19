@@ -7,12 +7,6 @@ namespace Platform.IO.Tests.TemporaryFileTest
 {
     class Program
     {
-        /// <summary>
-        /// <para>
-        /// Main.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         static void Main()
         {
             using TemporaryFile tempFile = new();

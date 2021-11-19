@@ -4,20 +4,8 @@ using System.Diagnostics;
 
 namespace Platform.IO.Tests
 {
-    /// <summary>
-    /// <para>
-    /// Represents the temporary file tests.
-    /// </para>
-    /// <para></para>
-    /// </summary>
     public class TemporaryFileTests
     {
-        /// <summary>
-        /// <para>
-        /// Tests that temporary file test.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         [Fact]
         public void TemporaryFileTest()
         {
@@ -32,12 +20,6 @@ namespace Platform.IO.Tests
             Assert.False(File.Exists(path));
         }
 
-        /// <summary>
-        /// <para>
-        /// Tests that temporary file test without console app.
-        /// </para>
-        /// <para></para>
-        /// </summary>
         [Fact]
         public void TemporaryFileTestWithoutConsoleApp()
         {
