@@ -1,54 +1,79 @@
-﻿namespace Platform::IO
+﻿#include <stop_token>
+
+namespace Platform::IO
 {
-    class ConsoleCancellation : public DisposableBase
+    class ConsoleCancellation
     {
-        public: const CancellationTokenSource Source;
+    private:
+        const std::stop_source _source;
 
-        public: const CancellationToken Token;
+    private:
+        const std::stop_token _token;
 
-        public: bool IsRequested()
+    public:
+        auto Token
+        -> std::stop_token { return _token; }
+
+    public:
+        auto Source
+        -> std::stop_source { return _source; }
+
+    public:
+        bool IsRequested()
         {
-            return Source.IsCancellationRequested;
+            return _source.stop_requested;
         }
 
-        public: bool NotRequested()
+    public:
+        bool NotRequested()
         {
-            return !Source.IsCancellationRequested;
+            return !_source.stop_requested;
         }
 
-        public: ConsoleCancellation()
+    public:
+        ConsoleCancellation()
+                : _source{std::stop_source{}}
+
+        : _token { _source.get_token() }
         {
             Source = this->CancellationTokenSource();
             Token = Source.Token;
             Console.CancelKeyPress += OnCancelKeyPress;
         }
 
-        public: void ForceCancellation() { Source.Cancel(); }
-
-        public: void Wait()
+    public:
+        ~ConsoleCancellation()
         {
-            while (NotRequested)
-            {
+            // ToDo
+        }
+
+    public:
+        void ForceCancellation()
+        { _source.request_stop; }
+
+    public:
+        void Wait()
+        {
+            while (NotRequested) {
                 ThreadHelpers.Sleep();
             }
         }
 
-        protected: void Dispose(bool manual, bool wasDisposed) override
-        {
-            if (!wasDisposed)
-            {
-                Console.CancelKeyPress -= OnCancelKeyPress;
-                Source.DisposeIfPossible();
-            }
-        }
-
-        private: void OnCancelKeyPress(void *sender, ConsoleCancelEventArgs e)
-        {
-            e.Cancel = true;
-            if (NotRequested)
-            {
-                Source.Cancel();
-            }
-        }
+//    private:
+//        void OnCancelKeyPress(void *sender, ConsoleCancelEventArgs e)
+//        {
+//            e.Cancel = true;
+//            if (NotRequested) {
+//                Source.Cancel();
+//            }
+//        }
+//
+//    private:
+//        void my_handler(int s)
+//        {
+//            printf("Caught signal %d\n", s);
+//            exit(1);
+//
+//        }
     };
 }
