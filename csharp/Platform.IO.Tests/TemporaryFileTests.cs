@@ -9,10 +9,13 @@ namespace Platform.IO.Tests
         [Fact]
         public void TemporaryFileTest()
         {
-            using Process process = new();
-            process.StartInfo.FileName = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", "..", "Platform.IO.Tests.TemporaryFileTest", "bin", "Debug", "net5", "Platform.IO.Tests.TemporaryFileTest"));
-            process.StartInfo.UseShellExecute = false;
-            process.StartInfo.RedirectStandardOutput = true;
+            var startInfo = new ProcessStartInfo();
+            startInfo.WorkingDirectory = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", "..", "Platform.IO.Tests.TemporaryFileTest"));
+            startInfo.UseShellExecute = false;
+            startInfo.RedirectStandardOutput = true;
+            startInfo.FileName = "dotnet";
+            startInfo.Arguments = "run --project Platform.IO.Tests.TemporaryFileTest.csproj";
+            using Process process = new(){StartInfo = startInfo};
             process.Start();
             var path = process.StandardOutput.ReadLine();
             Assert.True(File.Exists(path));
