@@ -4,7 +4,7 @@
     <Description>LinksPlatform's Platform.IO Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.IO</AssemblyTitle>
-    <VersionPrefix>0.4.0</VersionPrefix>
+    <VersionPrefix>0.5.0</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFramework>net7</TargetFramework>
     <AssemblyName>Platform.IO</AssemblyName>
@@ -24,7 +24,9 @@
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <LangVersion>latest</LangVersion>
     <PackageReleaseNotes>Target frameworks are changed to net7.
-Change license to Unlicense.</PackageReleaseNotes>
+Change license to Unlicense.
+Update Platform.Threading dependency from 0.4.0 to 0.5.0.
+Update Platform.Unsafe dependency from 0.5.2 to 0.6.0.</PackageReleaseNotes>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
@@ -33,8 +35,8 @@ Change license to Unlicense.</PackageReleaseNotes>
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Platform.Threading" Version="0.4.0" />
-    <PackageReference Include="Platform.Unsafe" Version="0.5.2" />
+    <PackageReference Include="Platform.Threading" Version="0.5.0" />
+    <PackageReference Include="Platform.Unsafe" Version="0.6.0" />
   </ItemGroup>
 
 </Project>
