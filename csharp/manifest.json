@@ -1,125 +1,8 @@
 {
   "homepages": [],
-  "source_base_path": "/home/runner/work/IO/IO",
+  "source_base_path": "/home/runner/work/IO/IO/csharp",
   "xrefmap": "xrefmap.yml",
   "files": [
-    {
-      "type": "Resource",
-      "output": {
-        "resource": {
-          "relative_path": "index.json"
-        }
-      },
-      "is_incremental": false
-    },
-    {
-      "type": "Conceptual",
-      "source_relative_path": "README.md",
-      "output": {
-        ".html": {
-          "relative_path": "README.html",
-          "hash": "1uiMDxpDuUWomws8M+Vz6w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.IO.ConsoleCancellation.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.IO.ConsoleCancellation.html",
-          "hash": "vvRxoxGPgsZwqrcDlmtorQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.IO.ConsoleHelpers.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.IO.ConsoleHelpers.html",
-          "hash": "etpzjGApPvGI9eOTfacrSw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.IO.FileHelpers.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.IO.FileHelpers.html",
-          "hash": "Ko2LB+g0YLMRRSdwgAxm0w=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.IO.StreamExtensions.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.IO.StreamExtensions.html",
-          "hash": "YJGnz4Qn7xAhEg5YusFRiw=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.IO.TemporaryFile.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.IO.TemporaryFile.html",
-          "hash": "GElg2EhA3CHmiH8jY0m0Xg=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.IO.TemporaryFiles.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.IO.TemporaryFiles.html",
-          "hash": "vtjGqDD9+qcxb1Mvio3XJQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "ManagedReference",
-      "source_relative_path": "obj/api/Platform.IO.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/Platform.IO.html",
-          "hash": "GCuW6RqjPf5CpHAr4jRiwA=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
-    {
-      "type": "Toc",
-      "source_relative_path": "obj/api/toc.yml",
-      "output": {
-        ".html": {
-          "relative_path": "api/toc.html",
-          "hash": "JxZqf7j+DGRDtizyLrZFMQ=="
-        }
-      },
-      "is_incremental": false,
-      "version": ""
-    },
     {
       "log_codes": [
         "InvalidFileLink"
@@ -129,7 +12,7 @@
       "output": {
         ".html": {
           "relative_path": "toc.html",
-          "hash": "p9yB+JEpoW+jJxD0mG2JkQ=="
+          "hash": "lNSDkFwblbhgGJkNVQeSYg=="
         }
       },
       "is_incremental": false,
@@ -147,18 +30,6 @@
         "full_build_reason_code": "NoAvailableBuildCache"
       },
       "processors": {
-        "ConceptualDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 1,
-          "skipped_file_count": 0
-        },
-        "ManagedReferenceDocumentProcessor": {
-          "can_incremental": false,
-          "incrementalPhase": "build",
-          "total_file_count": 7,
-          "skipped_file_count": 0
-        },
         "TocDocumentProcessor": {
           "can_incremental": false,
           "details": "Processor TocDocumentProcessor cannot support incremental build because the processor doesn't implement ISupportIncrementalDocumentProcessor interface.",
