@@ -4,7 +4,7 @@
     <Description>LinksPlatform's Platform.IO Class Library</Description>
     <Copyright>Konstantin Diachenko</Copyright>
     <AssemblyTitle>Platform.IO</AssemblyTitle>
-    <VersionPrefix>0.5.0</VersionPrefix>
+    <VersionPrefix>0.5.1</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
     <TargetFramework>net7</TargetFramework>
     <AssemblyName>Platform.IO</AssemblyName>
