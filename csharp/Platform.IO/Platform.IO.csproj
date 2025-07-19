@@ -6,7 +6,7 @@
     <AssemblyTitle>Platform.IO</AssemblyTitle>
     <VersionPrefix>0.5.1</VersionPrefix>
     <Authors>Konstantin Diachenko</Authors>
-    <TargetFramework>net7</TargetFramework>
+    <TargetFramework>net8</TargetFramework>
     <AssemblyName>Platform.IO</AssemblyName>
     <PackageId>Platform.IO</PackageId>
     <PackageTags>LinksPlatform;IO;ConsoleCancellation;ConsoleHelpers;FileHelpers;StreamExtensions</PackageTags>
@@ -23,7 +23,7 @@
     <IncludeSymbols>true</IncludeSymbols>
     <SymbolPackageFormat>snupkg</SymbolPackageFormat>
     <LangVersion>latest</LangVersion>
-    <PackageReleaseNotes>Update Platform.Unsafe dependency to 0.6.1.</PackageReleaseNotes>
+    <PackageReleaseNotes>Update target framework from net7 to net8.</PackageReleaseNotes>
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
