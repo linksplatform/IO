@@ -13,6 +13,15 @@ namespace Platform.IO
         private const string UserFilesListFileNamePrefix = ".used-temporary-files.txt";
         private static readonly object UsedFilesListLock = new();
         private static readonly string UsedFilesListFilename = Assembly.GetExecutingAssembly().Location + UserFilesListFileNamePrefix;
+
+        /// <summary>
+        /// <para>Static constructor that cleans up all previously used temporary files.</para>
+        /// <para>Статический конструктор, который очищает все ранее использованные временные файлы.</para>
+        /// </summary>
+        static TemporaryFiles()
+        {
+            DeleteAllPreviouslyUsed();
+        }
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void AddToUsedFilesList(string filename)
         {
