@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<TestRun id="9cc10f97-cd53-4031-b60c-dacab63da415" name="@vds2816548 2025-09-12 22:28:36" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <Times creation="2025-09-12T22:28:36.9867141+03:00" queuing="2025-09-12T22:28:36.9867143+03:00" start="2025-09-12T22:28:31.0416857+03:00" finish="2025-09-12T22:28:37.0674464+03:00" />
+  <TestSettings name="default" id="e5994e8b-db3f-4ffa-9c99-3ac46da32112">
+    <Deployment runDeploymentRoot="_vds2816548_2025-09-12_22_28_36" />
+  </TestSettings>
+  <Results>
+    <UnitTestResult executionId="904e007f-ffc4-43d8-a408-a1746bd1afe9" testId="70eb51eb-7f30-5547-01c6-8334dd4a01f0" testName="Platform.IO.Tests.TemporaryFileTests.TemporaryFileTestWithoutConsoleApp" computerName="vds2816548" duration="00:00:00.0239040" startTime="2025-09-12T22:28:36.3066342+03:00" endTime="2025-09-12T22:28:36.3066344+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="904e007f-ffc4-43d8-a408-a1746bd1afe9" />
+    <UnitTestResult executionId="fb643907-7165-4fb7-9c96-1fe0d4ebcfee" testId="e0e5b6c7-92e8-865d-f638-1d6ba805f760" testName="Platform.IO.Tests.FileHelpersTests.WriteReadTest" computerName="vds2816548" duration="00:00:00.0892117" startTime="2025-09-12T22:28:36.2693138+03:00" endTime="2025-09-12T22:28:36.2754557+03:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Passed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="fb643907-7165-4fb7-9c96-1fe0d4ebcfee" />
+  </Results>
+  <TestDefinitions>
+    <UnitTest name="Platform.IO.Tests.TemporaryFileTests.TemporaryFileTestWithoutConsoleApp" storage="/tmp/gh-issue-solver-1757704980998/csharp/platform.io.tests/bin/debug/net8/platform.io.tests.dll" id="70eb51eb-7f30-5547-01c6-8334dd4a01f0">
+      <Execution id="904e007f-ffc4-43d8-a408-a1746bd1afe9" />
+      <TestMethod codeBase="/tmp/gh-issue-solver-1757704980998/csharp/Platform.IO.Tests/bin/Debug/net8/Platform.IO.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Platform.IO.Tests.TemporaryFileTests" name="TemporaryFileTestWithoutConsoleApp" />
+    </UnitTest>
+    <UnitTest name="Platform.IO.Tests.FileHelpersTests.WriteReadTest" storage="/tmp/gh-issue-solver-1757704980998/csharp/platform.io.tests/bin/debug/net8/platform.io.tests.dll" id="e0e5b6c7-92e8-865d-f638-1d6ba805f760">
+      <Execution id="fb643907-7165-4fb7-9c96-1fe0d4ebcfee" />
+      <TestMethod codeBase="/tmp/gh-issue-solver-1757704980998/csharp/Platform.IO.Tests/bin/Debug/net8/Platform.IO.Tests.dll" adapterTypeName="executor://xunit/VsTestRunner2/netcoreapp" className="Platform.IO.Tests.FileHelpersTests" name="WriteReadTest" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestEntries>
+    <TestEntry testId="70eb51eb-7f30-5547-01c6-8334dd4a01f0" executionId="904e007f-ffc4-43d8-a408-a1746bd1afe9" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="e0e5b6c7-92e8-865d-f638-1d6ba805f760" executionId="fb643907-7165-4fb7-9c96-1fe0d4ebcfee" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <ResultSummary outcome="Completed">
+    <Counters total="2" executed="2" passed="2" failed="0" error="0" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" completed="0" inProgress="0" pending="0" />
+    <Output>
+      <StdOut>[xUnit.net 00:00:00.01] xUnit.net VSTest Adapter v2.4.3+1b45f5407b (64-bit .NET 8.0.19)
+[xUnit.net 00:00:01.97]   Discovering: Platform.IO.Tests
+[xUnit.net 00:00:02.20]   Discovered:  Platform.IO.Tests
+[xUnit.net 00:00:02.23]   Starting:    Platform.IO.Tests
+[xUnit.net 00:00:02.69]   Finished:    Platform.IO.Tests
+</StdOut>
+    </Output>
+  </ResultSummary>
+</TestRun>
