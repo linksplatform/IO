@@ -1,3 +1,5 @@
+using System;
+using System.Collections.Generic;
 using System.IO;
 using System.Reflection;
 using System.Runtime.CompilerServices;
@@ -19,6 +21,59 @@ namespace Platform.IO
             lock (UsedFilesListLock)
             {
                 FileHelpers.AppendLine(UsedFilesListFilename, filename);
+            }
+        }
+
+        /// <summary>
+        /// <para>Adds a temporary file to the registry for cleanup tracking.</para>
+        /// <para>Добавляет временный файл в реестр для отслеживания очистки.</para>
+        /// </summary>
+        /// <param name="filename">
+        /// <para>The filename to add to registry.</para>
+        /// <para>Имя файла для добавления в реестр.</para>
+        /// </param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void AddToRegistry(string filename)
+        {
+            AddToUsedFilesList(filename);
+        }
+
+        /// <summary>
+        /// <para>Removes a temporary file from the registry.</para>
+        /// <para>Удаляет временный файл из реестра.</para>
+        /// </summary>
+        /// <param name="filename">
+        /// <para>The filename to remove from registry.</para>
+        /// <para>Имя файла для удаления из реестра.</para>
+        /// </param>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static void RemoveFromRegistry(string filename)
+        {
+            lock (UsedFilesListLock)
+            {
+                try
+                {
+                    var listFilename = UsedFilesListFilename;
+                    if (File.Exists(listFilename))
+                    {
+                        var lines = File.ReadAllLines(listFilename);
+                        var filteredLines = new List<string>();
+                        
+                        foreach (var line in lines)
+                        {
+                            if (!string.Equals(line.Trim(), filename.Trim(), StringComparison.OrdinalIgnoreCase))
+                            {
+                                filteredLines.Add(line);
+                            }
+                        }
+                        
+                        File.WriteAllLines(listFilename, filteredLines);
+                    }
+                }
+                catch
+                {
+                    // Ignore errors during registry update
+                }
             }
         }
 
