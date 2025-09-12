@@ -10,11 +10,34 @@ namespace Platform.IO
     /// </summary>
     public class TemporaryFiles
     {
-        private const string UserFilesListFileNamePrefix = ".used-temporary-files.txt";
-        private static readonly object UsedFilesListLock = new();
-        private static readonly string UsedFilesListFilename = Assembly.GetExecutingAssembly().Location + UserFilesListFileNamePrefix;
+        /// <summary>
+        /// <para>The prefix used for the temporary files list filename.</para>
+        /// <para>Префикс, используемый для имени файла списка временных файлов.</para>
+        /// </summary>
+        public const string UserFilesListFileNamePrefix = ".used-temporary-files.txt";
+        
+        /// <summary>
+        /// <para>The lock object used to synchronize access to the used files list.</para>
+        /// <para>Объект блокировки, используемый для синхронизации доступа к списку используемых файлов.</para>
+        /// </summary>
+        public static readonly object UsedFilesListLock = new();
+        
+        /// <summary>
+        /// <para>The filename of the used files list.</para>
+        /// <para>Имя файла списка используемых файлов.</para>
+        /// </summary>
+        public static readonly string UsedFilesListFilename = Assembly.GetExecutingAssembly().Location + UserFilesListFileNamePrefix;
+        
+        /// <summary>
+        /// <para>Adds a filename to the used files list.</para>
+        /// <para>Добавляет имя файла в список используемых файлов.</para>
+        /// </summary>
+        /// <param name="filename">
+        /// <para>The filename to add to the list.</para>
+        /// <para>Имя файла для добавления в список.</para>
+        /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        private static void AddToUsedFilesList(string filename)
+        public static void AddToUsedFilesList(string filename)
         {
             lock (UsedFilesListLock)
             {
