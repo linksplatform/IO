@@ -43,6 +43,29 @@ namespace Platform.IO
         public static string GetOrReadArgument(int index, params string[] args) => GetOrReadArgument(index, $"{index + 1} argument", args);
 
         /// <summary>
+        /// <para>Gets an argument's value with the specified <paramref name="index"/> from the <paramref name="args"/> array and if it's absent requests a user to input it in the console. If user input is empty, returns the specified <paramref name="defaultValue"/>.</para>
+        /// <para>Получает значение аргумента с указанным <paramref name="index"/> из массива <paramref name="args"/>, a если оно отсутствует запрашивает его ввод в консоли у пользователя. Если ввод пользователя пустой, возвращает указанное <paramref name="defaultValue"/>.</para>
+        /// </summary>
+        /// <param name="index">
+        /// <para>The ordinal number of the argument in the array.</para>
+        /// <para>Порядковый номер аргумента в массиве.</para>
+        /// </param>
+        /// <param name="defaultValue">
+        /// <para>The default value to return if the argument is not found and user input is empty.</para>
+        /// <para>Значение по умолчанию, которое возвращается, если аргумент не найден и ввод пользователя пустой.</para>
+        /// </param>
+        /// <param name="args">
+        /// <para>The argument array passed to the application.</para>
+        /// <para>Массив аргументов переданных приложению.</para>
+        /// </param>
+        /// <returns>
+        /// <para>The value with the specified <paramref name="index"/> extracted from the <paramref name="args"/> array, entered by a user in the console, or the <paramref name="defaultValue"/> if user input is empty.</para>
+        /// <para>Значение с указанным <paramref name="index"/>, извлечённое из массива <paramref name="args"/>, введённое пользователем в консоли, или <paramref name="defaultValue"/>, если ввод пользователя пустой.</para>
+        /// </returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static string GetOrReadArgumentOrDefault(int index, string defaultValue, params string[] args) => GetOrReadArgumentWithDefault(index, $"{index + 1} argument", defaultValue, args);
+
+        /// <summary>
         /// <para>Gets an argument's value with the specified <paramref name="index"/> from the <paramref name="args"/> array and if it's absent requests a user to input it in the console.</para>
         /// <para>Получает значение аргумента с указанным <paramref name="index"/> из массива <paramref name="args"/>, a если оно отсутствует запрашивает его ввод в консоли у пользователя.</para>
         /// </summary>
@@ -73,6 +96,48 @@ namespace Platform.IO
             if (string.IsNullOrEmpty(result))
             {
                 return "";
+            }
+            else
+            {
+                return result.Trim().TrimSingle('"').Trim();
+            }
+        }
+
+        /// <summary>
+        /// <para>Gets an argument's value with the specified <paramref name="index"/> from the <paramref name="args"/> array and if it's absent requests a user to input it in the console. If user input is empty, returns the specified <paramref name="defaultValue"/>.</para>
+        /// <para>Получает значение аргумента с указанным <paramref name="index"/> из массива <paramref name="args"/>, a если оно отсутствует запрашивает его ввод в консоли у пользователя. Если ввод пользователя пустой, возвращает указанное <paramref name="defaultValue"/>.</para>
+        /// </summary>
+        /// <param name="index">
+        /// <para>The ordinal number of the argument in the array.</para>
+        /// <para>Порядковый номер аргумента в массиве.</para>
+        /// </param>
+        /// <param name="readMessage">
+        /// <para>The message's text to a user describing which argument is being entered at the moment. If the <paramref name="args"/> array doesn't contain the element with the specified <paramref name="index"/>, then this message is used.</para>
+        /// <para>Текст сообщения пользователю описывающее какой аргумент вводится в данный момент. Это сообщение используется только если массив <paramref name="args"/> не содержит аргумента с указанным <paramref name="index"/>.</para>
+        /// </param>
+        /// <param name="defaultValue">
+        /// <para>The default value to return if the argument is not found and user input is empty.</para>
+        /// <para>Значение по умолчанию, которое возвращается, если аргумент не найден и ввод пользователя пустой.</para>
+        /// </param>
+        /// <param name="args">
+        /// <para>The argument array passed to the application.</para>
+        /// <para>Массив аргументов переданных приложению.</para>
+        /// </param>
+        /// <returns>
+        /// <para>The value with the specified <paramref name="index"/> extracted from the <paramref name="args"/> array, entered by a user in the console, or the <paramref name="defaultValue"/> if user input is empty.</para>
+        /// <para>Значение с указанным <paramref name="index"/>, извлечённое из массива <paramref name="args"/>, введённое пользователем в консоли, или <paramref name="defaultValue"/>, если ввод пользователя пустой.</para>
+        /// </returns>
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static string GetOrReadArgumentWithDefault(int index, string readMessage, string defaultValue, params string[] args)
+        {
+            if (!args.TryGetElement(index, out string result))
+            {
+                Console.Write($"{readMessage}: ");
+                result = Console.ReadLine();
+            }
+            if (string.IsNullOrEmpty(result))
+            {
+                return defaultValue ?? "";
             }
             else
             {
