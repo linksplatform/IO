@@ -1,11 +1,14 @@
-﻿namespace Platform::IO::Tests::TemporaryFileTest
+﻿#include <iostream>
+#include "../Platform.IO/TemporaryFile.h"
+
+using namespace Platform::IO;
+
+int main()
 {
-    class Program
     {
-        static void Main()
-        {
-            using TemporaryFile tempFile = new();
-            Console.WriteLine(tempFile);
-        }
-    };
+        TemporaryFile tempFile;
+        std::cout << tempFile.Filename << std::endl;
+    }
+    // TemporaryFile destructor automatically deletes the file
+    return 0;
 }
