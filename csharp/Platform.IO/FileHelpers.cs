@@ -207,7 +207,7 @@ namespace Platform.IO
         /// <para>Путь к директории для очистки.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void DeleteAll(string directory) => DeleteAll(directory, "*");
+        public static void DeleteFiles(string directory) => DeleteFiles(directory, "*");
 
         /// <summary>
         /// <para>Removes files from the directory at the path <paramref name="directory"/> according to the <paramref name="searchPattern"/>.</para>
@@ -222,7 +222,7 @@ namespace Platform.IO
         /// <para>Шаблон поиска для удаляемых файлов в директории находящейся по пути <paramref name="directory"/>.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void DeleteAll(string directory, string searchPattern) => DeleteAll(directory, searchPattern, SearchOption.TopDirectoryOnly);
+        public static void DeleteFiles(string directory, string searchPattern) => DeleteFiles(directory, searchPattern, SearchOption.TopDirectoryOnly);
 
         /// <summary>
         /// <para>Removes files from the directory at the path <paramref name="directory"/> according to the <paramref name="searchPattern"/> and the <paramref name="searchOption"/>.</para>
@@ -241,7 +241,7 @@ namespace Platform.IO
         /// <para>Значение <see cref="SearchOption"/> определяющее искать ли только в текущей директории находящейся по пути <paramref name="directory"/>, или также во всех субдиректориях.</para>
         /// </param>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static void DeleteAll(string directory, string searchPattern, SearchOption searchOption)
+        public static void DeleteFiles(string directory, string searchPattern, SearchOption searchOption)
         {
             foreach (var file in Directory.EnumerateFiles(directory, searchPattern, searchOption))
             {

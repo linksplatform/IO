@@ -69,11 +69,11 @@
             }
         }
 
-        public: static void DeleteAll(std::string directory) { DeleteAll(directory, "*"); }
+        public: static void DeleteFiles(std::string directory) { DeleteFiles(directory, "*"); }
 
-        public: static void DeleteAll(std::string directory, std::string searchPattern) { DeleteAll(directory, searchPattern, SearchOption.TopDirectoryOnly); }
+        public: static void DeleteFiles(std::string directory, std::string searchPattern) { DeleteFiles(directory, searchPattern, SearchOption.TopDirectoryOnly); }
 
-        public: static void DeleteAll(std::string directory, std::string searchPattern, SearchOption searchOption)
+        public: static void DeleteFiles(std::string directory, std::string searchPattern, SearchOption searchOption)
         {
             foreach (auto file in Directory.EnumerateFiles(directory, searchPattern, searchOption))
             {
