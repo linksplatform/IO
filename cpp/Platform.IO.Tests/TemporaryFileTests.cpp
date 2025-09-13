@@ -1,29 +1,44 @@
-﻿namespace Platform::IO::Tests
-{
-    TEST_CLASS(TemporaryFileTests)
-    {
-        public: TEST_METHOD(TemporaryFileTest)
-        {
-            using Process process = new();
-            process.StartInfo.FileName = Path.GetFullPath(Path.Combine(Directory.GetCurrentDirectory(), "..", "..", "..", "..", "Platform.IO.Tests.TemporaryFileTest", "bin", "Debug", "net5", "Platform.IO.Tests.TemporaryFileTest"));
-            process.StartInfo.UseShellExecute = false;
-            process.StartInfo.RedirectStandardOutput = true;
-            process.Start();
-            auto path = process.StandardOutput.ReadLine();
-            Assert::IsTrue(File.Exists(path));
-            process.WaitForExit();
-            Assert::IsFalse(File.Exists(path));
-        }
+﻿#include <gtest/gtest.h>
+#include <filesystem>
+#include "../Platform.IO/TemporaryFile.h"
 
-        public: TEST_METHOD(TemporaryFileTestWithoutConsoleApp)
-        {
-            std::string fileName = 0;
-            using (TemporaryFile tempFile = new())
-            {
-                fileName = tempFile;
-                Assert::IsTrue(File.Exists(fileName));
-            }
-            Assert::IsFalse(File.Exists(fileName));
-        }
+using namespace Platform::IO;
+
+namespace Platform::IO::Tests
+{
+    class TemporaryFileTests : public ::testing::Test
+    {
+    protected:
+        void SetUp() override {}
+        void TearDown() override {}
     };
+
+    TEST_F(TemporaryFileTests, TemporaryFileTestWithoutConsoleApp)
+    {
+        std::string fileName;
+        {
+            TemporaryFile tempFile;
+            fileName = tempFile.Filename;
+            EXPECT_TRUE(std::filesystem::exists(fileName));
+        }
+        // After the TemporaryFile goes out of scope, the file should be deleted
+        EXPECT_FALSE(std::filesystem::exists(fileName));
+    }
+
+    TEST_F(TemporaryFileTests, TemporaryFileMoveSemanticsTest)
+    {
+        std::string fileName;
+        {
+            TemporaryFile tempFile1;
+            fileName = tempFile1.Filename;
+            EXPECT_TRUE(std::filesystem::exists(fileName));
+            
+            // Test move constructor
+            TemporaryFile tempFile2 = std::move(tempFile1);
+            EXPECT_EQ(tempFile2.Filename, fileName);
+            EXPECT_TRUE(std::filesystem::exists(fileName));
+        }
+        // After both TemporaryFile objects go out of scope, the file should be deleted
+        EXPECT_FALSE(std::filesystem::exists(fileName));
+    }
 }
