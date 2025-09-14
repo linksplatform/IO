@@ -19,7 +19,7 @@ namespace Platform.IO
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void PressAnyKeyToContinue()
         {
-            Console.WriteLine("Press any key to continue.");
+            Console.WriteLine(Resources.PressAnyKeyToContinue);
             Console.ReadKey();
         }
 
@@ -40,7 +40,7 @@ namespace Platform.IO
         /// <para>Значение с указанным <paramref name="index"/>, извлечённое из массива <paramref name="args"/>, или введённое пользователем в консоли.</para>
         /// </returns>
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
-        public static string GetOrReadArgument(int index, params string[] args) => GetOrReadArgument(index, $"{index + 1} argument", args);
+        public static string GetOrReadArgument(int index, params string[] args) => GetOrReadArgument(index, string.Format(Resources.ArgumentPrompt, index + 1), args);
 
         /// <summary>
         /// <para>Gets an argument's value with the specified <paramref name="index"/> from the <paramref name="args"/> array and if it's absent requests a user to input it in the console.</para>
@@ -67,7 +67,7 @@ namespace Platform.IO
         {
             if (!args.TryGetElement(index, out string result))
             {
-                Console.Write($"{readMessage}: ");
+                Console.Write(string.Format(Resources.InputPrompt, readMessage));
                 result = Console.ReadLine();
             }
             if (string.IsNullOrEmpty(result))
