@@ -11,12 +11,12 @@ namespace Platform.IO
     public class TemporaryFiles
     {
         private const string UserFilesListFileNamePrefix = ".used-temporary-files.txt";
-        private static readonly object UsedFilesListLock = new();
+        private static readonly object UsedFilesListLockObject = new();
         private static readonly string UsedFilesListFilename = Assembly.GetExecutingAssembly().Location + UserFilesListFileNamePrefix;
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         private static void AddToUsedFilesList(string filename)
         {
-            lock (UsedFilesListLock)
+            lock (UsedFilesListLockObject)
             {
                 FileHelpers.AppendLine(UsedFilesListFilename, filename);
             }
@@ -45,7 +45,7 @@ namespace Platform.IO
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static void DeleteAllPreviouslyUsed()
         {
-            lock (UsedFilesListLock)
+            lock (UsedFilesListLockObject)
             {
                 var listFilename = UsedFilesListFilename;
                 if (File.Exists(listFilename))
