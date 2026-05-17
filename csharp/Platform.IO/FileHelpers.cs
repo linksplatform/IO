@@ -250,7 +250,7 @@ namespace Platform.IO
         }
 
         /// <summary>
-        /// <para>Trincates the file at the <paramref name="path"/>.</para>
+        /// <para>Truncates the file at the <paramref name="path"/>.</para>
         /// <para>Очищает содержимое файла по пути <paramref name="path"/>.</para>
         /// </summary>
         /// <param name="path">
